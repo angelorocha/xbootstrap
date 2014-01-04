@@ -1,0 +1,131 @@
+<!doctype html>
+<html class="no-js" lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- disable zoom in mobile devices:
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/modernizr.custom.95845.js"></script>
+<script src="js/js.js"></script>
+<title>XOOPS Responsive Layout</title>
+</head>
+<body>
+<div class="navbar-wrapper">
+  <div class="navbar navbar-inverse navbar-static-top global-nav">
+  <div class="container">
+    <div class="navbar-header">
+      <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <a href="javascript:;" class="navbar-brand xlogo"><img src="images/logo.png" alt=""></a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li class="dropdown"> <a data-toggle="dropdown" class="dropdown-toggle" href="javascript:;">News <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="javascript:;">Topic 1</a></li>
+              <li><a href="javascript:;">Topic 2</a></li>
+              <li><a href="javascript:;">Topic 3</a></li>
+              <li><a href="javascript:;">Topic 4</a></li>
+              <li><a href="javascript:;">Topic 5</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div><!-- .navbar-wrapper -->
+
+<div class="carousel slide" id="myCarousel"> 
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
+    <li data-slide-to="1" data-target="#myCarousel" class=""></li>
+    <li data-slide-to="2" data-target="#myCarousel" class=""></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item active"> <img alt="First slide" src="images/slider.png">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Lorem ipsum dolor sit amet</h1>
+          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+          <p><a href="javascript:;" class="btn btn-large btn-primary">Read More</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="item"> <img alt="First slide" src="images/slider.png">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Lorem ipsum dolor sit amet</h1>
+          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+          <p><a href="javascript:;" class="btn btn-large btn-primary">Read More</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="item"> <img alt="First slide" src="images/slider.png">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Lorem ipsum dolor sit amet</h1>
+          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+          <p><a href="javascript:;" class="btn btn-large btn-primary">Read More</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev"> <span class="icon-prev"></span> </a> <a data-slide="next" href="#myCarousel" class="right carousel-control"> <span class="icon-next"></span> </a>
+</div><!-- .carousel -->
+
+<div class="container maincontainer">
+<div class="aligncenter home-message">
+  <h2>About Us</h2>
+  <p class="lead">Ut auctor elit mi, non adipiscing quam accumsan sed. Vivamus consequat massa eget purus volutpat, et placerat elit pharetra. Maecenas quis mauris eros. Morbi consequat mattis diam, a laoreet est egestas id.</p>
+  <p><a href="javascript:;" class="btn btn-md btn-success">Learn More...</a></p>
+</div>
+
+<div class="row">
+<div class="col-md-8 col-sm-8 content-area">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a metus ac augue tempus sagittis. Etiam ullamcorper, enim quis rutrum luctus, dui quam auctor ante, eu consequat sem ipsum tincidunt lacus. Sed est dolor, dictum in egestas ac, accumsan eu lorem! Nulla sagittis libero nec massa aliquet, vitae molestie felis consequat. Pellentesque sodales bibendum ipsum, eu cursus velit rutrum eget
+</div><!-- .content-area -->
+
+<div class="col-md-4 col-sm-4 sidebar-blocks">
+    <aside>
+        <h3>Lorem ipsum dolor</h3>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a metus ac augue tempus sagittis. Etiam ullamcorper, enim quis rutrum luctus, dui quam auctor ante, eu consequat sem ipsum tincidunt lacus.
+    </aside>
+</div><!-- .sidebar-blocks -->
+</div>
+</div><!-- .maincontainer -->
+
+<div class="bottom-blocks">
+	<div class="container">
+        <div class="row">
+	        <aside class="col-sm-4 col-md-4">
+            <h3>Lorem ipsum dolor</h3>
+            Phasellus iaculis feugiat leo, vitae sodales dolor elementum eu. Duis eu feugiat risus, sit amet aliquet nisl. Suspendisse potenti. Phasellus magna tortor, tempor sed turpis ut, eleifend mollis risus? Phasellus lacinia molestie felis sed dictum. </aside>
+            <aside class="col-sm-4 col-md-4">
+            <h3>Lorem ipsum dolor</h3>
+            Phasellus iaculis feugiat leo, vitae sodales dolor elementum eu. Duis eu feugiat risus, sit amet aliquet nisl. Suspendisse potenti. Phasellus magna tortor, tempor sed turpis ut, eleifend mollis risus? Phasellus lacinia molestie felis sed dictum. </aside>
+            <aside class="col-sm-4 col-md-4">
+            <h3>Lorem ipsum dolor</h3>
+            Phasellus iaculis feugiat leo, vitae sodales dolor elementum eu. Duis eu feugiat risus, sit amet aliquet nisl. Suspendisse potenti. Phasellus magna tortor, tempor sed turpis ut, eleifend mollis risus? Phasellus lacinia molestie felis sed dictum. </aside>
+        </div>
+    </div>
+</div><!-- .bottom-blocks -->
+
+<footer class="footer">
+<h3>&copy; 2014 - XOOPS Project - All rights reserveds</h3>
+</footer>
+</body>
+</html>

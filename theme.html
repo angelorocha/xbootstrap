@@ -1,0 +1,87 @@
+<!doctype html>
+<html class="no-js" lang="<{$xoops_langcode}>">
+<head>
+<{assign var=theme_name value=$xoTheme->folderName}>
+<meta charset="<{$xoops_charset}>">
+<meta name="keywords" content="<{$xoops_meta_keywords}>">
+<meta name="description" content="<{$xoops_meta_description}>">
+<meta name="robots" content="<{$xoops_meta_robots}>">
+<meta name="rating" content="<{$xoops_meta_rating}>">
+<meta name="author" content="<{$xoops_meta_author}>">
+<meta name="generator" content="XOOPS">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+<![endif]-->
+<!-- disable zoom in mobile devices:
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+-->
+<link href="<{$xoops_url}>/favicon.ico" rel="shortcut icon">
+<link rel="stylesheet" type="text/css" href="<{$xoops_imageurl}>css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="<{$xoops_imageurl}>css/reset.css">
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>">
+<script src="<{$xoops_imageurl}>js/jquery-1.10.2.js"></script>
+<script src="<{$xoops_imageurl}>js/bootstrap.min.js"></script>
+<script src="<{$xoops_imageurl}>js/modernizr.custom.95845.js"></script>
+<script src="<{$xoops_imageurl}>js/js.js"></script>
+<link rel="alternate" type="application/rss+xml" title="" href="<{xoAppUrl backend.php}>">
+<title><{if $xoops_dirname == "system"}><{$xoops_sitename}><{if $xoops_pagetitle !=''}> - <{$xoops_pagetitle}><{/if}><{else}><{if $xoops_pagetitle !=''}><{$xoops_pagetitle}> - <{$xoops_sitename}><{/if}><{/if}></title>
+<{includeq file="$theme_name/tpl/shareaholic-script.html"}>
+<{$xoops_module_header}>
+</head>
+<body id="<{$xoops_dirname}>">
+
+<{includeq file="$theme_name/tpl/nav-menu.html"}>
+
+<{includeq file="$theme_name/tpl/slider.html"}>
+
+<div class="container maincontainer">
+
+<{if $xoops_dirname == "system"}>
+<div class="aligncenter home-message">
+  <h2>About Us</h2>
+  <p class="lead"><{$xoops_meta_description}></p>
+  <p><a href="javascript:;" class="btn btn-md btn-success">Learn More...</a></p>
+</div><!-- .home-message -->
+<{/if}>
+
+<div class="row">
+    <{includeq file="$theme_name/tpl/leftBlock.html"}>
+    
+    <{includeq file="$theme_name/tpl/content-zone.html"}>
+    
+    <{includeq file="$theme_name/tpl/rightBlock.html"}>
+</div>
+
+</div><!-- .maincontainer -->
+
+<{if $xoBlocks.page_bottomcenter || $xoBlocks.page_bottomright || $xoBlocks.page_bottomleft}>
+    <div class="bottom-blocks">
+        <div class="container">
+            <div class="row">
+                <{includeq file="$theme_name/tpl/leftBottom.html"}>
+                
+                <{includeq file="$theme_name/tpl/centerBottom.html"}>
+                
+                <{includeq file="$theme_name/tpl/rightBottom.html"}>
+            </div>
+        </div>
+    </div><!-- .bottom-blocks -->
+<{/if}>
+
+<footer class="footer">
+	<h3>
+    	<{$xoops_footer}>
+            <a href="http://angelorocha.com.br" title="Design by: Angelo Rocha" target="_blank" class="credits visible-md visible-sm visible-lg">
+                <img src="<{$xoops_imageurl}>images/favicon.png" alt="Design by: Angelo Rocha">
+            </a>
+	</h3>
+</footer>
+<div class="aligncenter comments-nav visible-xs">
+    <a href="http://angelorocha.com.br" title="Design by: Angelo Rocha" target="_blank">
+        <img src="<{$xoops_imageurl}>images/favicon.png" alt="Design by: Angelo Rocha">
+    </a>
+</div>
+</body>
+</html>
