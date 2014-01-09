@@ -1,0 +1,34 @@
+<{include file='db:publisher_header.html'}>
+
+<!-- if we are on the index page OR inside a category that has subcats OR (inside a category with no subcats 
+	AND $display_category_summary is set to TRUE), let's display the summary table ! //-->
+
+<{if $indexpage || $category.subcats || ($category && $display_category_summary)}>
+
+	<{if $display_category_summary && $category}>
+	   	<div class="well well-sm">
+	   		<{$lang_category_summary}>
+	   	</div>
+   	<{/if}>
+
+
+	<{include file='db:publisher_categories_table.html'}>    
+	<!-- End of if !$category || $category.subcats || ($category && $display_category_summary) //-->
+<{/if}>
+
+<{if $items}>    
+	<{if $collapsable_heading == 1}>
+		<h4 style="padding-bottom: 10px;"><{$lang_items_title}></h4>
+	<{/if}>
+	
+	<!-- Start item loop -->    
+	<{foreach item=item from=$items}>
+		<{include file="db:publisher_singleitem.html" item=$item}>
+	<{/foreach}>
+	<!-- End item loop -->
+		
+	<!-- end of if $items -->
+
+<{/if}>
+
+<{include file='db:publisher_footer.html'}>

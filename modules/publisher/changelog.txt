@@ -1,0 +1,2 @@
+- changed class/category.php the public function getCategoryPath to display breadcrumb as list
+- in bootstrap.css .panel-heading a{color:inherit} to avoid invisible title
