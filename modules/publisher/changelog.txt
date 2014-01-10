@@ -1,2 +1,4 @@
 - changed class/category.php the public function getCategoryPath to display breadcrumb as list
+- changed class/item.php to display category of article | line 718
+- changed item.php to display article title in breadcrumb as last list element | line 186 
 - in bootstrap.css .panel-heading a{color:inherit} to avoid invisible title
