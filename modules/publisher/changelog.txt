@@ -1,7 +1,9 @@
 - changed class/category.php the public function getCategoryPath to display breadcrumb as list
 + changed class/item.php to display category of article | line 718
+- in class/item.php deleted hardcoded <br><br> | line 248 | public function body | to display body and summary check module preferences at the bottom
 - changed item.php to display article title in breadcrumb as last list element | line 186 
 - in bootstrap.css .panel-heading a{color:inherit} to avoid invisible title
 - in search.php added css class to <select> | line 176
 - in search.php added css class to <select> | line 191  
 - in search.php added css class to <input> | line 200 - 230  
+- changed themes style css - add css for xoopsQuote
