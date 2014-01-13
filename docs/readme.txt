@@ -1,3 +1,5 @@
+xBootstrap is a theme for XOOPS (www.xoops.org) developed with Bootstrap (http://getbootstrap.com)
+
 Developed by.: Angelo Rocha
 
 URL: www.angelorocha.com.br
@@ -15,3 +17,4 @@ Keep my credit from theme is not obligatory, it would be most
 appreciated.
 
 Viva XOOPS!
+www.xoops.org 
