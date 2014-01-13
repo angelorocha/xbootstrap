@@ -245,7 +245,7 @@ class PublisherItem extends XoopsObject
         if ($this->publisher->getConfig('item_disp_blocks_summary')) {
             $summary = $this->summary($maxLength, $format, $stripTags);
             if ($summary) {
-                $ret = $this->summary() . '<br /><br />' . $ret;
+                $ret = $this->summary() . '' . $ret; 
             }
         }
         if (!empty($stripTags)) {
@@ -543,7 +543,7 @@ class PublisherItem extends XoopsObject
      * @param int  $maxsize
      *
      * @return string
-     */
+     */     
     public function getItemLink($class = false, $maxsize = 0)
     {
         if ($class) {
