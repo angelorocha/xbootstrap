@@ -41,6 +41,9 @@ footer.footer{background:#111; color:#EAEAEA;}
 footer.footer > h3{font-size:0.9em; margin:0; line-height:inherit; max-width:960px; margin:0 auto 0 auto; padding:10px 0 10px 0; text-align:center; position:relative;}
 footer.footer > h3 > a.credits{position:absolute; top:3px; right:10px;}
 
+/* XOOPS Codes */
+.xoopsQuote{padding:10px 20px;margin:0 0 20px;border-left:5px solid #eeeeee; font-style:italic}
+
 /* XOOPS Blocks*/
 div.xoops-side-blocks > aside{margin-bottom:20px;}
 div.xoops-side-blocks > aside h1, div.xoops-side-blocks > aside h2, div.xoops-side-blocks > aside h3, div.xoops-side-blocks > aside h4, div.xoops-side-blocks > aside h5, div.xoops-side-blocks > aside h6{font-size:0.9em;}
