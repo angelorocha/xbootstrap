@@ -1,0 +1,6 @@
+Credits
+===============
+
+Originally developed by Angelo Rocha (www.angelorocha.com.br)
+
+Thanks to the Bootstrap Team (http://getbootstrap.com)

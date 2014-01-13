@@ -1,4 +1,4 @@
 xBootstrap
 ==========
 
-xBootstrap is a theme for XOOPS developed with Bootstrap.
+xBootstrap is a theme for XOOPS (www.xoops.org) developed with Bootstrap.
