@@ -1,19 +1,48 @@
 <{include file='db:publisher_header.html'}>
 	
-	<div class="pub-article clearfix">
+	<div class="pub-article_full clearfix">
 		<{if $item.image_path}>
-			<figure class="pull-left">
-				<img width="300px" src="<{$item.image_path}>" alt="<{$item.image_name}>" />
+			<figure>
+				<img src="<{$item.image_path}>" alt="<{$item.image_name}>" />
 			</figure>
 		<{/if}>
 		<header>
-			<h2><{$item.title}></h2>
+			<h2 <{if !$item.image_path}>class="no-top-margin"<{/if}>><{$item.title}></h2>
 		</header>
 		<div class="pub-article-info">
+			<div class="pull-left">
 			<span class="glyphicon glyphicon-paperclip"></span>&nbsp;<{$item.category}>
 			&nbsp;<{$item.who_when}>
+			</div>
+			<div class="pull-right">
+				<{if $display_comment_link && $item.cancomment}>
+              
+
+          				<{$item.comments}> <{$smarty.const._MD_PUBLISHER_COMMENTS}>
+         	
+  
+        		<{/if}>
+			</div>
 		</div>
 		<{$item.maintext}>
+	</div>
+	
+	<{if $itemfooter}>
+    	<div class="panel-footer">
+    		<small><{$itemfooter}></small>
+    	</div>
+    <{/if}>
+
+	
+	
+	<div class="pub_article_extras">
+		<{if $perm_author_items && $item.uid != 0}>
+        	<div class="btn btn-primary btn-lg btn-block">
+          		<a href="<{$publisher_url}>/author_items.php?uid=<{$item.uid}>">
+          			<{$smarty.const._MD_PUBLISHER_ITEMS_SAME_AUTHOR}>
+          		</a>
+        	</div>
+        <{/if}>
 	</div>
 
 
@@ -95,19 +124,31 @@
         	<p><{include file="db:tag_bar.html"}></p>
         <{/if}>
     </div>
+    <!--
     <{if $itemfooter}>
     <div class="publisher_itemfooter"><{$itemfooter}></div>
     <{/if}>
+    -->
     <div class="publisher_pre_itemInfo">
         <div class="itemInfo" style="height: 14px;">
+            <!--
             <{if $display_comment_link && $item.cancomment}>
                 <span style="float: left;">
-          <a href="<{$item.itemurl}>"><{$item.comments}> <{$smarty.const._MD_PUBLISHER_COMMENTS}></a>
-        </span> <{else}>
-            <span style="float: left;">&nbsp;</span> <{/if}> <{if $perm_author_items && $item.uid != 0}>
-        <span style="float: left; margin-left: 5px;">
-          <a href="<{$publisher_url}>/author_items.php?uid=<{$item.uid}>"><{$smarty.const._MD_PUBLISHER_ITEMS_SAME_AUTHOR}></a>
-        </span> <{/if}>
+          			<a href="<{$item.itemurl}>">
+          				<{$item.comments}> <{$smarty.const._MD_PUBLISHER_COMMENTS}>
+         			</a>
+        		</span> 
+        	<{else}>
+            	<span style="float: left;">&nbsp;</span> 
+            <{/if}> 
+           -->
+            <!--
+            <{if $perm_author_items && $item.uid != 0}>
+        	<span style="float: left; margin-left: 5px;">
+          		<a href="<{$publisher_url}>/author_items.php?uid=<{$item.uid}>"><{$smarty.const._MD_PUBLISHER_ITEMS_SAME_AUTHOR}></a>
+        	</span> 
+        	<{/if}>
+        	-->
             <span style="float: right; text-align: right;"><{$item.adminlink}></span>
 
             <div style="height: 0; display: inline; clear: both;"></div>
