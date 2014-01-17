@@ -172,13 +172,13 @@ class PublisherItem extends XoopsObject
     public function getBlockSummary($maxLength = 0, $fullSummary = false)
     {
         if ($fullSummary) {
-            $ret = $this->summary(0, 's', '<br></ br>');
+            $ret = $this->summary(0, 's', '></ br>');
         } else {
-            $ret = $this->summary($maxLength, 's', '<br></ br>');
+            $ret = $this->summary($maxLength, 's', '></ br>');
         }
         //no summary? get body!
         if (strlen($ret) == 0) {
-            $ret = $this->body($maxLength, 's', '<br></ br>');
+            $ret = $this->body($maxLength, 's', '></ br>');
         }
         return $ret;
     }
@@ -562,6 +562,24 @@ class PublisherItem extends XoopsObject
         $postdate = $this->datesub();
         return sprintf(_CO_PUBLISHER_POSTEDBY, $posterName, $postdate);
     }
+	
+	/**
+     * @return string
+     */
+    public function getWho()
+    {
+        $posterName = $this->linkedPosterName();
+        return $posterName;
+    }
+	
+	/**
+     * @return string
+     */
+    public function getWhen()
+    {
+        $postdate = $this->datesub();
+        return $postdate;
+    }
 
     /**
      * @param null|string $body
@@ -661,11 +679,16 @@ class PublisherItem extends XoopsObject
             $display = 'all';
         }
         $item['itemid'] = $this->itemid();
+		$item['itemurl'] = $this->getItemUrl();
         $item['uid'] = $this->uid();
-        $item['titlelink'] = $this->getItemLink(false, $max_char_title);
+        $item['titlelink'] = $this->getItemLink('titlelink', $max_char_title);
         $item['subtitle'] = $this->subtitle();
         $item['datesub'] = $this->datesub();
         $item['counter'] = $this->counter();
+		$item['who'] = $this->getWho();
+		$item['when'] = $this->getWhen();
+		$item['category'] = $this->getCategoryName();
+		$item = $this->getMainImage($item);
         switch ($display) {
             case 'summary':
             case 'list':
@@ -715,6 +738,8 @@ class PublisherItem extends XoopsObject
         $item['adminlink'] = $this->getAdminLinks();
         $item['categoryPath'] = $this->getCategoryPath($this->publisher->getConfig('format_linked_path'));
         $item['who_when'] = $this->getWhoAndWhen();
+		$item['who'] = $this->getWho();
+		$item['when'] = $this->getWhen();
 		$item['category'] = $this->getCategoryName();
         $item = $this->getMainImage($item);
         return $item;
