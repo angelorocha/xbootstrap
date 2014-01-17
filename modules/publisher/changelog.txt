@@ -13,3 +13,4 @@
 - comment out publisher.js from item.php
 + in class/item.php seperating smarty who_when in who and when
 + in class/item.php give titlelink a css class .titlelink | line 683
++ in class/item.php added imgurl, who and when in simpleview
