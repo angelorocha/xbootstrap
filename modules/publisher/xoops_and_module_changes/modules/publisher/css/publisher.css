@@ -131,7 +131,21 @@
 /* END CATEGORY LIST VIEW*/
 
 
+/***********/
+/* BLOCKS */
+/***********/
 
+.spot_publisher_items_list {
+	padding-top:10px;
+}
+.spot_article_wf_img{
+	float: left; margin: 0 15px 10px 2px; position: relative; padding: 2px; line-height: 0;
+}
+.spot_article_wf_img img{
+	padding:1px;
+	border: 1px solid #CCCCCC;
+	width: 250px;
+}
 
 /**
 * $Id: module.css,v 1.1 2007/06/05 18:28:24 marcan Exp $
@@ -584,7 +598,7 @@ background:url(../images/bullet.gif) no-repeat 1px 4px;
 background:#F3F3EB;
 border:1px solid #CCC;
 margin:0 8px 10px 0;
-padding:4px;
+padding:1px;
 }
 
 .publisher-clearfix:after {

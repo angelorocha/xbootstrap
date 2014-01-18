@@ -15,25 +15,41 @@
 <{else}>    
 	<{foreach item=item from=$block.items name=spotlight}>
 		<{if $item.summary != ''}>
-			<div class="itemText" style="padding-left: 5px; padding-top: 5px;">
-    			<div>
-        			<img style="vertical-align: middle;" src="<{$block.publisher_url}>/images/links/doc.png" alt=""/>&nbsp;
-        			<{$item.titlelink}>
-    			</div>
-
-    		<div>
-        	<{if $item.image_path}>
-        		<img width="250" class="publisher_item_image" src="<{$item.image_path}>" align="right" alt="<{$item.clean_title}>" title="<{$item.clean_title}>"/> 
-        	<{/if}> 
-        	<{$item.summary}>
-    </div>
-</div>
-<div style="clear: both"></div>                <{if $item.showline}>
-<div style="font-size: 10px; text-align: right; border-bottom: 1px dotted #000000;">
-    <{/if}> <{if $block.truncate}>
-    <div style="font-size: 10px; text-align: right;">
-        <a href="<{$item.itemurl}>"><{$block.lang_readmore}></a></div>
-    <{/if}>
-</div>
-
-<{/if}>    <{/foreach}><{/if}>
+			<div class="spot_publisher_items_list" >
+	    		<div class="article_wf_title">
+	    			<h3><{$item.titlelink}></h3>
+		    		<font>
+						<span class="glyphicon glyphicon-tag"></span>&nbsp;<{$item.category}>
+					</font>
+					<font>
+						<span class="glyphicon glyphicon-user"></span>&nbsp;<{$item.who}>
+					</font>
+					<font>
+						<span class="glyphicon glyphicon-calendar"></span>&nbsp;<{$item.when}>
+					</font>
+					<font>
+						<span class="glyphicon glyphicon-comment"></span>&nbsp;<{$item.comments}>
+					</font>
+	    		</div>
+	    		<{if $item.image_path}>
+					<div class="spot_article_wf_img">
+						<img src="<{$item.image_path}>" alt="<{$item.title}>" />
+					</div>
+				<{/if}>
+				<div class="article_wf_summary">
+					<{$item.summary}>
+				</div>
+				
+				<{if $block.truncate}>
+				    <div class="pull-right" style="margin-top: 15px;">
+				        <a href="<{$item.itemurl}>" class="btn btn-primary btn-xs">
+				        	<{$block.lang_readmore}>
+				        </a>
+				    </div>
+				<{/if}>
+				<div style="clear: both"></div>    
+			</div>
+			            
+		<{/if}>    
+	<{/foreach}>
+<{/if}>
