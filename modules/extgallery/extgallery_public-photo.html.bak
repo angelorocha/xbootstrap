@@ -96,10 +96,9 @@
 
 <!-- Start Photo Information -->
 <{if $enable_info }>
-<div class="text-center">
-    <a href="#gallery-info" data-toggle="collapse" class="big-info-icon-link" title="Info"><span class="glyphicon glyphicon-info-sign"></span></a>
-</div>
-    
+
+<a href="#gallery-info" data-toggle="collapse" class="gallery-info-collapse" title="Info"><span class="glyphicon glyphicon-info-sign"></span></a>
+
 <div class="panel-collapse collapse" id="gallery-info">
     
 	<h3 class="gallerytitle aligncenter"><{$lang.photoInfo}></h3>
