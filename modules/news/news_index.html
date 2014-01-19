@@ -1,24 +1,40 @@
-<{if $topic_rssfeed_link != ""}>
-    <{$topic_rssfeed_link}>
-<{/if}>
-	
-<{if $displaynav == true}>
-    <form name="form1" action="<{$xoops_url}>/modules/news/index.php" method="get">
-    <{$topic_select}> <select name="storynum"><{$storynum_options}></select> <input type="submit" value="<{$lang_go}>"></form>
-<{/if}>
-	
-<{if $topic_description != ""}>
-    <{$topic_description}>
-<{/if}>
-	
-<{$pagenav}>
-
-<{section name=i loop=$columns}>
-    <{foreach item=story from=$columns[i]}>
-        <{include file="db:news_item.html" story=$story}>
-    <{/foreach}>
-<{/section}>
-
-<{$pagenav}>
-
+<div class="news-home">
+    <{if $topic_rssfeed_link != ""}>
+        <{$topic_rssfeed_link}>
+    <{/if}>
+        
+    <{if $displaynav == true}>
+        <form name="form1" action="<{$xoops_url}>/modules/news/index.php" method="get">
+        <{$topic_select}> <select name="storynum"><{$storynum_options}></select> <input type="submit" value="<{$lang_go}>"></form>
+    <{/if}>
+        
+    <{if $topic_description != ""}>
+        <{$topic_description}>
+    <{/if}>
+        
+    <{$pagenav}>
+    <div class="row">
+    <{section name=i loop=$columns}>
+        
+        <{foreach item=story from=$columns[i]}>
+        <div class="col-md-6">
+        <{if $story.picture != ""}>
+            <img src="<{$story.picture}>" alt="<{$story.pictureinfo}>" class="img-responsive img-thumbnail">
+        <{else}>
+           <img src="<{$xoops_imageurl}>images/tdm-no-image.jpg" alt="" class="img-responsive img-thumbnail">
+        <{/if}>
+            
+        <{$story.news_title|strip_tags}>
+            
+        <{$story.text}>
+            
+        <{$story.morelink}>
+        </div>
+        <{/foreach}>
+            
+    <{/section}>
+    </div>
+    <{$pagenav}>
+</div>
+    
 <{include file='db:system_notification_select.html'}>
