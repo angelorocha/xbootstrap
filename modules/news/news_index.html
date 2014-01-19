@@ -1,0 +1,24 @@
+<{if $topic_rssfeed_link != ""}>
+    <{$topic_rssfeed_link}>
+<{/if}>
+	
+<{if $displaynav == true}>
+    <form name="form1" action="<{$xoops_url}>/modules/news/index.php" method="get">
+    <{$topic_select}> <select name="storynum"><{$storynum_options}></select> <input type="submit" value="<{$lang_go}>"></form>
+<{/if}>
+	
+<{if $topic_description != ""}>
+    <{$topic_description}>
+<{/if}>
+	
+<{$pagenav}>
+
+<{section name=i loop=$columns}>
+    <{foreach item=story from=$columns[i]}>
+        <{include file="db:news_item.html" story=$story}>
+    <{/foreach}>
+<{/section}>
+
+<{$pagenav}>
+
+<{include file='db:system_notification_select.html'}>
