@@ -57,6 +57,7 @@ div.xoops-bottom-blocks:hover{top:-10px; box-shadow:0 10px 10px #222;}
 
 /* ---------------------------------------------- XOOPS Modules ----------------------------------------------*/
 /* ----- News module --- */
+div.news-home{}
 section.news-item{margin-bottom:20px;}
 div.news-header{position:relative;}
 div.news-header img{position:relative; min-width:100%; max-width:100%;}
