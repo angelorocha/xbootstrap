@@ -1,3 +1,12 @@
+1.01 Beta 2 2014-01-18
+-------------------
++ Add TDMDownloads template (Angelo Rocha)
++ Add Publisher templates (Bleekk)
++ Add XOOPS Faq template (Heyula)
++ Add Obituairies template (Heyula)
+
+-------------------
+
 1.01 Beta 1 2014-xx-xx
 -------------------
 - changed/added pictures (mamba)
