@@ -7,8 +7,8 @@
     <strong class="pull-right hit-counter"><{$story.hits}> <{$lang_reads}></strong>
         
     <h2 class="news-title" role="heading"><{$story.topic_title}> <{$story.news_title}></h2>
-        <a title="" data-toggle="modal" data-target="#myModal" href="#myModal">
-            <img src="<{$story.picture}>" alt="">
+        <a title="<{$story.news_title|strip_tags}>" data-toggle="modal" data-target="#myModal" href="#myModal">
+            <img src="<{$story.picture}>" alt="<{$story.news_title|strip_tags}>">
         </a>
 	</div>
     <{else}>
@@ -34,7 +34,7 @@
         <h4 class="modal-title" id="myModalLabel"><{$story.news_title}></h4>
       </div>
       <div class="modal-body">
-       <img src="<{$story.picture}>" alt="<{$story.news_title}>" class="img-responsive">
+       <img src="<{$story.picture}>" alt="<{$story.news_title|strip_tags}>" class="img-responsive">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

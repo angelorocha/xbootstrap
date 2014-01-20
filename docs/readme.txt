@@ -13,8 +13,5 @@ Github:             https://github.com/angelorocha
 This is a template for XOOPS developed with Bootstrap 3.
 You can use for personal or commercial purposes.
 
-Keep my credit from theme is not obligatory, it would be most 
-appreciated.
-
 Viva XOOPS!
 www.xoops.org 

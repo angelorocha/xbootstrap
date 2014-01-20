@@ -58,8 +58,14 @@ div.xoops-bottom-blocks:hover{top:-10px; box-shadow:0 10px 10px #222;}
 /* ---------------------------------------------- XOOPS Modules ----------------------------------------------*/
 /* ----- News module --- */
 div.news-home{}
-div.news-home div.excerpt-news{max-height:100px; overflow:hidden;}
+div.news-home .text-center form{margin-bottom: 20px;}
+div.home-news-loop{margin-bottom:20px;}
+div.excerpt-news{max-height:100px; overflow:hidden;}
+div.home-thumbnails {height:200px; overflow:hidden; border: 3px solid #EEE;}
+div.home-thumbnails img{position:relative; width:100%; height:100%;}
+
 section.news-item{margin-bottom:20px;}
+
 div.news-header{position:relative;}
 div.news-header img{position:relative; min-width:100%; max-width:100%;}
 div.news-header > h2.news-title{background:url(images/alpha.png); position:absolute; bottom:10%; left:0; padding:10px; margin:0; color:#FFF; font-size:1.8em; z-index:5;}
@@ -222,13 +228,19 @@ div.tdm-screenshot-single img{min-width:100%; max-width:100%;}
 
 div.tdm-download-data{padding-bottom:5px; border-bottom:1px dashed #999;}
 div.tdm-download-data ul.tdm-download-details{}
-div.tdm-download-data ul.tdm-download-details li{margin-bottom:5px;}
+div.tdm-download-data ul.tdm-download-details li{margin-bottom:5px 10px 5px 10px;}
 
 div.tdm-modify-file{overflow-x:hidden;}
 div.tdm-modify-file img{max-width:100%;}
 
 /* Useful Classes */
 .big-info-icon-link{color:#333; font-size:1.8em; margin:10px 0 10px 0; display:inline-table; cursor:pointer;}
+.xoops-default-title{font-size:1.3em; margin:0; line-height:inherit;}
+.one-line-title{display:block; max-height:30px; overflow:hidden;}
+.generic-pagination{}
+.generic-pagination a{background:#FAFAFA; border:1px solid #EEE; padding:5px 10px; border-radius:5px;}
+.generic-pagination a:hover{background:#EBEBEB;}
+.generic-pagination .xo-pagact{background:#09C; color:#FFF; border:1px solid #EEE; padding:5px; border-radius:5px;}
 
 /* bla, bla, bla */
 .aligncenter{text-align:center; margin-left:auto; margin-right:auto;}
