@@ -1,0 +1,134 @@
+<style>
+.xoopstube_legend1 {
+    padding-bottom: 1px;
+    padding-top: 1px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+</style>
+
+<link rel="stylesheet" type="text/css" href="<{$smarty.const.xoopstube_url}>/xtubestyle.css"/>
+<{if $video.imageheader != ""}>
+<center><div class="img-thumbnail"><{$video.imageheader}></div></center>
+<{/if}>
+<div>&nbsp;</div>
+<ol class="breadcrumb">
+  <li> <{$video.path}></li>
+  <li> <{$back}></li>
+</ol>
+<div>&nbsp;</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading"><span class="glyphicon glyphicon-tasks"></span>&nbsp;<{$video.title}> <{$video.icons}>
+	<span>
+		<{if $xoops_isadmin}> 
+			&nbsp;<{$video.adminvideo}>
+		<{/if}>
+	</span>
+	</div>
+  <div class="panel-body">
+    <center><{$video.showvideo}></center>
+  </div>
+</div>
+
+<div>&nbsp;</div>
+
+<div style="clear: both;">&nbsp;</div>
+
+  <div class="panel panel-default">
+  <div class="panel-body">
+	<span style="float: left; width: 48%;">
+        <{if $video.showsubmitterx}>
+		<span class="glyphicon glyphicon-user"></span>&nbsp;<small><b><{$smarty.const._MD_XTUBE_SUBMITTER}>:</b>&nbsp;<{$video.submitter}></small><br/>
+        <{/if}>
+		<legend class="xoopstube_legend1"></legend>
+		<span class="glyphicon glyphicon-th"></span>&nbsp;<small><b><{$smarty.const._MD_XTUBE_PUBLISHER}>:</b>&nbsp;<{$video.publisher}></small><br/>
+		<legend class="xoopstube_legend1"></legend>
+		<span class="glyphicon glyphicon-calendar"></span>&nbsp;<small><b><{$lang_subdate}>:</b>&nbsp;<{$video.updated|wordwrap:50:"\n":true}></small>
+		<legend class="xoopstube_legend1"></legend>
+	</span>
+	
+
+	<span style="float: right; width: 48%;">
+		<span class="glyphicon glyphicon-eye-open"></span>&nbsp;<small><{$video.hits|wordwrap:50:"\n":true}></small><br/>
+		<legend class="xoopstube_legend1"></legend>
+		<span class="glyphicon glyphicon-dashboard"></span>&nbsp;<small><{$smarty.const._MD_XTUBE_TIMEB}>&nbsp;<{$video.time}></small>
+		<legend class="xoopstube_legend1"></legend>
+		<{if $video.showrating}>
+			<small>
+                <span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;<b><{$smarty.const._MD_XTUBE_RATINGC}></b>&nbsp;<img src="<{$xoops_url}>/modules/<{$video.module_dir}>/images/icon/<{$video.rateimg}>" alt="" align="middle"/>&nbsp;&nbsp;(<{$video.votes}>)
+            </small>
+			<legend class="xoopstube_legend1"></legend>
+		<{/if}>
+            
+		<{if $tagbar}>
+			<small><{include file="db:tag_bar.html"}></small>
+		<{/if}>
+	</span>
+	
+     
+    <b><span class="label label-danger"><{$smarty.const._MD_XTUBE_DESCRIPTIONC}></span></b><br/>
+	<legend class="xoopstube_legend1"></legend>
+    <{$video.description2}>
+</div>
+</div>
+
+<div class="well">
+   <div class="col-md-12 aligncenter">
+		<div class='shareaholic-canvas' data-app='share_buttons' data-app-id='482507'></div>
+	</div>
+</div>
+
+<br/>
+<div class="well well-sm">
+<div class="even" align="center">
+    <small>&nbsp;
+        <{if $video.showrating}>
+        <{if $video.allow_rating}>
+        <a href="<{$xoops_url}>/modules/<{$video.module_dir}>/ratevideo.php?cid=<{$video.cid}>&amp;lid=<{$video.id}>"><b><span class="label label-danger"><{$smarty.const._MD_XTUBE_RATETHISFILE}></span></a>
+        |
+        <{/if}>
+        <{/if}>
+        <a href="<{$xoops_url}>/modules/<{$video.module_dir}>/brokenvideo.php?lid=<{$video.id}>"><span class="label label-primary"><{$smarty.const._MD_XTUBE_REPORTBROKEN}></span></a>
+        |
+        <{if $video.useradminvideo}>
+        <span class="label label-warning"><{$video.usermodify}></span>
+        <{/if}>
+        <a href="mailto:?subject=<{$video.mail_subject}>&body=<{$video.mail_body}>" target="_top"><span class="label label-success"><{$smarty.const._MD_XTUBE_TELLAFRIEND}></span></a>
+        <{if $video.comment_rules > 0}>
+        |
+        <a href="<{$xoops_url}>/modules/<{$video.module_dir}>/singlevideo.php?cid=<{$video.cid}>&amp;lid=<{$video.id}>"><span class="label label-info"><{$smarty.const._COMMENTS}>
+            (<{$video.comments}>)</span></a>
+        <{/if}>&nbsp;
+    </small>
+</div>
+</div>
+<br/>
+<{if $video.othervideox > 0}>
+<span class="label label-success"><{$other_videos}></span>
+</br>
+<legend class="xoopstube_legend1"></legend>
+<{foreach item=video_user from=$video_uid}>
+<div style="margin-left: 10px;">
+    <a href="<{$xoops_url}>/modules/<{$video.module_dir}>/singlevideo.php?cid=<{$video_user.cid}>&amp;lid=<{$video_user.lid}>"><{$video_user.title}></a>
+   <span class="label label-danger"> (<{$video_user.published}>)</span>
+   <legend class="xoopstube_legend1"></legend>
+</div>
+<{/foreach}>
+<{/if}>
+<br/><br/>
+<div align="center"><{$lang_copyright}></div>
+<div style="text-align: center; padding: 3px; margin:3px;">
+    <{$commentsnav}> <{$lang_notice}>
+</div>
+<!-- start comments loop -->
+<{if $comment_mode == "flat"}>
+<{include file="db:system_comments_flat.html"}>
+<{elseif $comment_mode == "thread"}>
+<{include file="db:system_comments_thread.html"}>
+<{elseif $comment_mode == "nest"}>
+<{include file="db:system_comments_nest.html"}>
+<{/if}>
+<!-- end comments loop -->
+<{include file="db:system_notification_select.html"}>

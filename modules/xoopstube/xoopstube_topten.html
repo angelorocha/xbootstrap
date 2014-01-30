@@ -1,0 +1,56 @@
+<style>
+.xoopstube_legend1 {
+    padding-bottom: 1px;
+    padding-top: 1px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+</style>
+<link rel="stylesheet" type="text/css" href="<{$smarty.const.xoopstube_url}>/xtubestyle.css"/>
+
+<{if $catarray.imageheader != ""}> <br/>
+<center><div class="img-thumbnail"><{$catarray.imageheader}></div></center>
+<{/if}>
+
+</br>
+
+<ol class="breadcrumb">
+     <li> <b><{$smarty.const._MD_XTUBE_DISPLAYING}><{$lang_sortby}></b></li>
+     <li> <{$back}></li>
+</ol>
+
+</br>
+<!-- Start ranking loop -->
+<{foreach item=ranking from=$rankings}>
+<div class="even" style="font-weight: bold; font-size: 110%;">
+    <{$smarty.const._MD_XTUBE_CATEGORY}>: <{$ranking.title}>
+</div>
+<legend class="xoopstube_legend1"></legend>
+
+
+<table class="table table-bordered">
+    <tr>
+        <th align="center" width="5%"><{$smarty.const._MD_XTUBE_RANK}></th>
+        <th>&nbsp;<{$smarty.const._MD_XTUBE_TITLE}></th>
+        <th width="25%">&nbsp;<{$smarty.const._MD_XTUBE_CATEGORY}></th>
+        <th align="center" width="7%"><{$smarty.const._MD_XTUBE_HITS}></th>
+        <th align="center" width="7%"><{$smarty.const._MD_XTUBE_RATING}></th>
+        <th align="center" width="7%"><{$smarty.const._MD_XTUBE_VOTE}></th>
+    </tr>
+    <!-- Start files loop -->
+    <{foreach item=file from=$ranking.file}>
+    <tr>
+        <td align="center" class="head"><b><{$file.rank}></b></td>
+        <td class="even"><a href="singlevideo.php?cid=<{$file.cid}>&amp;lid=<{$file.id}>"><{$file.title}></a></td>
+        <td class="even"><a href="viewcat.php?cid=<{$file.cid}>"><{$file.category}></a></td>
+        <td class="even" align="center"><{$file.hits}></td>
+        <td class="even" align="center"><{$file.rating}></td>
+        <td align="center" class="even"><{$file.votes}></td>
+    </tr>
+    <{/foreach}>
+    <!-- End links loop-->
+</table>
+<br/>
+<{/foreach}>
+<!-- End ranking loop -->

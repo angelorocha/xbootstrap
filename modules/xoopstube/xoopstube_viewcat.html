@@ -1,0 +1,105 @@
+<link rel="stylesheet" type="text/css" href="<{$smarty.const.xoopstube_url}>/xtubestyle.css"/>
+<{if $catarray.imageheader != ""}>
+<br/>
+<center><div class="img-thumbnail"><{$catarray.imageheader}></div></center>
+<{/if}>
+<div><{$description}></div><br/>
+<div class="panel panel-default">
+  <div class="panel-body">
+<div style="padding-bottom: 12px; text-align: center;" class="itemPermaLink"><{$catarray.letters}></div>
+</div>
+</div>
+<ol class="breadcrumb">
+<div class="even" style="font-size: smaller;"><{$category_path}></div>
+</ol>
+<{if $subcategories}>
+<fieldset>
+    <legend class="xoopstube_legend"><button type="button" class="btn btn-default"><{$smarty.const._MD_XTUBE_SUBCATLISTING}></button></legend>
+    <div align="left" style="margin-left: 5px; padding: 0px;">
+        <table width="80%">
+            <tr>
+                <{foreach item=subcat from=$subcategories}>
+                <td>
+				<ul class="list-group">
+                   <li class="list-group-item">  <a href="viewcat.php?cid=<{$subcat.id}>"><img src="<{$subcat.image}>" title="<{$subcat.alttext}>" alt="<{$subcat.alttext}>" align="middle"/></a>
+                    <a href="viewcat.php?cid=<{$subcat.id}>"><{$subcat.title}></a>&nbsp;(<{$subcat.totalvideos}>)<br/> </li>
+				</ul>
+                    <{if $subcat.infercategories}>
+                    &nbsp;&nbsp;<{$subcat.infercategories}>
+                    <{/if}>
+                </td>
+                <{if $subcat.count is div by $cat_columns}>
+            </tr>
+            <tr>
+                <{/if}>
+                <{/foreach}>
+            </tr>
+        </table>
+    </div>
+</fieldset>
+<br/>
+<{/if}>
+
+<{if $show_videos == true}>
+<div align="center" style="vertical-align: middle; font-size: smaller;">
+    <b><{$smarty.const._MD_XTUBE_SORTBY}>ssss</b>&nbsp;<{$smarty.const._MD_XTUBE_TITLE}> (
+    <a href="viewcat.php?cid=<{$category_id}>&orderby=titleA">
+        <img src="<{xoModuleIcons16 up.png}>" align="middle" alt=""/></a>
+    <a href="viewcat.php?cid=<{$category_id}>&orderby=titleD">
+        <img src="<{xoModuleIcons16 down.png}>" align="middle" alt=""/></a>
+    )
+    &nbsp;
+    <{$smarty.const._MD_XTUBE_DATE}> (
+    <a href="viewcat.php?cid=<{$category_id}>&orderby=dateA">
+        <img src="<{xoModuleIcons16 up.png}>" align="middle" alt=""/></a>
+    <a href="viewcat.php?cid=<{$category_id}>&orderby=dateD">
+        <img src="<{xoModuleIcons16 down.png}>" align="middle" alt=""/></a>
+    )
+    &nbsp;
+    <{$smarty.const._MD_XTUBE_RATING}> (
+    <a href="viewcat.php?cid=<{$category_id}>&orderby=ratingA">
+        <img src="<{xoModuleIcons16 up.png}>" align="middle" alt=""/></a>
+    <a href="viewcat.php?cid=<{$category_id}>&orderby=ratingD">
+        <img src="<{xoModuleIcons16 down.png}>" align="middle" alt=""/></a>
+    )
+    &nbsp;
+    <{$smarty.const._MD_XTUBE_POPULARITY}> (
+    <a href="viewcat.php?cid=<{$category_id}>&orderby=hitsA">
+        <img src="<{xoModuleIcons16 up.png}>" align="middle" alt=""/></a>
+    <a href="viewcat.php?cid=<{$category_id}>&orderby=hitsD">
+        <img src="<{xoModuleIcons16 down.png}>" align="middle" alt=""/></a>
+    )
+    <br/>
+    <b><{$lang_cursortedby}></b><br/><br/>
+</div>
+<br/>
+<{/if}>
+
+<{if $page_nav == true}>
+<div style="text-align: left;"><{$pagenav}></div>
+<br/>
+<{/if}>
+
+<div>
+    <!-- Start link loop -->
+    <{section name=i loop=$video}>
+    <{include file="db:xoopstube_videoload.html" video=$video[i]}>
+    <{/section}>
+    <!-- End link loop -->
+</div>
+<{if $page_nav == true}>
+<div style="text-align: right;"><{$pagenav}></div>
+<{/if}>
+
+<{if $moderate == true}>
+<div><b><{$smarty.const._MD_XTUBE_MODERATOR_OPTIONS}></b></div><br/>
+<div>
+    <!-- Start link loop -->
+    <{section name=a loop=$mod_arr}>
+    <{include file="db:xoopstube_videoload.html" video=$mod_arr[a]}>
+    <{/section}>
+    <!-- End link loop -->
+</div>
+
+<{/if}>
+<{include file="db:system_notification_select.html"}>

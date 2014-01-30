@@ -1,0 +1,86 @@
+<link rel="stylesheet" type="text/css" href="<{$smarty.const.xoopstube_url}>/xtubestyle.css"/>
+<{if $catarray.imageheader != ""}>
+<br/>
+<center><div class="img-thumbnail"><{$catarray.imageheader}></div></center>
+
+<{/if}>
+<{if $catarray.indexheading != ""}>
+<h4 style="text-align: center;"><{$catarray.indexheading}></h4>
+<{/if}>
+<a href="#gallery-info" data-toggle="collapse" class="gallery-info-collapse" title="Info"><span class="glyphicon glyphicon-info-sign"></span></a>
+<div class="panel-collapse collapse" id="gallery-info">
+<div class="alert alert-info"><{$catarray.indexheader}></div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-body">
+<div style="padding-bottom: 12px; text-align: center;" class="itemPermaLink"><{$catarray.letters}></div>
+</div>
+</div>
+<{if count($categories) gt 0}>
+
+<ol class="breadcrumb">
+<b><{$smarty.const._MD_XTUBE_MAINLISTING}></b>
+</ol>
+
+<table width="100%" cellspacing="1" cellpadding="3" summary='' style="text-align: center;">
+    <tr>
+        <td colspan="2">&nbsp;</td>
+    <tr>
+    <tr>
+        <!-- Start category loop -->
+        <{foreach item=category from=$categories}>
+
+        <td width="35%" style="text-align: left; vertical-align: middle;">
+		<ul class="list-group">
+          <li class="list-group-item"> <a href="<{$xoops_url}>/modules/<{$module_dir}>/viewcat.php?cid=<{$category.id}>"><img src="<{$category.image}>" title="<{$category.alttext}>" alt="<{$category.alttext}>" align="middle"/></a> <a href="<{$xoops_url}>/modules/<{$module_dir}>/viewcat.php?cid=<{$category.id}>"><b><{$category.title}></b></a>&nbsp;<span class="badge pull-right">(<{$category.totalvideos}>)</span><br/></li>
+		</ul>
+            <{if $category.subcategories}>
+            <div style="margin-bottom: 3px; margin-left: 16px; font-size: smaller; vertical-align: top;">
+                <{$category.subcategories}>
+            </div>
+            <{/if}>
+        </td>
+        <{if $category.count is div by $cat_columns}>
+    </tr>
+    <tr><{/if}> <{/foreach}>
+        <!-- End category loop -->
+    </tr>
+    <tr>
+        <td colspan="2">&nbsp;</td>
+    <tr>
+</table>
+<div class="odd" style="text-align: left; font-size: smaller;"><div class="alert alert-warning"><{$lang_thereare}></div></div>
+<div class="xoopstube_legend">
+    <img src="<{$xoops_url}>/modules/<{$module_dir}>/images/icon/linkload1_small.png" title="<{$smarty.const._MD_XTUBE_LEGENDTEXTNEW}>" alt="" align="middle"/>&nbsp;<span class="label label-primary"><{$smarty.const._MD_XTUBE_LEGENDTEXTNEW}></span>
+    <img src="<{$xoops_url}>/modules/<{$module_dir}>/images/icon/linkload2_small.png" title="<{$smarty.const._MD_XTUBE_LEGENDTEXTNEWTHREE}>" alt="" align="middle"/>&nbsp;<span class="label label-success"><{$smarty.const._MD_XTUBE_LEGENDTEXTNEWTHREE}></span>
+    <img src="<{$xoops_url}>/modules/<{$module_dir}>/images/icon/linkload3_small.png" title="<{$smarty.const._MD_XTUBE_LEGENDTEXTTHISWEEK}>" alt="" align="middle"/>&nbsp;<span class="label label-warning"><{$smarty.const._MD_XTUBE_LEGENDTEXTTHISWEEK}></span>
+    <img src="<{$xoops_url}>/modules/<{$module_dir}>/images/icon/linkload4_small.png" title="<{$smarty.const._MD_XTUBE_LEGENDTEXTNEWLAST}>" alt="" align="middle"/>&nbsp;<span class="label label-danger"><{$smarty.const._MD_XTUBE_LEGENDTEXTNEWLAST}></span>
+</div>
+<{/if}>
+<div style="padding-bottom: 12px; text-align: <{$catarray.indexfooteralign}>;"><{$catarray.indexfooter}></div>
+
+<{if $showlatest}>
+<br/><br/>
+<div class="odd" style="font-size: bigger; font-weight: bold;"><{$smarty.const._MD_XTUBE_LATESTLIST}></div>
+<br/>
+<{if $pagenav}>
+<div><{$pagenav}></div>
+<br/>
+<{/if}>
+<table width="100%" cellspacing="0" cellpadding="10" border="0">
+    <tr>
+        <td width="100%">
+            <!-- Start video loop -->
+            <{section name=i loop=$video}>
+            <{include file="db:xoopstube_videoload.html" video=$video[i]}>
+            <{/section}>
+            <!-- End video loop -->
+        </td>
+    </tr>
+</table>
+<{if $pagenav}>
+<div align="right"><{$pagenav}></div>
+<{/if}>
+<{/if}>
+
+<{include file="db:system_notification_select.html"}>

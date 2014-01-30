@@ -1,0 +1,69 @@
+<link rel="stylesheet" type="text/css" href="<{$smarty.const.xoopstube_url}>/xtubestyle.css"/>
+<{if $catarray.imageheader != ""}> <br/>
+<div class="xoopstube_header"><{$catarray.imageheader}></div>
+<{/if}> <br/>
+<div style="text-align: right;"><{$back}>&nbsp;</div>
+<div class="even" style="font-weight: bold; font-size: 110%;">&nbsp;<{$smarty.const._MD_XTUBE_NEWVIDEOS}></div>
+<br/>
+
+<table class="table table-bordered">
+    <tr>
+        <th height="5" colspan="2"><b><{$smarty.const._MD_XTUBE_TOTALNEWVIDEOS}>:</b></th>
+    </tr>
+    <tr>
+        <td class="odd"><{$smarty.const._MD_XTUBE_LASTWEEK}></td>
+        <td width="5%" class="odd" align="center"><{$allweekvideos}></td>
+    </tr>
+    <tr>
+        <td class="odd"><{$smarty.const._MD_XTUBE_LAST30DAYS}></td>
+        <td width="15%" class="odd" align="center"><{$allmonthvideos}></td>
+    </tr>
+</table>
+<br/><br/>
+
+<div style="float: left; margin-left: 8px; margin-right: 8px;">
+    <b><{$smarty.const._MD_XTUBE_SHOW}>:</b>
+</div>
+<div style="float: left; margin-right: 3px;">
+    <a class="xoopstube_button" href="<{$xoops_url}>/modules/<{$module_dir}>/newlist.php?newvideoshowdays=7"><{$smarty.const._MD_XTUBE_1WEEK}></a>
+    <a class="xoopstube_button" href="<{$xoops_url}>/modules/<{$module_dir}>/newlist.php?newvideoshowdays=14"><{$smarty.const._MD_XTUBE_2WEEKS}></a>
+    <a class="xoopstube_button" href="<{$xoops_url}>/modules/<{$module_dir}>/newlist.php?newvideoshowdays=30"><{$smarty.const._MD_XTUBE_30DAYS}></a>
+</div>
+
+<br/><br/><br/>
+
+<table class="table table-bordered">
+    <tr>
+        <th colspan="2"><b><{$smarty.const._MD_XTUBE_DTOTALFORLAST}> <{$newvideoshowdays}>
+            <{$smarty.const._MD_XTUBE_DAYS}></b></th>
+    </tr>
+
+
+    <{if count($dailyvideos) gt 0}>
+    <!-- Start day loop -->
+    <{foreach item=dailyvideo from=$dailyvideos}>
+
+    <tr>
+        <td class="odd">
+            <a href="<{$xoops_url}>/modules/<{$module_dir}>/viewcat.php?selectdate=<{$dailyvideo.newvideodayRaw}>"><{$dailyvideo.newvideoView}></a>
+        </td>
+        <td class="odd" width="15%" align="center"><{$dailyvideo.totalvideos}></td>
+    </tr>
+
+    <{/foreach}>
+</table>
+<!-- End day loop -->
+
+<!-- <h4><{$smarty.const._MD_XTUBE_LATESTLIST}></h4> -->
+<table class="table table-bordered">
+    <tr>
+        <td width="100%">
+            <!-- Start video loop -->
+            <{section name=i loop=$video}>
+            <{include file="db:xtube_videoload.html" video=$video[i]}>
+            <{/section}>
+            <!-- End video loop -->
+        </td>
+    </tr>
+</table>
+<{/if}>

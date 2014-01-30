@@ -1,0 +1,19 @@
+<style>
+.xoopstube_legend1 {
+    padding-bottom: 1px;
+    padding-top: 1px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+</style>
+
+<div align="left">
+    <{foreach item=videoload from=$block.videos}>
+    <li>
+        <a href="<{$xoops_url}>/modules/<{$videoload.dirname}>/singlevideo.php?cid=<{$videoload.cid}>&amp;lid=<{$videoload.id}>"><{$videoload.title}></a>
+        <small><span class="label label-success"> (<{$videoload.date}>)</span></small>
+		<legend class="xoopstube_legend1"></legend>
+    </li>
+    <{/foreach}>
+</div>

@@ -1,0 +1,52 @@
+<{if $catarray.imageheader != ""}>
+<div align="center"><{$catarray.imageheader}></div>
+<{/if}>
+
+<{if $brokenreport == true}>
+<div align="left">
+    <h4><{$smarty.const._MD_XTUBE_RESOURCEREPORTED}></h4>
+
+    <div align="center">
+        <h4><{$smarty.const._MD_XTUBE_RESOURCEREPORTED}></h4>
+
+        <div><{$smarty.const._MD_XTUBE_RESOURCEREPORTED}></div>
+        <br/>
+
+        <div><b><{$smarty.const._MD_XTUBE_FILETITLE}></b><{$broken.title}></div>
+        <div><b><{$smarty.const._MD_XTUBE_RESOURCEID}></b><{$broken.id}></div>
+        <div><b><{$smarty.const._MD_XTUBE_REPORTER}></b> <{$broken.reporter}></div>
+        <div><b><{$smarty.const._MD_XTUBE_DATEREPORTED}></b> <{$broken.date}></div>
+        <br/>
+
+        <div><b><{$smarty.const._MD_XTUBE_WEBMASTERACKNOW}></b> <{$broken.acknowledged}></div>
+        <div><b><{$smarty.const._MD_XTUBE_WEBMASTERCONFIRM}></b> <{$broken.confirmed}></div>
+    </div>
+</div>
+
+<{else}>
+
+<div align="left">
+    <h4><{$smarty.const._MD_XTUBE_BROKENREPORT}></h4>
+
+    <div><{$smarty.const._MD_XTUBE_THANKSFORHELP}></div>
+    <div><{$smarty.const._MD_XTUBE_FORSECURITY}></div>
+    <br/>
+
+    <div><{$smarty.const._MD_XTUBE_BEFORESUBMIT}></div>
+    <br/>
+
+    <div align="center">
+        <div><b><{$smarty.const._MD_XTUBE_FILETITLE}></b><{$video.title}></div>
+        <div><b><{$smarty.const._MD_XTUBE_SUBMITTER}>:</b> <{$video.publisher}></div>
+        <div><b><{$lang_subdate}>:</b> <{$video.updated}></div>
+        <br/>
+
+        <form action="brokenvideo.php" method="POST">
+            <input type="hidden" name="lid" value="<{$video_id}>"/>
+            <input type="hidden" name="title" value="<{$video.title}>"/>
+            <input type="submit" name="op" value="<{$smarty.const._MD_XTUBE_SUBMITBROKEN}>" title="<{$smarty.const._MD_XTUBE_SUBMITBROKEN}>" alt="<{$smarty.const._MD_XTUBE_SUBMITBROKEN}>"/>
+            &nbsp;<input type="button" value="<{$smarty.const._MD_XTUBE_CANCEL}>" title="<{$smarty.const._MD_XTUBE_CANCEL}>" alt="<{$smarty.const._MD_XTUBE_CANCEL}>" onclick="javascript:history.go(-1)"/>
+        </form>
+    </div>
+</div>
+<{/if}>

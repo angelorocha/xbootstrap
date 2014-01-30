@@ -1,0 +1,15 @@
+<table cellspacing="1" align="center" border="0">
+    <{foreach item=videoload from=$block.videos}>
+    <tr>
+        <td align="left" class="even" style="padding: 4px;vertical-align: top;">
+            <a href="<{$xoops_url}>/modules/<{$videoload.dirname}>/singlevideo.php?cid=<{$videoload.cid}>&lid=<{$videoload.id}>">
+               <span class="label label-danger"> <small><{$videoload.title}></small></span>  <small><span class="label label-info">(<{$videoload.hits}>&nbsp;hits)</span></small>
+            </a>
+           
+            <br/>
+            <a href="<{$xoops_url}>/modules/<{$videoload.dirname}>/singlevideo.php?cid=<{$videoload.cid}>&lid=<{$videoload.id}>"><div class="img-thumbnail"><{$videoload.videothumb}></div></a>
+            <br/>
+        </td>
+    </tr>
+    <{/foreach}>
+</table>

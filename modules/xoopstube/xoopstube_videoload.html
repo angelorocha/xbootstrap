@@ -1,0 +1,72 @@
+<style>
+.xoopstube_legend1 {
+    padding-bottom: 1px;
+    padding-top: 1px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+</style>
+
+
+<{if $show_categort_title == true}>
+<div style="margin-bottom: 4px;"><b><{$smarty.const._MD_XTUBE_CATEGORYC}></b><{$video.category}></div>
+<{/if}>
+
+<div class="panel panel-default">
+  <div class="panel-heading"><a href="<{$xoops_url}>/modules/<{$video.module_dir}>/singlevideo.php?cid=<{$video.cid}>&amp;lid=<{$video.id}>"><span class="glyphicon glyphicon-glyphicon glyphicon-tasks"></span>&nbsp;<{$video.title}></a><{$video.icons}>&nbsp;<{if $xoops_isadmin}><{$video.adminvideo}><{/if}>
+   <{if $video.published > 0 }>
+		<span style="float: right; vertical-align: middle; padding-left: 10px;">
+			<a href="<{$xoops_url}>/modules/<{$video.module_dir}>/singlevideo.php?cid=<{$video.cid}>&amp;lid=<{$video.id}>">
+                <img src="<{$xoops_url}>/modules/<{$video.module_dir}>/images/icon/play.png" alt="<{$smarty.const._MD_XTUBE_VIEWDETAILS}>" title="<{$smarty.const._MD_XTUBE_VIEWDETAILS}>"/>
+            </a>
+		</span>
+  <{/if}>
+  
+  
+<span style="float: right; vertical-align: middle; padding-left: 10px;">
+    <{if $video.showrating}>
+       <span class="glyphicon glyphicon-thumbs-up"></span>&nbsp; <b><{$smarty.const._MD_XTUBE_RATINGC}></b>&nbsp;<img src="<{$xoops_url}>/modules/<{$video.module_dir}>/images/icon/<{$video.rateimg}>" alt="" align="middle"/>&nbsp;&nbsp;(<{$video.votes}>)
+    <{/if}>
+ </span>
+  
+  </div>
+  <div class="panel-body">
+
+
+
+
+
+<div style="float: right; width: 250px;">
+  <div class="panel panel-default">
+  <div class="panel-body">
+        <{if $video.showsubmitterx}>
+        <span class="glyphicon glyphicon-user"></span>&nbsp;<b><{$smarty.const._MD_XTUBE_SUBMITTER}>:</b> <{$video.submitter}>
+        <{/if}>
+		<legend class="xoopstube_legend1"></legend>
+        <span class="glyphicon glyphicon-th"></span>&nbsp;<b><{$smarty.const._MD_XTUBE_PUBLISHER}>:</b>&nbsp;<{$video.publisher}>
+		<legend class="xoopstube_legend1"></legend>
+        <span class="glyphicon glyphicon-calendar"></span>&nbsp;<b><{$lang_subdate}>:</b>&nbsp;&nbsp;<{$video.updated}>
+		<legend class="xoopstube_legend1"></legend>
+        <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<{$video.hits|wordwrap:50:"\n":true}>
+        <span class="glyphicon glyphicon-dashboard"></span>&nbsp;<{$smarty.const._MD_XTUBE_TIMEB}>&nbsp;<{$video.time}>
+  </div>
+  </div>
+
+</div>
+
+<div style="float: left; padding: 0 4px 4px 0;">
+    <{if $video.screen_shot}>
+   <div class="img-thumbnail"> <a href="<{$xoops_url}>/modules/<{$video.module_dir}>/singlevideo.php?cid=<{$video.cid}>&amp;lid=<{$video.id}>" target=""><{$video.videothumb}></a></div>
+    <{/if}>
+</div>
+
+<div>
+    <span class="label label-danger"><b><{$smarty.const._MD_XTUBE_DESCRIPTIONC}></b><br/></span>
+    <{$video.description|truncate:$video.total_chars}>
+</div>
+
+</div>
+</div>
+
+<div style="clear: both; width: 99%;">&nbsp;</div>
