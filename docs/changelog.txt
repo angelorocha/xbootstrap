@@ -1,11 +1,16 @@
-1.01 Beta 2 2014-01-18
+1.01 Beta 3 2014-01-29
 -------------------
-+ Add TDMDownloads template (Angelo Rocha)
-+ Add Publisher templates (Bleekk)
-+ Add XOOPS Faq template (Heyula)
-+ Add Obituairies template (Heyula)
+- Add xoopstube templates (Heyula)
+- Add news templates (Angelo Rocha)
+- Fixed HTML5 in IE 8 (Angelo Rocha)
+- Fixed Reponsive Layout IE 8 (Angelo Rocha)
 
+-1.01 Beta 2 2014-01-18
 -------------------
+- Add TDMDownloads template (Angelo Rocha)
+- Add Publisher templates (Bleekk)
+- Add XOOPS Faq template (Heyula)
+- Add Obituairies template (Heyula)
 
 1.01 Beta 1 2014-xx-xx
 -------------------
@@ -15,3 +20,11 @@
 1.00 Final 2014-01-02
 -------------------
 First Release (Angelo Rocha)
+- Add new templates to:
+    - PM
+    - Profile
+    - extGallery
+    - XOOPS Comments
+    - XOOPS Notifications
+    - XOOPS Tags
+    - Contact
