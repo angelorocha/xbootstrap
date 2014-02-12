@@ -228,7 +228,7 @@ div.tdm-screenshot-single img{min-width:100%; max-width:100%;}
 
 div.tdm-download-data{padding-bottom:5px; border-bottom:1px dashed #999;}
 div.tdm-download-data ul.tdm-download-details{}
-div.tdm-download-data ul.tdm-download-details li{margin-bottom:5px 10px 5px 10px;}
+div.tdm-download-data ul.tdm-download-details li{margin:5px 10px 5px 10px;}
 
 div.tdm-modify-file{overflow-x:hidden;}
 div.tdm-modify-file img{max-width:100%;}

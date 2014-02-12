@@ -1,3 +1,9 @@
+1.01 Final 2014-02-11
+--------------------
+- Bootstrap Upgraded to 3.1.0 (Angelo Rocha)
+- Add xoops.css to folder theme (removed reset) (Angelo Rocha)
+- Many css ajusts (Angelo Rocha)
+
 1.01 Beta 3 2014-01-29
 -------------------
 - Add xoopstube templates (Heyula)

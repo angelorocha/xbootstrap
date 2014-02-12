@@ -1,13 +1,10 @@
-<div class="container">
 <div class="row">
     <div class="col-md-12"><a title="<{$extgalleryName}>" href="<{xoAppUrl modules/extgallery/}>"><h4><{$extgalleryName}></h4></a></div>
     <div class="col-xs-4 col-sm-4 col-md-4"><{$lang.categoriesAlbums}></div>
     <!-- <div class="col-xs-4 col-sm-4 col-md-4"><{$lang.nbAlbums}></div> -->
     <!-- <div class="col-xs-4 col-sm-4 col-md-4"><{$lang.nbPhotos}></div> -->
 </div>
-</div>
 
-<div class="container">
 <div class="row">
   <{foreachq item=child from=$cats}>
   <div class="col-xs-4 col-sm-4 col-md-4 xoops-gallery-thumb">
@@ -87,6 +84,5 @@
         </a>
     </div>
 <{/if}>
-</div>
 </div>
 <{include file='db:system_notification_select.html'}>
