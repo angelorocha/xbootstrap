@@ -1,1 +1,0 @@
-<{include file="db:tag_block_cloud.html"}>

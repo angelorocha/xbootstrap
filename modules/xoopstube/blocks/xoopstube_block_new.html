@@ -1,19 +1,11 @@
-<table cellspacing="1" align="center" border="0">
+<div class="xoopstube-blocks row">
     <{foreach item=videoload from=$block.videos}>
-    <tr>
-        <td align="left" class="even" style="padding: 4px; vertical-align: top;">
-            <a href="<{$xoops_url}>/modules/<{$videoload.dirname}>/singlevideo.php?cid=<{$videoload.cid}>&lid=<{$videoload.id}>">
-                <span class="label label-danger"><small><{$videoload.title}></small></span>
-            </a>
-            <br/>
-            <a href="<{$xoops_url}>/modules/<{$videoload.dirname}>/singlevideo.php?cid=<{$videoload.cid}>&lid=<{$videoload.id}>"> <div class="img-thumbnail"><{$videoload.videothumb}></div></a>
-            <br/>
-        </td>
-    </tr>
+        <div class="col-md-4 xoopstube-thumb">
+            <a href="<{$xoops_url}>/modules/<{$videoload.dirname}>/singlevideo.php?cid=<{$videoload.cid}>&lid=<{$videoload.id}>"><{$videoload.videothumb}></a>
+                <span>
+                    <a href="<{$xoops_url}>/modules/<{$videoload.dirname}>/singlevideo.php?cid=<{$videoload.cid}>&lid=<{$videoload.id}>"><{$videoload.title}></a>
+                    <{$videoload.date}>
+                </span>
+        </div>
     <{/foreach}>
-</table>
-
-
-
-
-
+</div>

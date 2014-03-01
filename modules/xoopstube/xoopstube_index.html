@@ -1,86 +1,83 @@
-<link rel="stylesheet" type="text/css" href="<{$smarty.const.xoopstube_url}>/xtubestyle.css"/>
+<div class="xoopstube ">
 <{if $catarray.imageheader != ""}>
-<br/>
-<center><div class="img-thumbnail"><{$catarray.imageheader}></div></center>
-
+    <div class="xoopstube-header text-center">
+        <{$catarray.imageheader}>
+    </div><!-- .xoopstube-header -->
 <{/if}>
+    
 <{if $catarray.indexheading != ""}>
-<h4 style="text-align: center;"><{$catarray.indexheading}></h4>
+    <div class="text-center xoopstube-header-text">
+        <h1><{$catarray.indexheading}></h1>
+    </div><!-- .xoopstube-header-text -->
 <{/if}>
-<a href="#gallery-info" data-toggle="collapse" class="gallery-info-collapse" title="Info"><span class="glyphicon glyphicon-info-sign"></span></a>
-<div class="panel-collapse collapse" id="gallery-info">
-<div class="alert alert-info"><{$catarray.indexheader}></div>
-</div>
-<div class="panel panel-default">
-  <div class="panel-body">
-<div style="padding-bottom: 12px; text-align: center;" class="itemPermaLink"><{$catarray.letters}></div>
-</div>
-</div>
+
+<{if $catarray.indexheader != ""}>
+    <div class="xoopstube-description text-center">
+        <{$catarray.indexheader}>
+    </div><!-- .xoopstube-description -->
+<{/if}>
+    
+<div class="text-center xoopstube-navigation">
+    <{$catarray.letters}>
+</div><!-- .xoopstube-navigation -->
+
 <{if count($categories) gt 0}>
-
-<ol class="breadcrumb">
-<b><{$smarty.const._MD_XTUBE_MAINLISTING}></b>
-</ol>
-
-<table width="100%" cellspacing="1" cellpadding="3" summary='' style="text-align: center;">
-    <tr>
-        <td colspan="2">&nbsp;</td>
-    <tr>
-    <tr>
-        <!-- Start category loop -->
+<h1 class="xoops-default-title"><{$smarty.const._MD_XTUBE_MAINLISTING}></h1>
+    <div class="row">
         <{foreach item=category from=$categories}>
-
-        <td width="35%" style="text-align: left; vertical-align: middle;">
-		<ul class="list-group">
-          <li class="list-group-item"> <a href="<{$xoops_url}>/modules/<{$module_dir}>/viewcat.php?cid=<{$category.id}>"><img src="<{$category.image}>" title="<{$category.alttext}>" alt="<{$category.alttext}>" align="middle"/></a> <a href="<{$xoops_url}>/modules/<{$module_dir}>/viewcat.php?cid=<{$category.id}>"><b><{$category.title}></b></a>&nbsp;<span class="badge pull-right">(<{$category.totalvideos}>)</span><br/></li>
-		</ul>
-            <{if $category.subcategories}>
-            <div style="margin-bottom: 3px; margin-left: 16px; font-size: smaller; vertical-align: top;">
-                <{$category.subcategories}>
+            <div class="col-sm-4 col-md-4 category-titles">
+                <a href="<{$xoops_url}>/modules/<{$module_dir}>/viewcat.php?cid=<{$category.id}>" title="<{$category.title}>" class="btn btn-primary btn-block">
+                    <{$category.title}> <span class="badge"><{$category.totalvideos}></span>
+                </a>
             </div>
+
+            <{if $category.subcategories}>
+                <{$category.subcategories}>
             <{/if}>
-        </td>
-        <{if $category.count is div by $cat_columns}>
-    </tr>
-    <tr><{/if}> <{/foreach}>
-        <!-- End category loop -->
-    </tr>
-    <tr>
-        <td colspan="2">&nbsp;</td>
-    <tr>
-</table>
-<div class="odd" style="text-align: left; font-size: smaller;"><div class="alert alert-warning"><{$lang_thereare}></div></div>
-<div class="xoopstube_legend">
-    <img src="<{$xoops_url}>/modules/<{$module_dir}>/images/icon/linkload1_small.png" title="<{$smarty.const._MD_XTUBE_LEGENDTEXTNEW}>" alt="" align="middle"/>&nbsp;<span class="label label-primary"><{$smarty.const._MD_XTUBE_LEGENDTEXTNEW}></span>
-    <img src="<{$xoops_url}>/modules/<{$module_dir}>/images/icon/linkload2_small.png" title="<{$smarty.const._MD_XTUBE_LEGENDTEXTNEWTHREE}>" alt="" align="middle"/>&nbsp;<span class="label label-success"><{$smarty.const._MD_XTUBE_LEGENDTEXTNEWTHREE}></span>
-    <img src="<{$xoops_url}>/modules/<{$module_dir}>/images/icon/linkload3_small.png" title="<{$smarty.const._MD_XTUBE_LEGENDTEXTTHISWEEK}>" alt="" align="middle"/>&nbsp;<span class="label label-warning"><{$smarty.const._MD_XTUBE_LEGENDTEXTTHISWEEK}></span>
-    <img src="<{$xoops_url}>/modules/<{$module_dir}>/images/icon/linkload4_small.png" title="<{$smarty.const._MD_XTUBE_LEGENDTEXTNEWLAST}>" alt="" align="middle"/>&nbsp;<span class="label label-danger"><{$smarty.const._MD_XTUBE_LEGENDTEXTNEWLAST}></span>
+        <{/foreach}>
+    </div>
+<div class="xoopstube-data">
+<div class="row">
+    <div class="col-md-12 text-right"><{$lang_thereare}></div>
+
+    <div class="col-sm-3 col-md-3 text-center">
+        <img src="<{$xoops_url}>/modules/<{$module_dir}>/images/icon/linkload1_small.png" alt="<{$smarty.const._MD_XTUBE_LEGENDTEXTNEW}>">
+        <{$smarty.const._MD_XTUBE_LEGENDTEXTNEW}>
+    </div>
+        
+    <div class="col-sm-3 col-md-3 text-center">
+        <img src="<{$xoops_url}>/modules/<{$module_dir}>/images/icon/linkload2_small.png" alt="<{$smarty.const._MD_XTUBE_LEGENDTEXTNEWTHREE}>">
+        <{$smarty.const._MD_XTUBE_LEGENDTEXTNEWTHREE}>
+    </div>
+        
+    <div class="col-sm-3 col-md-3 text-center">
+        <img src="<{$xoops_url}>/modules/<{$module_dir}>/images/icon/linkload3_small.png" alt="<{$smarty.const._MD_XTUBE_LEGENDTEXTTHISWEEK}>">
+        <{$smarty.const._MD_XTUBE_LEGENDTEXTTHISWEEK}>
+    </div>
+
+    <div class="col-sm-3 col-md-3 text-center">
+        <img src="<{$xoops_url}>/modules/<{$module_dir}>/images/icon/linkload4_small.png" alt="<{$smarty.const._MD_XTUBE_LEGENDTEXTNEWLAST}>">
+        <{$smarty.const._MD_XTUBE_LEGENDTEXTNEWLAST}>
+    </div>
 </div>
+</div><!-- .xoopstube-data -->
 <{/if}>
-<div style="padding-bottom: 12px; text-align: <{$catarray.indexfooteralign}>;"><{$catarray.indexfooter}></div>
+
+<div class="xoopstube-footer">
+    <{$catarray.indexfooter}>
+</div><!-- .xoopstube-footer -->
 
 <{if $showlatest}>
-<br/><br/>
-<div class="odd" style="font-size: bigger; font-weight: bold;"><{$smarty.const._MD_XTUBE_LATESTLIST}></div>
-<br/>
-<{if $pagenav}>
-<div><{$pagenav}></div>
-<br/>
+    <{$smarty.const._MD_XTUBE_LATESTLIST}>
+    <{if $pagenav}>
+        <{$pagenav}>
+    <{/if}>
+    <{section name=i loop=$video}>
+        <{include file="db:xoopstube_videoload.html" video=$video[i]}>
+    <{/section}>
+    <{if $pagenav}>
+        <{$pagenav}>
+    <{/if}>
 <{/if}>
-<table width="100%" cellspacing="0" cellpadding="10" border="0">
-    <tr>
-        <td width="100%">
-            <!-- Start video loop -->
-            <{section name=i loop=$video}>
-            <{include file="db:xoopstube_videoload.html" video=$video[i]}>
-            <{/section}>
-            <!-- End video loop -->
-        </td>
-    </tr>
-</table>
-<{if $pagenav}>
-<div align="right"><{$pagenav}></div>
-<{/if}>
-<{/if}>
-
 <{include file="db:system_notification_select.html"}>
+</div><!-- .xoopstube -->
