@@ -19,7 +19,7 @@
 @-o-viewport        {width: device-width;}
 @viewport           {width: device-width;}
 
-div.global-nav{margin-bottom:0;}
+div.global-nav{margin-bottom: 0;}
 
 a.navbar-brand.xlogo{padding: 5px 20px 0 5px;}
 
