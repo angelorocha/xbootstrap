@@ -30,10 +30,15 @@
 <![endif]-->
 <script src="<{xoImgUrl}>js/js.js"></script>
 <link rel="alternate" type="application/rss+xml" title="" href="<{xoAppUrl backend.php}>">
+
 <title><{if $xoops_dirname == "system"}><{$xoops_sitename}><{if $xoops_pagetitle !=''}> - <{$xoops_pagetitle}><{/if}><{else}><{if $xoops_pagetitle !=''}><{$xoops_pagetitle}> - <{$xoops_sitename}><{/if}><{/if}></title>
+
 <{includeq file="$theme_name/tpl/shareaholic-script.html"}>
+    
 <{$xoops_module_header}>
+    
 </head>
+    
 <body id="<{$xoops_dirname}>">
 
 <{includeq file="$theme_name/tpl/nav-menu.html"}>
