@@ -1,20 +1,15 @@
-<{if $video.imageheader != ""}>
-    <{$video.imageheader}>
-<{/if}>
-
-<{$video.path}>
-<{$back}>
-
-<{$video.title}>
 <{$video.icons}>
+    
 <{if $xoops_isadmin}> 
     <{$video.adminvideo}>
 <{/if}>
 
-<{$video.showvideo}>
-
+<div class="xoopstube-video-play">
+    <{$video.showvideo}>
+</div><!-- .xoopstube-video-play -->
+    
 <{if $video.showsbookmarx > 0}>
-    <{$video.sbmarks}>
+    <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='482507'></div>
 <{/if}>
 
 <{if $video.showsubmitterx}>

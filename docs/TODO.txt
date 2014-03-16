@@ -12,3 +12,11 @@ To have paginations like on demo page and screenshots:
  - Copy "themes/xBootstrap/modules/publisher/xoops_and_module_changes/xoops.css"
     to
    your_xoops/xoops.css
+   
+   
+----- XOOPS Tube module ---
+
+Recomended xoops tube thumbs dimensions:
+300x250
+
+Replace file "video.php" in "xoopstube/include/" by file in "xBootstrap/docs/xoopstube/include/video.php"

@@ -261,18 +261,27 @@ div.tdm-modify-file img{max-width:100%;}
 .xoopstube .xoopstube-navigation a{background: #FAFAFA; border: 1px solid #EEE; font-size: 0.9em; padding: 5px 10px 5px 10px; display: inline-block; margin: 0 0 5px 0; border-radius: 5px;}
 .xoopstube .xoopstube-navigation a:hover{background: #EBEBEB; color: #979797;}
 
-.xoopstube-video-title{font-size: 1.2em;}
+.xoopstube-loop{margin-bottom: 20px;}
+.xoopstube-loop ul li{margin-bottom: 5px;}
+
+.xoopstube-video-title{font-size: 1.5em; line-height: inherit; margin: 0;}
+.xoopstube-video-thumb{padding: 0; position: relative;}
+.xoopstube-video-thumb span{position: absolute; left: 5px; bottom: 5px; color: #666;}
+.xoopstube-video-thumb img{max-width: 100%;}
 
 .xoopstube .category-titles{margin-bottom: 10px;}
 
 .xoopstube .xoopstube-data{margin-bottom: 10px;}
 
-.xoopstube .xoopstube-footer{}
+.xoopstube .xoopstube-footer{margin-bottom: 20px;}
 
 .xoopstube-blocks{}
 .xoopstube-blocks img{max-width: 100%;}
 .xoopstube-thumb{position: relative; margin-bottom: 20px;}
 .xoopstube-thumb span{background: #000; display: block;}
+
+.xoopstube-video-play{}
+.xoopstube-video-play embed{max-width: 100%;}
 
 /* 5. Useful Classes */
 .big-info-icon-link{color:#333; font-size:1.8em; margin:10px 0 10px 0; display:inline-table; cursor:pointer;}
