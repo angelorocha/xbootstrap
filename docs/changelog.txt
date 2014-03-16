@@ -1,3 +1,8 @@
+1.01.1
+--------------------
+- Redesigning xoopstube (Angelo Rocha)
+- Added table of contents in style.css (Angelo Rocha)
+
 1.01 Final 2014-02-11
 --------------------
 - Bootstrap Upgraded to 3.1.0 (Angelo Rocha)
