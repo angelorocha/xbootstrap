@@ -269,11 +269,20 @@ div.tdm-modify-file img{max-width:100%;}
 .xoopstube-video-thumb span{position: absolute; left: 5px; bottom: 5px; color: #666;}
 .xoopstube-video-thumb img{max-width: 100%;}
 
+.xoopstube .xoopstube-video-info{}
+.xoopstube .xoopstube-video-info [class*=col]{margin-bottom: 10px;}
+
 .xoopstube .category-titles{margin-bottom: 10px;}
 
 .xoopstube .xoopstube-data{margin-bottom: 10px;}
 
+.xoopstube ul.xoopstube-list li{margin-bottom: 10px;}
+
 .xoopstube .xoopstube-footer{margin-bottom: 20px;}
+
+.xoopstube-other-video{background: #F9F9F9; border-top: 1px solid #EEE;}
+
+.xoopstube-credits{background: #333; color: #EEE; padding: 10px;}
 
 .xoopstube-blocks{}
 .xoopstube-blocks img{max-width: 100%;}
