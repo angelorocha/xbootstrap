@@ -60,6 +60,7 @@ footer.footer > h3 > a.credits{position:absolute; top:3px; right:10px;}
 
 /* 2. XOOPS Codes */
 .xoopsQuote{padding:10px 20px; margin:0 0 20px;border-left:5px solid #eeeeee; font-style:italic;}
+.xoopsCode {background: #FAFAFA; padding: 5px; overflow-x: scroll; border: 1px solid #EEE;}
 
 /* 3. XOOPS Blocks*/
 div.xoops-side-blocks > aside{margin-bottom:20px;}
@@ -248,6 +249,10 @@ div.tdm-download-data ul.tdm-download-details li{margin:5px 10px 5px 10px;}
 
 div.tdm-modify-file{overflow-x:hidden;}
 div.tdm-modify-file img{max-width:100%;}
+
+ul.tdm-new-download-block{}
+ul.tdm-new-download-block li{line-height: 30px; border-bottom: 1px dashed #EAEAEA;}
+ul.tdm-new-download-block li:last-child{border-bottom: none;}
 
 /* 4.11. XOOPS Tube */
 .xoopstube{}
