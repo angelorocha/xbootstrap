@@ -44,6 +44,9 @@
 				<font style="font-size: 11px; padding: 0 0 0 16px; margin: 0; line-height: 12px; opacity:0.8;-moz-opacity:0.8">
 					<span class="glyphicon glyphicon-comment"></span>&nbsp;<{$item.comments}>
 				</font>
+                <font style="font-size: 11px; padding: 0 0 0 16px; margin: 0; line-height: 12px; opacity:0.8;-moz-opacity:0.8">
+					<span class="glyphicon glyphicon-ok-circle"></span>&nbsp;<{$item.counter}> <{$smarty.const._MD_PUBLISHER_READS}>
+				</font>
 			</h2>
 			
 			<{if $show_subtitle && $item.subtitle}>
@@ -70,6 +73,8 @@
 		<{/if}>
 		<div>
 			<{$item.maintext}>
+                
+        <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='482507'></div>
 		</div>
         
 	</div>
