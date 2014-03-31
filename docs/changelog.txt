@@ -1,4 +1,11 @@
-1.01.2
+1.01.3 2014-03-30
+--------------------
+- Add reads count in publisher template (Angelo Rocha)
+- Add width 100% in elements of publisher search block (Angelo Rocha)
+- Add style for xoopscodes class (Angelo Rocha)
+- Add new style for block tdmdownloads_block_new.html (Angelo Rocha)
+
+1.01.2 2014-03-16
 --------------------
 - Redesigning xoopstube (Angelo Rocha)
 - Added table of contents in style.css (Angelo Rocha)
