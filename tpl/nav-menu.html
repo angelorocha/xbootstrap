@@ -10,9 +10,9 @@
         <a href="<{$xoops_url}>" class="navbar-brand xlogo"><img src="<{$xoops_imageurl}>images/logo.png" alt=""></a> </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="<{$xoops_url}>">Home</a></li>
-          <li><a href="javascript:;">About</a></li>
-          <li class="dropdown"> <a data-toggle="dropdown" class="dropdown-toggle" href="javascript:;">News <b class="caret"></b></a>
+          <li class="active"><a href="<{$xoops_url}>"><{$smarty.const.THEME_HOME}></a></li>
+          <li><a href="javascript:;"><{$smarty.const.THEME_MODULE2}></a></li>
+          <li class="dropdown"> <a data-toggle="dropdown" class="dropdown-toggle" href="javascript:;"><{$smarty.const.THEME_MODULE2}><b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a href="javascript:;">Topic 1</a></li>
               <li><a href="javascript:;">Topic 2</a></li>
@@ -21,7 +21,7 @@
               <li><a href="javascript:;">Topic 5</a></li>
             </ul>
           </li>
-          <li><a href="<{$xoops_url}>/modules/contact">Contact</a></li>
+          <li><a href="<{$xoops_url}>/modules/contact"><{$smarty.const.THEME_MODULE3}></a></li>
         </ul>
       </div>
     </div>
