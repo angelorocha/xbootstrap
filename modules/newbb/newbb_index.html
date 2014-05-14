@@ -1,66 +1,62 @@
 <div class="xoops-newbb">
 
-<div class="row">
-    <div class="col-md-12 xoops-newbb-header">
-        <h3><a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php" title="<{$index_title}>"><{$index_title}></a></h3>
-        <{$index_desc}>
+<h3>
+    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php" title="<{$index_title}>">
+        <{$index_title}>
+    </a>
+</h3>
+<{$index_desc}>
 
+<{if $viewer_level gt 1}>
+    <{$smarty.const._MD_TOPIC}>:
+    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/list.topic.php?status=active#admin" title="<{$smarty.const._MD_TYPE_ADMIN}>">
+        <{$smarty.const._MD_TYPE_ADMIN}>
+    </a>
 
-        <{if $viewer_level gt 1}>
-            <{$smarty.const._MD_TOPIC}>:
-            <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/list.topic.php?status=active#admin" title="<{$smarty.const._MD_TYPE_ADMIN}>">
-                <{$smarty.const._MD_TYPE_ADMIN}>
-            </a>
+    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/list.topic.php?status=pending#admin" title="<{$smarty.const._MD_TYPE_PENDING}>">
+        <{if $wait_new_topic}>(<font color="red"><{$wait_new_topic}></font>)<{/if}> <{$smarty.const._MD_TYPE_PENDING}>
+    </a>
 
-            <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/list.topic.php?status=pending#admin" title="<{$smarty.const._MD_TYPE_PENDING}>">
-                <{if $wait_new_topic}>(<font color="red"><{$wait_new_topic}></font>)<{/if}> <{$smarty.const._MD_TYPE_PENDING}>
-            </a>
+    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/list.topic.php?status=deleted#admin" title="<{$smarty.const._MD_TYPE_DELETED}>">
+        <{if $delete_topic}>(<font color="red"><{$delete_topic}></font>)<{/if}> <{$smarty.const._MD_TYPE_DELETED}>
+    </a>
 
-            <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/list.topic.php?status=deleted#admin" title="<{$smarty.const._MD_TYPE_DELETED}>">
-                <{if $delete_topic}>(<font color="red"><{$delete_topic}></font>)<{/if}> <{$smarty.const._MD_TYPE_DELETED}>
-            </a>
+    <{$smarty.const._MD_POST2}>:
+    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewpost.php?status=active#admin" title="<{$smarty.const._MD_TYPE_ADMIN}>">
+        <{$smarty.const._MD_TYPE_ADMIN}>
+    </a>
 
-            <{$smarty.const._MD_POST2}>:
-            <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewpost.php?status=active#admin" title="<{$smarty.const._MD_TYPE_ADMIN}>">
-                <{$smarty.const._MD_TYPE_ADMIN}>
-            </a>
+    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewpost.php?status=pending#admin" title="<{$smarty.const._MD_TYPE_PENDING}>">
+        <{if $wait_new_post}>(<font color="red"><{$wait_new_post}></font>)<{/if}> <{$smarty.const._MD_TYPE_PENDING}>
+    </a>
 
-            <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewpost.php?status=pending#admin" title="<{$smarty.const._MD_TYPE_PENDING}>">
-                <{if $wait_new_post}>(<font color="red"><{$wait_new_post}></font>)<{/if}> <{$smarty.const._MD_TYPE_PENDING}>
-            </a>
+    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewpost.php?status=deleted#admin" title="<{$smarty.const._MD_TYPE_DELETED}>">
+        <{if $delete_post}>(<font color="red"><{$delete_post}></font>)<{/if}> <{$smarty.const._MD_TYPE_DELETED}>
+    </a>
 
-            <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewpost.php?status=deleted#admin" title="<{$smarty.const._MD_TYPE_DELETED}>">
-                <{if $delete_post}>(<font color="red"><{$delete_post}></font>)<{/if}> <{$smarty.const._MD_TYPE_DELETED}>
-            </a>
+    <{if $report_post}>
+        <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/admin/admin_report.php" title="<{$report_post}>">
+            <{$report_post}>
+        </a>
+    <{/if}>
 
-            <{if $report_post}>
-                <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/admin/admin_report.php" title="<{$report_post}>"><{$report_post}></a>
-            <{/if}>
+    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/moderate.php" title="<{$smarty.const._MD_TYPE_SUSPEND}>">
+        <{$smarty.const._MD_TYPE_SUSPEND}>
+    </a>
 
-            <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/moderate.php" title="<{$smarty.const._MD_TYPE_SUSPEND}>"><{$smarty.const._MD_TYPE_SUSPEND}></a>
+    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/admin/index.php" title="<{$smarty.const._MD_ADMINCP}>">
+        <{$smarty.const._MD_ADMINCP}>
+    </a>
+<{/if}>
 
-            <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/admin/index.php" title="<{$smarty.const._MD_ADMINCP}>"><{$smarty.const._MD_ADMINCP}></a>
-
-        <{/if}>
-    </div><!-- .xoops-newbb-header -->
-</div><!-- .row -->
-
-<div class="col-md-12 xoops-newbb-menu text-right">
-    <{includeq file="db:newbb_index_menu.html"}>
-</div><!-- .xoops-newbb-menu -->
+<{includeq file="db:newbb_index_menu.html"}>
 
 <{foreachq item=category from=$categories}><!-- Forum categories -->
 
-<div class="row">
-<div class="xoops-newbb-categories">
-
-<div class="col-md-1">
     <div class="pointer" onclick="ToggleBlockCategory('<{$category.cat_element_id}>',(this.firstElementChild || this.children[0]) , '<{$category_icon.expand}>', '<{$category_icon.collapse}>','<{$smarty.const._MD_NEWBB_HIDE}>','<{$smarty.const._MD_NEWBB_SEE}>')">
         <{$category.cat_displayImage}>
     </div>
-</div>
 
-<div class="col-md-11">
     <{if $category.cat_image}>
         <img src="<{$category.cat_image}>" alt="<{$category.cat_title}>">
     <{/if}>
@@ -77,7 +73,6 @@
             </a>
         </p>
     <{/if}>
-</div>
 
 <div id="<{$category.cat_element_id}>" style="display: <{$category.cat_display}>;">
     <{if $category.forums}>
@@ -93,8 +88,6 @@
 
     <{/if}>
 </div>
-        </div><!-- .xoops-newbb-categories -->
-</div><!-- .row -->
 
 <{if $subforum_display == "expand"}> <!-- Start Forums -->
 <{foreachq item=forum from=$category.forums}>
