@@ -30,6 +30,7 @@
         * 4.9. eXtgallery Module
         * 4.10. TDMDownloads
         * 4.11. XOOPS Tube
+        * 4.12. NewBB Module
     * 5. Useful Classes
 **/
 
@@ -296,6 +297,11 @@ ul.tdm-new-download-block li:last-child{border-bottom: none;}
 
 .xoopstube-video-play{}
 .xoopstube-video-play embed{max-width: 100%;}
+
+/* 4.12. NewBB Module */
+.xoops-newbb{}
+.xoops-newbb-header{}
+.xoops-newbb-menu{}
 
 /* 5. Useful Classes */
 .big-info-icon-link{color:#333; font-size:1.8em; margin:10px 0 10px 0; display:inline-table; cursor:pointer;}
