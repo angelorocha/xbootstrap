@@ -57,33 +57,54 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#<{$category.cat_element_id}>">
+                <a data-toggle="collapse" data-parent="#accordion" href="#<{$category.cat_element_id}>" title="<{$smarty.const.THEME_NEWBB_TOPIC}>">
                     <span class="glyphicon glyphicon-plus-sign"></span>
                 </a>
-            </h4>
 
-            <{if $category.cat_image}>
-                <img src="<{$category.cat_image}>" alt="<{$category.cat_title}>">
-            <{/if}>
+                <{if $category.cat_image}>
+                    <img src="<{$category.cat_image}>" alt="<{$category.cat_title}>">
+                <{/if}>
 
-            <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php?cat=<{$category.cat_id}>">
-                <{$category.cat_title}>
-            </a>
-
-            <{if $category.cat_description}>
-                <p><{$category.cat_description}></p>
-            <{/if}>
+                <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php?cat=<{$category.cat_id}>">
+                    <{$category.cat_title}>
+                </a>
 
             <{if $category.cat_sponsor}>
-                <p>
-                    <a href="<{$category.cat_sponsor.link}>" title="<{$category.cat_sponsor.title}>" target="_blank">
-                        <{$category.cat_sponsor.title}>
-                    </a>
-                </p>
+            <a href="<{$category.cat_sponsor.link}>" title="<{$smarty.const.SPONSORBY}><{$category.cat_sponsor.title}>" target="_blank" class="pull-right btn btn-xs btn-success">
+                <{$category.cat_sponsor.title}>
+            </a>
             <{/if}>
-        </div><!-- .panel-heading -->
 
-<div id="<{$category.cat_element_id}>" class="panel-collapse collapse in">
+            <{if $category.cat_description}>
+                <a href="#forum-desc-<{$category.cat_element_id}>" title="" data-toggle="modal" data-target="#forum-desc-<{$category.cat_element_id}>" class="btn btn-xs btn-info pull-right">
+                    <span class="glyphicon glyphicon-info-sign"></span>
+                </a>
+            <{/if}>
+            </h4>
+<{if $category.cat_description}>
+<div class="modal fade" id="forum-desc-<{$category.cat_element_id}>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel"><{$category.cat_title}></h4>
+      </div>
+      <div class="modal-body">
+        <p><{$category.cat_description}></p>
+      </div>
+      <div class="modal-footer">
+        <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php?cat=<{$category.cat_id}>" title="<{$smarty.const.GOTOTHEFORUM}>" class="btn btn-default">
+            <{$smarty.const.GOTOTHEFORUM}>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<{/if}>
+
+            </div><!-- .panel-heading -->
+
+<div id="<{$category.cat_element_id}>" class="panel-collapse collapse">
     <div class="panel-body">
         <{if $category.forums}>
             <div class="row">
