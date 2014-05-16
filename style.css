@@ -116,9 +116,15 @@ div.usermenu li a.info span.badge{background:#F00; color:#FFF;}
 div.xoops-theme-select{text-align:center;}
 div.xoops-theme-select form select{border:1px solid #D6D6D6; width:100%;}
 
-div.newusers > .row.user{margin-bottom:10px; border-bottom:1px solid #D6D6D6; padding-top:5px;}
-div.newusers > .row.user > [class*="col-"]{padding:0; text-align:center;}
-div.newusers > .row.user:nth-child(odd){background:#EEE;}
+ul.newusers{border-bottom:1px solid #EEE; margin-bottom: 0; padding: 5px 0 5px 0;}
+ul.newusers:nth-child(odd){background: #F9F9F9;}
+ul.newusers:hover{background: #EEE;}
+ul.newusers:last-child{border-bottom: none;}
+ul.newusers > li{display: inline-block;}
+ul.newusers > li.avatar-image{max-width: 20%;}
+ul.newusers > li.avatar-image img{max-width: 100%;}
+ul.newusers > li.user-name{padding: 0 0 0 10px; width: 49%;}
+ul.newusers > li.join-date{padding: 0 5px 0 0; width: 9%;}
 
 /* 4.4. System Comments */
 div.xoops-comment-body{margin-top:20px;}

@@ -4,7 +4,8 @@
 define("THEME_HOME", "Home");
 define("THEME_MODULE1", "About");
 define("THEME_MODULE2", "News");
-define("THEME_MODULE3", "Contact");
+define("THEME_MODULE3", "Forum");
+define("THEME_MODULE4", "Contact");
 
 //Slider
 define("THEME_READMORE", "Read More");
