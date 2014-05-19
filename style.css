@@ -308,6 +308,10 @@ ul.tdm-new-download-block li:last-child{border-bottom: none;}
 .newbb{}
 .newbb-header{}
 .newbb-menu{}
+.newbb-header-icons{}
+.newbb-header-icons div{margin-bottom: 10px;}
+.xoops-newb-forum-list{}
+.xoops-newb-forum-list a.pull-right{margin-left: 5px}
 
 /* 5. Useful Classes */
 .big-info-icon-link{color:#333; font-size:1.8em; margin:10px 0 10px 0; display:inline-table; cursor:pointer;}

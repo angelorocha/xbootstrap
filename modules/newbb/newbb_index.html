@@ -9,53 +9,58 @@
 
 <p><{$index_desc}></p>
 <div class="text-right"><{includeq file="db:newbb_index_menu.html"}></div>
-</div><!-- .newbb-header -->
 
+<div class="newbb-header-icons hidden-xs">
 <{if $viewer_level gt 1}>
-    <{$smarty.const._MD_TOPIC}>:
-    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/list.topic.php?status=active#admin" title="<{$smarty.const._MD_TYPE_ADMIN}>">
+<div>
+    <strong><{$smarty.const._MD_TOPIC}>:</strong>
+    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/list.topic.php?status=active#admin" title="<{$smarty.const._MD_TYPE_ADMIN}>" class="btn btn-xs btn-primary">
         <{$smarty.const._MD_TYPE_ADMIN}>
     </a>
 
-    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/list.topic.php?status=pending#admin" title="<{$smarty.const._MD_TYPE_PENDING}>">
-        <{if $wait_new_topic}>(<font color="red"><{$wait_new_topic}></font>)<{/if}> <{$smarty.const._MD_TYPE_PENDING}>
+    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/list.topic.php?status=pending#admin" title="<{$smarty.const._MD_TYPE_PENDING}>" class="btn btn-xs btn-primary">
+        <{if $wait_new_topic}><span class="badge"><{$wait_new_topic}></span><{/if}> <{$smarty.const._MD_TYPE_PENDING}>
     </a>
 
-    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/list.topic.php?status=deleted#admin" title="<{$smarty.const._MD_TYPE_DELETED}>">
-        <{if $delete_topic}>(<font color="red"><{$delete_topic}></font>)<{/if}> <{$smarty.const._MD_TYPE_DELETED}>
+    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/list.topic.php?status=deleted#admin" title="<{$smarty.const._MD_TYPE_DELETED}>" class="btn btn-xs btn-danger">
+        <{if $delete_topic}><span class="badge"><{$delete_topic}></span><{/if}> <{$smarty.const._MD_TYPE_DELETED}>
     </a>
-
-    <{$smarty.const._MD_POST2}>:
-    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewpost.php?status=active#admin" title="<{$smarty.const._MD_TYPE_ADMIN}>">
+</div>
+<div>
+    <strong><{$smarty.const._MD_POST2}>:</strong>
+    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewpost.php?status=active#admin" title="<{$smarty.const._MD_TYPE_ADMIN}>" class="btn btn-xs btn-primary">
         <{$smarty.const._MD_TYPE_ADMIN}>
     </a>
 
-    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewpost.php?status=pending#admin" title="<{$smarty.const._MD_TYPE_PENDING}>">
+    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewpost.php?status=pending#admin" title="<{$smarty.const._MD_TYPE_PENDING}>" class="btn btn-xs btn-primary">
         <{if $wait_new_post}>(<font color="red"><{$wait_new_post}></font>)<{/if}> <{$smarty.const._MD_TYPE_PENDING}>
     </a>
 
-    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewpost.php?status=deleted#admin" title="<{$smarty.const._MD_TYPE_DELETED}>">
+    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewpost.php?status=deleted#admin" title="<{$smarty.const._MD_TYPE_DELETED}>" class="btn btn-xs btn-primary">
         <{if $delete_post}>(<font color="red"><{$delete_post}></font>)<{/if}> <{$smarty.const._MD_TYPE_DELETED}>
     </a>
 
     <{if $report_post}>
-        <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/admin/admin_report.php" title="<{$report_post}>">
+        <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/admin/admin_report.php" title="<{$report_post}>" class="btn btn-xs btn-primary">
             <{$report_post}>
         </a>
     <{/if}>
 
-    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/moderate.php" title="<{$smarty.const._MD_TYPE_SUSPEND}>">
+    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/moderate.php" title="<{$smarty.const._MD_TYPE_SUSPEND}>" class="btn btn-xs btn-primary">
         <{$smarty.const._MD_TYPE_SUSPEND}>
     </a>
 
-    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/admin/index.php" title="<{$smarty.const._MD_ADMINCP}>">
+    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/admin/index.php" title="<{$smarty.const._MD_ADMINCP}>" class="btn btn-xs btn-primary">
         <{$smarty.const._MD_ADMINCP}>
     </a>
+</div>
 <{/if}>
+</div><!-- .newbb-header-icons -->
+</div><!-- .newbb-header -->
 
 <{foreachq item=category from=$categories}><!-- Forum categories -->
 
-<div class="panel-group" id="accordion">
+<div class="panel-group xoops-newb-forum-list" id="accordion">
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
@@ -72,13 +77,13 @@
                 </a>
 
             <{if $category.cat_sponsor}>
-            <a href="<{$category.cat_sponsor.link}>" title="<{$smarty.const.SPONSORBY}><{$category.cat_sponsor.title}>" target="_blank" class="pull-right btn btn-xs btn-success">
+            <a href="<{$category.cat_sponsor.link}>" title="<{$smarty.const.THEME_FORUM_SPONSORBY}> <{$category.cat_sponsor.title}>" target="_blank" class="pull-right btn btn-xs btn-success">
                 <{$category.cat_sponsor.title}>
             </a>
             <{/if}>
 
             <{if $category.cat_description}>
-                <a href="#forum-desc-<{$category.cat_element_id}>" title="" data-toggle="modal" data-target="#forum-desc-<{$category.cat_element_id}>" class="btn btn-xs btn-info pull-right">
+                <a href="#forum-desc-<{$category.cat_element_id}>" title="<{$smarty.const.THEME_FORUM_DESCRIPTION}>" data-toggle="modal" data-target="#forum-desc-<{$category.cat_element_id}>" class="btn btn-xs btn-info pull-right">
                     <span class="glyphicon glyphicon-info-sign"></span>
                 </a>
             <{/if}>
