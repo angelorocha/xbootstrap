@@ -1,11 +1,15 @@
 <div class="newbb">
 
+<div class="jumbotron newbb-header">
 <h3>
     <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/index.php" title="<{$index_title}>">
         <{$index_title}>
     </a>
 </h3>
-<{$index_desc}>
+
+<p><{$index_desc}></p>
+<div class="text-right"><{includeq file="db:newbb_index_menu.html"}></div>
+</div><!-- .newbb-header -->
 
 <{if $viewer_level gt 1}>
     <{$smarty.const._MD_TOPIC}>:
@@ -48,8 +52,6 @@
         <{$smarty.const._MD_ADMINCP}>
     </a>
 <{/if}>
-
-<{includeq file="db:newbb_index_menu.html"}>
 
 <{foreachq item=category from=$categories}><!-- Forum categories -->
 
