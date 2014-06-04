@@ -115,6 +115,7 @@ div.usermenu li a.info span.badge{background:#F00; color:#FFF;}
 
 div.xoops-theme-select{text-align:center;}
 div.xoops-theme-select form select{border:1px solid #D6D6D6; width:100%;}
+div.xoops-theme-select img {max-width: 100%;}
 
 ul.newusers{border-bottom:1px solid #EEE; margin-bottom: 0; padding: 5px 0 5px 0;}
 ul.newusers:nth-child(odd){background: #F9F9F9;}
@@ -310,8 +311,11 @@ ul.tdm-new-download-block li:last-child{border-bottom: none;}
 .newbb-menu{}
 .newbb-header-icons{}
 .newbb-header-icons div{margin-bottom: 10px;}
-.xoops-newb-forum-list{}
-.xoops-newb-forum-list a.pull-right{margin-left: 5px}
+.xoops-newbb-forum-list{}
+.xoops-newbb-forum-list a.pull-right{margin-left: 5px}
+
+.xoops-mewbb-forum-title{}
+.xoops-mewbb-forum-title a.btn{color: #FFF;}
 
 /* 5. Useful Classes */
 .big-info-icon-link{color:#333; font-size:1.8em; margin:10px 0 10px 0; display:inline-table; cursor:pointer;}

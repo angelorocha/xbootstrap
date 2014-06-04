@@ -17,5 +17,5 @@ define("THEME_LEARNINGMORE", "Learning More...");
 //NewBB
 define("THEME_NEWBB_TOPIC", "More");
 define("THEME_FORUM_SPONSORBY", "Sponsor By.: ");
-define("GOTOTHEFORUM", "Go to Forum");
+define("THEME_GOTOTHEFORUM", "Go to Forum");
 define("THEME_FORUM_DESCRIPTION", "Description");
