@@ -1,3 +1,17 @@
+1.02 2014-06-04 Beta 1
+--------------------
+- Add newbb template - Developing
+- Add language support
+- Some bug fix in PM template
+- Add search block template
+- Add new users template
+- Add top users template
+- Add XOOPS Code Style
+- Add XOOPS Quote Style
+- Add search block template
+- Add shot theme in block of theme select
+- Add top search box
+
 1.01.3 2014-03-30
 --------------------
 - Add reads count in publisher template (Angelo Rocha)
