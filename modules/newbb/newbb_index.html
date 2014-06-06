@@ -58,10 +58,9 @@
 </div><!-- .newbb-header-icons -->
 </div><!-- .newbb-header -->
 
+<div class="panel-group xoops-newbb-category-list" id="accordion">
 <{foreachq item=category from=$categories}><!-- Forum categories -->
-
-<div class="panel-group xoops-newbb-forum-list" id="accordion">
-    <div class="panel panel-default">
+    <div class="panel panel-default mb10">
         <div class="panel-heading">
             <h4 class="panel-title xoops-mewbb-forum-title">
                 <{if $category.forums}>
@@ -116,13 +115,13 @@
         <{if $category.forums}>
             <div class="row hidden-xs">
             <{if $subforum_display == "expand"}>
-                <div class="col-sm-6 col-md-6"><{$smarty.const._MD_FORUM}></div>
+                <div class="col-sm-6 col-md-6"><strong><{$smarty.const._MD_FORUM}></strong></div>
             <{else}>
-                <div class="col-sm-6 col-md-6"><{$smarty.const._MD_FORUM}></div>
+                <div class="col-sm-6 col-md-6"><strong><{$smarty.const._MD_FORUM}></strong></div>
             <{/if}>
-                <div class="col-sm-1 col-md-1"><{$smarty.const._MD_TOPICS}></div>
-                <div class="col-sm-1 col-md-1"><{$smarty.const._MD_POSTS}></div>
-                <div class="col-sm-4 col-md-4"><{$smarty.const._MD_LASTPOST}></div>
+                <div class="col-sm-1 col-md-1"><strong><{$smarty.const._MD_TOPICS}></strong></div>
+                <div class="col-sm-1 col-md-1"><strong><{$smarty.const._MD_POSTS}></strong></div>
+                <div class="col-sm-4 col-md-4"><strong><{$smarty.const._MD_LASTPOST}></strong></div>
             </div>
         <{/if}>
 <{if $subforum_display == "expand"}> <!-- Start Forums -->
@@ -219,7 +218,7 @@
 
 <{elseif $subforum_display == "collapse"}>
     <{foreachq item=forum from=$category.forums}>
-    <div class="row">
+    <div class="row xoops-newbb-list-foruns mb10">
         <div class="col-sm-6 col-md-6">
         <{if $forum.subforum}>
             <div class="<{if $forum.forum_read eq 1 }>forum-read<{else}>forum-new2<{/if}> pull-left">
@@ -241,21 +240,21 @@
             </a>
         <{/if}>
 
-        <p><{$forum.forum_desc}></p>
+        <div class="text-justify"><{$forum.forum_desc}></div>
 
         <{if $forum.forum_moderators}>
-            <{$smarty.const._MD_MODERATOR}>: <{$forum.forum_moderators}>
+            <div class="text-right"><span class="label label-info"><{$smarty.const._MD_MODERATOR}>: <{$forum.forum_moderators}></span></div>
         <{/if}>
         </div>
 
-        <div class="col-sm-1 col-md-1 hidden-xs">
+        <div class="col-sm-1 col-md-1 text-center hidden-xs">
             <{if $stats[$forum.forum_id].topic.day}>
                 <strong><{$stats[$forum.forum_id].topic.day}></strong>/
             <{/if}>
         <{$forum.forum_topics}>
         </div>
 
-        <div class="col-sm-1 col-md-1 hidden-xs">
+        <div class="col-sm-1 col-md-1 text-center hidden-xs">
             <{if $stats[$forum.forum_id].post.day}>
                 <strong><{$stats[$forum.forum_id].post.day}></strong>/
             <{/if}>
@@ -325,8 +324,8 @@
     </div><!-- .panel-body -->
     </div><!-- .panel-collapse .collapse -->
   </div><!-- .panel .panel-default -->
-</div><!-- .panel-group -->
 <{/foreach}><!-- End Forum Categories -->
+</div><!-- .panel-group -->
 
 <div class="row mb10">
     <div class="col-md-12">
