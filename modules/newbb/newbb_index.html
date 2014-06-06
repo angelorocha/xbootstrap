@@ -240,14 +240,15 @@
             </a>
         <{/if}>
         <!-- Forum description -->
-        <button class="btn btn-primary btn-xs pull-right" data-toggle="modal" data-target="#forumDesc"><span class="glyphicon glyphicon-info-sign"></span></button>
+        <{if $forum.forum_desc != ""}>
+        <button class="btn btn-primary btn-xs pull-right" data-toggle="modal" data-target="#forumDesc-<{$forum.forum_id}>"><span class="glyphicon glyphicon-info-sign"></span></button>
 
-        <div class="modal fade" id="forumDesc" tabindex="-1" role="dialog" aria-labelledby="ForumDescription" aria-hidden="true">
+        <div class="modal fade" id="forumDesc-<{$forum.forum_id}>" tabindex="-1" role="dialog" aria-labelledby="ForumDescription" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel"><{$smarty.const.THEME_FORUM_DESC}></h4>
+                <h4 class="modal-title" id="ForumDescription"><{$smarty.const.THEME_FORUM_DESC}>: <{$category.cat_title}> - <{$forum.forum_name}></h4>
               </div>
               <div class="modal-body">
                 <{$forum.forum_desc}>
@@ -263,6 +264,7 @@
             </div>
           </div>
         </div>
+        <{/if}>
         <!-- End forum description-->
         </div>
 
