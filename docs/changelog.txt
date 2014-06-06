@@ -1,16 +1,16 @@
 1.02 2014-06-04 Beta 1
 --------------------
-- Add newbb template - Developing
-- Add language support
-- Some bug fix in PM template
-- Add search block template
-- Add new users template
-- Add top users template
-- Add XOOPS Code Style
-- Add XOOPS Quote Style
-- Add search block template
-- Add shot theme in block of theme select
-- Add top search box
+- Add newbb template - Developing... (Angelo Rocha)
+- Add language support (Angelo Rocha)
+- Some bug fix in PM template (Angelo Rocha)
+- Add search block template (Angelo Rocha)
+- Add new users template (Angelo Rocha)
+- Add top users template (Angelo Rocha)
+- Add XOOPS Code Style (Angelo Rocha)
+- Add XOOPS Quote Style (Angelo Rocha)
+- Add search block template (Angelo Rocha)
+- Add shot theme in block of theme select (Angelo Rocha)
+- Add top search box (Angelo Rocha)
 
 1.01.3 2014-03-30
 --------------------

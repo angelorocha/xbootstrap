@@ -114,7 +114,7 @@
 <div id="<{$category.cat_element_id}>" class="panel-collapse collapse">
     <div class="panel-body">
         <{if $category.forums}>
-            <div class="row">
+            <div class="row hidden-xs">
             <{if $subforum_display == "expand"}>
                 <div class="col-sm-6 col-md-6"><{$smarty.const._MD_FORUM}></div>
             <{else}>
@@ -248,21 +248,21 @@
         <{/if}>
         </div>
 
-        <div class="col-sm-1 col-md-1">
+        <div class="col-sm-1 col-md-1 hidden-xs">
             <{if $stats[$forum.forum_id].topic.day}>
                 <strong><{$stats[$forum.forum_id].topic.day}></strong>/
             <{/if}>
         <{$forum.forum_topics}>
         </div>
 
-        <div class="col-sm-1 col-md-1">
+        <div class="col-sm-1 col-md-1 hidden-xs">
             <{if $stats[$forum.forum_id].post.day}>
                 <strong><{$stats[$forum.forum_id].post.day}></strong>/
             <{/if}>
         <{$forum.forum_posts}>
         </div>
 
-        <div class="col-sm-4 col-md-4">
+        <div class="col-sm-4 col-md-4 hidden-xs">
         <{if $forum.forum_lastpost_subject}>
             <{$forum.forum_lastpost_time}> <{$smarty.const._MD_BY}> <{$forum.forum_lastpost_user}>
                 <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewtopic.php?post_id=<{$forum.forum_lastpost_id}>">
@@ -328,7 +328,7 @@
 </div><!-- .panel-group -->
 <{/foreach}><!-- End Forum Categories -->
 
-<div class="row">
+<div class="row mb10">
     <div class="col-md-12">
         <{$img_forum_new}> = <{$smarty.const._MD_NEWPOSTS}>
         <{$img_forum}> = <{$smarty.const._MD_NONEWPOSTS}>
@@ -336,44 +336,28 @@
 </div>
 
 <div class="row">
-    <div class="col-md-6">
-        <div class="input-group">
-            <form action="<{$xoops_url}>/modules/<{$xoops_dirname}>/search.php" method="post" name="search" id="search" role="search">
-                <input name="term" id="term" type="text" class="form-control">
-                <input type="hidden" name="forum" id="forum" value="all">
-                <input type="hidden" name="sortby" id="sortby" value="p.post_time desc">
-                <input type="hidden" name="searchin" id="searchin" value="both">
+    <div class="col-md-8 mb10">
+        <form class="input-group" action="<{$xoops_url}>/modules/<{$xoops_dirname}>/search.php" method="post" name="search" id="search" role="search">
+            <input name="term" id="term" type="text" class="form-control" placeholder="<{$smarty.const.THEME_NEWBB_SEARCH_FORUM}>">
+            <input type="hidden" name="forum" id="forum" value="all">
+            <input type="hidden" name="sortby" id="sortby" value="p.post_time desc">
+            <input type="hidden" name="searchin" id="searchin" value="both">
 
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="submit" id="submit"><{$smarty.const._MD_SEARCH}></button>
-                </span>
-            </form>
-        </div>
+            <span class="input-group-btn">
+                <button class="btn btn-primary" type="submit" id="submit"><{$smarty.const._MD_SEARCH}></button>
+            </span>
+        </form>
     </div>
-    <div class="col-lg-6">
+    <div class="col-md-4">
         <a class="btn btn-primary btn-block" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/search.php"><{$smarty.const._MD_ADVSEARCH}></a>
     </div>
 </div>
 
-<{if $rss_button}>
-<div class="row">
-    <div class="col-md-6">
-        <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/rss.php?c=<{$viewcat}>" target="_blank" title="RSS FEED">
-            <{$rss_button}>
-        </a>
-    </div>
-    <div class="col-md-6">
-        <a title="NewBB" href="http://www.simple-xoops.de" class="btn btn-xs btn-success btn-block">NewBB Version  <{$version/100}></a>
-    </div>
-</div>
-<{/if}>
-
 <{if $currenttime}>
 <div class="row">
-    <div class="col-md-6">
-        <ul class="list-unstyled">
-            <li><{$online.statistik}> <{$smarty.const._MD_NEWBB_STATS}></li>
-
+    <div class="col-lg-12"><h3 class="nompl"><{$online.statistik}> <{$smarty.const._MD_NEWBB_STATS}></h3></div>
+    <div class="col-sm-6 col-md-6">
+        <ul class="list-unstyled lw30">
             <li><{$currenttime}></li>
             <li><{$lastvisit}></li>
 
@@ -393,14 +377,14 @@
                     </a></li>
             <{/if}>
 
-            <li><a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewpost.php?status=new" title="<{$smarty.const._MD_VIEW_NEWPOSTS}>">
+            <li><a class="btn btn-xs btn-primary" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewpost.php?status=new" title="<{$smarty.const._MD_VIEW_NEWPOSTS}>">
                 <{$smarty.const._MD_VIEW_NEWPOSTS}>
             </a></li>
         </ul>
     </div>
 
-    <div class="col-md-6">
-        <ul class="list-unstyled">
+    <div class="col-sm-6 col-md-6">
+        <ul class="list-unstyled lw30">
             <{if $userstats}>
                 <li><{*$userstats.lastvisit*}>
                     <{$userstats.lastpost}></li>
@@ -424,6 +408,15 @@
 <{if $online}>
     <{includeq file="db:newbb_online.html"}>
 <{/if}>
+
+<ul class="list-unstyled">
+<li><a title="NewBB" href="http://www.simple-xoops.de" class="btn btn-xs btn-success">NewBB Version  <{$version/100}></a></li>
+<{if $rss_button}>
+    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/rss.php?c=<{$viewcat}>" target="_blank" title="RSS FEED">
+        <{$rss_button}>
+    </a>
+<{/if}>
+</ul>
 
 <{includeq file='db:newbb_notification_select.html'}>
 
