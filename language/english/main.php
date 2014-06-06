@@ -22,4 +22,5 @@ define("THEME_FORUM_SPONSORBY", "Sponsor By.: ");
 define("THEME_GOTOTHEFORUM", "Go to Forum");
 define("THEME_FORUM_DESCRIPTION", "Description");
 define("THEME_NEWBB_SEARCH_FORUM", "Search in forum...");
+define("THEME_NEWBB_SEARCH_TOPIC", "Search in topic...");
 define("THEME_FORUM_DESC", "About This Forum");
