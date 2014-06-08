@@ -110,7 +110,7 @@
 <{/if}>
         </div><!-- .panel-heading -->
 
-<div id="<{$category.cat_element_id}>" class="panel-collapse collapse">
+<div id="<{$category.cat_element_id}>" class="panel-collapse collapse <{if $subforum_display == 'expand'}>in<{/if}>">
     <div class="panel-body">
         <{if $category.forums}>
             <div class="row hidden-xs">
@@ -124,99 +124,6 @@
                 <div class="col-sm-4 col-md-4"><strong><{$smarty.const._MD_LASTPOST}></strong></div>
             </div>
         <{/if}>
-<{if $subforum_display == "expand"}> <!-- Start Forums -->
-<{foreachq item=forum from=$category.forums}>
-
-<div class="<{if $forum.forum_read eq 1 }>forum-read<{else}>forum-new<{/if}>">
-    <{$forum.forum_folder}>
-</div>
-
-<a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$forum.forum_id}>">
-    <{$forum.forum_name}>
-</a>
-
-<{if $rss_enable}>
-    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/rss.php?f=<{$forum.forum_id}>" target="_blank" title="RSS feed">
-        RSS
-    </a>
-<{/if}>
-
-<p><{$forum.forum_desc}></p>
-
-<{if $forum.forum_moderators}>
-    <{$smarty.const._MD_MODERATOR}>: <{$forum.forum_moderators}>
-<{/if}>
-
-<{if $stats[$forum.forum_id].topic.day}>
-    <{$stats[$forum.forum_id].topic.day}>
-<{/if}>
-
-<{$forum.forum_topics}>
-
-<{if $stats[$forum.forum_id].post.day}>
-    <{$stats[$forum.forum_id].post.day}>
-<{/if}>
-
-<{$forum.forum_posts}>
-
-<{if $forum.forum_lastpost_subject}>
-    <{$forum.forum_lastpost_time}> <{$smarty.const._MD_BY}> <{$forum.forum_lastpost_user}>
-        <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewtopic.php?post_id=<{$forum.forum_lastpost_id}>">
-            <{$forum.forum_lastpost_subject}> <{$forum.forum_lastpost_icon}>
-        </a>
-            <{else}>
-                <{$smarty.const._AM_NEWBB_NOTOPIC}>
-<{/if}>
-
-    <!-- Subforuns loop -->
-    <{if $forum.subforum}>
-        <{$img_subforum}>
-        <{$smarty.const._MD_SUBFORUMS}>
-            <{foreachq item=subforum from=$forum.subforum}>
-                <div class="<{if $subforum.forum_read eq 1 }>forum-read<{else}>forum-new<{/if}>"><{$subforum.forum_folder}></div>
-                    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$subforum.forum_id}>">
-                        <{$subforum.forum_name}>
-                    </a>
-
-                        <{if $rss_enable}>
-                            <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/rss.php?f=<{$subforum.forum_id}>" target="_blank" title="RSS feed">RSS</a>
-                        <{/if}>
-                        <{$subforum.forum_desc}>
-
-                        <{if $subforum.forum_moderators}>
-                            <{$smarty.const._MD_MODERATOR}>: <{$subforum.forum_moderators}>
-                        <{/if}>
-
-                        <{if $stats[$subforum.forum_id].topic.day}>
-                            <{$stats[$subforum.forum_id].topic.day}>
-                        <{/if}>
-
-                        <{$subforum.forum_topics}>
-
-                        <{if $stats[$subforum.forum_id].post.day}>
-                            <{$stats[$subforum.forum_id].post.day}>
-                        <{/if}>
-
-                        <{$subforum.forum_posts}>
-
-
-                        <{if $subforum.forum_lastpost_subject}>
-                            <{$subforum.forum_lastpost_time}> <{$smarty.const._MD_BY}> <{$subforum.forum_lastpost_user}>
-                                <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewtopic.php?post_id=<{$subforum.forum_lastpost_id}>">
-                                    <{$subforum.forum_lastpost_subject}>
-                                    <{$subforum.forum_lastpost_icon}>
-                                </a>
-                        <{else}>
-
-                        <{$smarty.const._AM_NEWBB_NOTOPIC}>
-
-                        <{/if}>
-
-            <{/foreach}>
-    <{/if}>
-<{/foreach}>
-
-<{elseif $subforum_display == "collapse"}>
     <{foreachq item=forum from=$category.forums}>
     <div class="row xoops-newbb-list-foruns mb10">
         <div class="col-sm-6 col-md-6">
@@ -302,46 +209,6 @@
         </div>
     </div>
     <{/foreach}>
-
-<{else}>
-
-    <{foreachq item=forum from=$category.forums}>
-        <div class="<{if $forum.forum_read eq 1 }>forum-read<{else}>forum-new<{/if}>"><{$forum.forum_folder}></div>
-            <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewforum.php?forum=<{$forum.forum_id}>"><{$forum.forum_name}></a>
-            <{if $rss_enable}>
-                (<a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/rss.php?f=<{$forum.forum_id}>" target="_blank" title="RSS feed">RSS</a>)
-            <{/if}>
-            <{$forum.forum_desc}>
-
-            <{if $forum.forum_moderators}>
-                <{$smarty.const._MD_MODERATOR}>: <{$forum.forum_moderators}>
-            <{/if}>
-
-            <{if $stats[$forum.forum_id].topic.day}>
-                <{$stats[$forum.forum_id].topic.day}>
-            <{/if}>
-
-            <{$forum.forum_topics}>
-
-            <{if $stats[$forum.forum_id].post.day}>
-                <{$stats[$forum.forum_id].post.day}>
-            <{/if}>
-
-            <{$forum.forum_posts}>
-
-            <{if $forum.forum_lastpost_subject}>
-                <{$forum.forum_lastpost_time}> <{$smarty.const._MD_BY}> <{$forum.forum_lastpost_user}>
-                    <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewtopic.php?post_id=<{$forum.forum_lastpost_id}>">
-                        <{$forum.forum_lastpost_subject}>
-                        <{$forum.forum_lastpost_icon}>
-                    </a>
-            <{else}>
-                <{$smarty.const._AM_NEWBB_NOTOPIC}>
-            <{/if}>
-
-        <{/foreach}>
-
-<{/if}>
     </div><!-- .panel-body -->
     </div><!-- .panel-collapse .collapse -->
   </div><!-- .panel .panel-default -->
