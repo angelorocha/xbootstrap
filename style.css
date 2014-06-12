@@ -61,7 +61,9 @@ footer.footer > h3 > a.credits{position:absolute; top:3px; right:10px;}
 
 /* 2. XOOPS Codes */
 .xoopsQuote{padding:10px 20px; margin:0 0 20px;border-left:5px solid #eeeeee; font-style:italic;}
-.xoopsCode {background: #FAFAFA; padding: 5px; overflow-x: scroll; border: 1px solid #EEE;}
+.xoopsCode {background:url(images/code.png); overflow-x: auto; border: 1px solid #EEE; padding-left: 10px}
+.xoopsCode code{background-color: transparent; line-height: 25px; position: relative;}
+.xoopsCode code > span{position: relative; z-index: 5;}
 
 /* 3. XOOPS Blocks*/
 div.xoops-side-blocks > aside{margin-bottom:20px;}
@@ -317,6 +319,9 @@ ul.tdm-new-download-block li:last-child{border-bottom: none;}
 .xoops-newbb-category-list a.pull-right{margin-left: 5px}
 .xoops-newbb-list-foruns{border-bottom: 1px solid #EAEAEA; padding-bottom: 5px;}
 .xoops-newbb-list-foruns:last-child{border-bottom: none;}
+
+.xoops-newbb-viewtopic{}
+.xoops-newbb-viewtopic table{max-width: 100%; border: 1px solid #000;}
 
 .xoops-mewbb-forum-title{}
 .xoops-mewbb-forum-title a.btn{color: #FFF;}
