@@ -1,3 +1,8 @@
+1.02 2014-06-08 Final
+--------------------
+- Update pt-br lang (Angelo Rocha)
+- Add XOOPS Banners Support (Angelo Rocha)
+
 1.02 2014-06-08 Beta 2
 --------------------
 - Newbb index finished (Angelo Rocha)
