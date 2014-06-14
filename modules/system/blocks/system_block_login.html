@@ -2,12 +2,12 @@
 <form action="<{xoAppUrl user.php}>" method="post" role="form">
     <div class="form-group">
     <{$block.lang_username}>
-    <input class="form-control" type="text" name="uname" placeholder="Your Login">
+    <input class="form-control" type="text" name="uname" placeholder="<{$smarty.const.THEME_LOGIN}>">
     </div>
     
     <div class="form-group">
     <{$block.lang_password}>
-    <input class="form-control" type="password" name="pass" placeholder="Your Password">
+    <input class="form-control" type="password" name="pass" placeholder="<{$smarty.const.THEME_PASS}>">
     </div>
     
     <div class="checkbox">

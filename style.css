@@ -52,12 +52,15 @@ div.slideshow .item{text-align:center;}
 div.slideshow .item img{display:inline-block;}
 
 div.maincontainer{margin-top:20px; margin-bottom:20px;}
-div.home-message{background: #FFF; padding-top:5px; border-left: 3px solid #9C6; margin-top:-60px; position:relative; z-index:5;}
+div.home-message{background: #FAFAFA; padding-top:5px; border-left: 3px solid #9C6; margin-top:-60px; position:relative; z-index:5;}
 div.bottom-blocks{background: url(images/cover.jpg) 50% 50% no-repeat fixed; background-size:cover; margin-top: 20px; padding: 20px 0 20px 0;}
 
 footer.footer{background:#111; color:#EAEAEA;}
 footer.footer > h3{font-size:0.9em; margin:0; line-height:inherit; max-width:960px; margin:0 auto 0 auto; padding:10px 0 10px 0; text-align:center; position:relative;}
 footer.footer > h3 > a.credits{position:absolute; top:3px; right:10px;}
+
+.xoops-banner{position: relative; top: 40px;}
+.xoops-banner *{max-width: 100%;}
 
 /* 2. XOOPS Codes */
 .xoopsQuote{padding:10px 20px; margin:0 0 20px;border-left:5px solid #eeeeee; font-style:italic;}
@@ -339,6 +342,12 @@ div.order-by a{color:#999; font-size:1.2em;}
 .mb10{margin-bottom: 10px;} /* Only Add Margin Bottom of 10px */
 .lw30{line-height: 30px;} /* Only Add Line Height 30px */
 .nompl{margin: 0; padding: 0; line-height: inherit;}/* No margin, paddind and lineweight -> use in title tags if necessary... */
+
+/* Media Queries */
+@media (min-width:320px) and (max-width:768px){
+    .xoops-banner{top: 0;}
+    .xoops-banner.pull-right{float: none !important;}
+}
 
 /* bla, bla, bla */
 .aligncenter{text-align:center; margin-left:auto; margin-right:auto;}

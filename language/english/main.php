@@ -24,3 +24,7 @@ define("THEME_FORUM_DESCRIPTION", "Description");
 define("THEME_NEWBB_SEARCH_FORUM", "Search in forum...");
 define("THEME_NEWBB_SEARCH_TOPIC", "Search in topic...");
 define("THEME_FORUM_DESC", "About This Forum");
+
+//Block login
+define("THEME_LOGIN", "Your Username");
+define("THEME_PASS", "Your Password");
