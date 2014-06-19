@@ -1,3 +1,13 @@
+1.03 2014-06-19 Beta 1
+--------------------
+- Add Masonry Cascading grid layout library - http://masonry.desandro.com/ (Angelo Rocha)
+- New news module grid (Angelo Rocha)
+- Add grid function in js.js (Angelo Rocha)
+- Fix bug in tdmdownloads, div unclosed (Angelo Rocha)
+- Fix bug in tdmdownloads, modal description link ID (Angelo Rocha)
+- Fix tdmdownloads index grid (Angelo Rocha)
+- New extgallery grid system (Angelo Rocha)
+
 1.02 2014-06-08 Final
 --------------------
 - Update pt-br lang (Angelo Rocha)

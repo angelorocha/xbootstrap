@@ -5,14 +5,14 @@
     <!-- <div class="col-xs-4 col-sm-4 col-md-4"><{$lang.nbPhotos}></div> -->
 </div>
 
-<div class="row">
+<div id="xoopsgrid" class="row">
   <{foreachq item=child from=$cats}>
-  <div class="col-xs-4 col-sm-4 col-md-4 xoops-gallery-thumb">
-	<{if $child.cat_nb_album == 0}>
+  <div class="col-xs-6 col-sm-4 col-md-4 xoops-gallery-thumb">
+      <{if $child.cat_nb_album == 0}>
 
-	<{else}> 
+          <{else}>
     
-    <{/if}> 
+        <{/if}>
       
 <{if $disp_cat_img == 1 }>
       <{if $child.cat_imgurl != "" }>

@@ -16,3 +16,7 @@ jQuery(document).ready(function($) {
         wrap:       true
   })
 });
+
+jQuery(document).ready(function($){
+  $('#xoopsgrid').masonry({ singleMode: true });
+});
