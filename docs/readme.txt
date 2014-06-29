@@ -5,6 +5,9 @@ Built with:
 - Masonry:          http://masonry.desandro.com/
 - Selectivizr:      http://selectivizr.com/
 
+Written with:
+- Brackets:         http://brackets.io/
+
 Developed by.: Angelo Rocha
 URL: www.angelorocha.com.br
 XOOPS Fire (Brazillian Support): www.xoopsfire.com

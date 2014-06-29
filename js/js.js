@@ -20,3 +20,11 @@ jQuery(document).ready(function($) {
 jQuery(document).ready(function($){
   $('#xoopsgrid').masonry({ singleMode: true });
 });
+
+/* Newbb Forms (Honestly hope this works well...) */
+jQuery(document).ready(function($){
+    /* Bootstrap Style: Horizontal Form */
+    $(".xoopsform").find('form').addClass("form-inline");
+    $(".xoopsform").find('select').addClass("form-control");
+    $(".xoopsform").find('input[type="submit"]').addClass("btn btn-primary");
+});

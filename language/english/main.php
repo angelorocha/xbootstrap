@@ -28,6 +28,8 @@ define("THEME_NEWBB_SEARCH_TOPIC", "Search in topic...");
 define("THEME_FORUM_DESC", "About This Forum");
 define("THEME_FORUM_NEWTOPIC", "New Topic");
 define("THEME_FORUM_REGISTER", "Register");
+define("THEME_FORUM_SEARCH", "Search");
+define("THEME_FORUM_ADVSEARCH", "Advanced Search");
 
 //Block login
 define("THEME_LOGIN", "Your Username");
