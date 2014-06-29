@@ -18,7 +18,13 @@ jQuery(document).ready(function($) {
 });
 
 jQuery(document).ready(function($){
-  $('#xoopsgrid').masonry({ singleMode: true });
+//  $('#xoopsgrid').masonry({ singleMode: true});
+    $(window).load(function(){$('#xoopsgrid').masonry(); });
+
+    var $container = $('#xoopsgrid').masonry();
+    $container.imagesLoaded( function() {
+      $container.masonry();
+    });
 });
 
 /* Newbb Forms (Honestly hope this works well...) */
