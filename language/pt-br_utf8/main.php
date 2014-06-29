@@ -1,5 +1,7 @@
 <?php
 
+define("THEME_CLOSE", "Fechar");
+
 //Nav Menu
 define("THEME_HOME", "Início");
 define("THEME_MODULE1", "Sobre");
@@ -24,6 +26,8 @@ define("THEME_FORUM_DESCRIPTION", "Descrição");
 define("THEME_NEWBB_SEARCH_FORUM", "Buscar no Fórum...");
 define("THEME_NEWBB_SEARCH_TOPIC", "Buscar no Tópico...");
 define("THEME_FORUM_DESC", "Sobre este fórum");
+define("THEME_FORUM_NEWTOPIC", "Novo Tópico");
+define("THEME_FORUM_REGISTER", "Registre-se para postar");
 
 //Block login
 define("THEME_LOGIN", "Nome de Usuário");
