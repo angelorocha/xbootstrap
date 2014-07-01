@@ -1,6 +1,9 @@
-1.03 2014-06-24 Beta 2
+1.03 2014-06-29 Beta 2
 --------------------
-- Add newbb_viewforum_subforum template (Angelo Rocha)
+- Fix grid layout
+- Finish Newbb View Forum
+- Finish NewBB View Subforum
+- Other minors Adjusts
 
 1.03 2014-06-19 Beta 1
 --------------------
@@ -22,6 +25,7 @@
 - Newbb index finished (Angelo Rocha)
 - Add Newbb viewtopic template (Angelo Rocha)
 - Add Newbb viewforum template (Angelo Rocha)
+- Add newbb_viewforum_subforum template (Angelo Rocha)
 
 1.02 2014-06-04 Beta 1
 --------------------

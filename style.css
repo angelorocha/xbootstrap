@@ -322,6 +322,9 @@ ul.tdm-new-download-block li:last-child{border-bottom: none;}
 .xoops-newbb-list-foruns:last-child{border-bottom: none;}
 
 .newbb-viewtopic{}
+.newbb-tagbar{}
+.newbb-online-users{}
+.newbb-quick-reply textarea{max-height: 150px; width: 100%;}
 
 .newbb-forum-title{}
 .newbb-forum-title a.btn{color: #FFF;}
