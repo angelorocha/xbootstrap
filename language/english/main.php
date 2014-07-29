@@ -1,5 +1,6 @@
 <?php
 
+define("THEME_INFO", "Info");
 define("THEME_CLOSE", "Close");
 
 //Nav Menu

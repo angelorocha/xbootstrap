@@ -72,7 +72,7 @@ function xtube_videothumb($vidid, $title, $source, $picurl, $screenshot, $width 
 // YouTube
     case 0:
         $thumb
-            = '<img src="http://img.youtube.com/vi/' . $vidid . '/default.jpg"  title="' . $title . '" alt="' . $title
+            = '<img src="http://img.youtube.com/vi/' . $vidid . '/0.jpg"  title="' . $title . '" alt="' . $title
             . '" width="' . $width . '" height="' . $height . '" style="padding: 0px; border-style: none;" />';
         break;
 

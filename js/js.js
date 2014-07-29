@@ -27,10 +27,11 @@ jQuery(document).ready(function($){
     });
 });
 
-/* Newbb Forms (Honestly hope this works well...) */
+/* Newbb */
 jQuery(document).ready(function($){
     /* Bootstrap Style: Horizontal Form */
     $(".xoopsform").find('form').addClass("form-inline");
     $(".xoopsform").find('select').addClass("form-control");
     $(".xoopsform").find('input[type="submit"]').addClass("btn btn-primary");
+    $(".newbb-links").find('span').removeClass('forum_icon forum_button');
 });

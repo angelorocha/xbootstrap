@@ -1,5 +1,6 @@
-1.03 2014-06-29 Beta 2
+1.03 2014-07-28 Beta 2
 --------------------
+- Update Bootstrap version to 3.2.0
 - Fix grid layout
 - Finish Newbb View Forum
 - Finish NewBB View Subforum

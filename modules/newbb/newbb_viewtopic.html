@@ -68,7 +68,7 @@
                 <{/if}>
             </div>
         <{/if}>
-        <div class="col-sm-4 col-md-4 generic-pagination text-right">
+        <div class="<{if $viewer_level gt 1}>col-sm-4 col-md-4<{else}>col-sm-12 col-md-12<{/if}> generic-pagination text-right">
             <{$forum_page_nav|replace:'form':'div'|replace:'id="xo-pagenav"':''}>
         </div>
     </div>
