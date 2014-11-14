@@ -6,7 +6,8 @@ Built with:
 - Selectivizr:      http://selectivizr.com/
 
 Written with:
-- Brackets:         http://brackets.io/
+- Brackets:         http://brackets.io/ (so far... 1.03 2014-07-28 Beta 2)
+- PHPStorm:         https://www.jetbrains.com/phpstorm/ (1.03 2014-11-14 Beta 3)
 
 Developed by.: Angelo Rocha
 URL: www.angelorocha.com.br

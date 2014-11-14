@@ -1,3 +1,8 @@
+1.03 2014-11-14 Beta 3
+--------------------
+- Update Bootstrap vertion to 3.3.1
+- Update pm and profile extension templates files
+
 1.03 2014-07-28 Beta 2
 --------------------
 - Update Bootstrap version to 3.2.0
