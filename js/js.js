@@ -32,3 +32,8 @@ jQuery(document).ready(function($){
     $(".xoopsform").find('input[type="submit"]').addClass("btn btn-primary");
     $(".newbb-links").find('span').removeClass('forum_icon forum_button');
 });
+
+jQuery(document).ready(function($){
+    $('.newbb-thread-attachment').find('br').remove();
+    $('.newbb-thread-attachment').find('hr').remove();
+})

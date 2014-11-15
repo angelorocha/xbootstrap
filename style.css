@@ -327,6 +327,7 @@ ul.tdm-new-download-block li:last-child{border-bottom: none;}
 .newbb-quick-reply textarea{max-height: 150px; width: 100%;}
 
 .newbb-forum-title{}
+.newbb-forum-title strong{font-size: 1.5em; color: #BBB;}
 .newbb-forum-title a.btn{color: #FFF;}
 
 .newbb-subforum{}
@@ -339,9 +340,14 @@ ul.tdm-new-download-block li:last-child{border-bottom: none;}
 .newbb-topiclist-itens.even{background: #FAFAFA;}
 .newbb-topiclist-itens.odd{background: #F6F6F6;}
 
-.newbb-thread{background: #FAFAFA; border: 1px solid #EEE;}
+.newbb-thread{background: #EEE; border: 1px solid #DADADA;}
+.newbb-post-anchor{background: #09C; color: #FFF; position: absolute; right: 0; top: 0; padding: 3px; font-size: 0.8em;}
+.newbb-user-signature{position: absolute; bottom: 0; left: 0; border-top: 1px dotted #DADADA; width: 100%; color: #BBB; font-style: italic; padding:5px;}
+.newbb-thread-attachment{margin-top: 20px;}
+.newbb-thread-attachment strong,
+.newbb-thread-attachment small{display: block;}
 .newbb-user-data{}
-.newbb-message-area{position: relative;}
+.newbb-message-area{position: relative; padding-bottom: 40px; padding-left: 0;}
 .newbb-topic-id{position: absolute; bottom: 0; right: 0;}
 .newbb-links{margin-top: 5px; border-bottom: 1px dotted #E6E6E6; padding-bottom: 2px;}
 

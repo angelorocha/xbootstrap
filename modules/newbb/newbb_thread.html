@@ -3,7 +3,7 @@
         <{assign var=forum_post_prefix value="forumpost"}>
         <div id="<{$forum_post_prefix}>0"></div>
     <{/if}>
-<div class="col-md-3 text-center newbb-user-data">
+<div class="col-sm-3 col-md-3 text-center newbb-user-data">
     <{$topic_post.poster.link}>
 
     <{if $topic_post.poster.uid gt -1}>
@@ -89,7 +89,7 @@
         <strong><{$topic_post.post_title}></strong>
 
         <{if $topic_post.post_id > 0}>
-            <a id="<{$forum_post_prefix}><{$topic_post.post_id}>" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewtopic.php?post_id=<{$topic_post.post_id}>" title="<{$topic_post.post_no}>" class="btn btn-primary btn-xs pull-right">
+            <a id="<{$forum_post_prefix}><{$topic_post.post_id}>" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewtopic.php?post_id=<{$topic_post.post_id}>" title="<{$topic_post.post_no}>" class="newbb-post-anchor">
                 #<{$topic_post.post_no}>
             </a>
         <{/if}>
@@ -98,7 +98,9 @@
     <{$topic_post.post_text}>
 
     <{if $topic_post.post_attachment}>
+    <div class="newbb-thread-attachment">
         <{$topic_post.post_attachment}>
+    </div>
     <{/if}>
 
     <{if $topic_post.post_edit}>
@@ -108,13 +110,15 @@
     <{/if}>
 
     <{if $topic_post.post_signature}>
-        <{$topic_post.post_signature}>
+        <div class="newbb-user-signature">
+            <{$topic_post.post_signature}>
+        </div>
     <{/if}>
 </div>
 </div><!-- .newbb-thread -->
             
 <div class="clearfix newbb-links mb10">
-    <div class="col-md-6 nompl">
+    <div class="col-md-6 nompl hidden-xs">
     <{if $topic_post.thread_action}>
         <{foreachq item=btn from=$topic_post.thread_action}>
             <a href="<{$btn.link}>&amp;post_id=<{$topic_post.post_id}>" title="<{$btn.name}>" <{if $btn.target}>target="<{$btn.target}>"<{/if}>>

@@ -100,7 +100,7 @@
             <{$forum_addpoll}>
         </div>
 
-        <div class="col-sm-6 col-md-6 text-right">
+        <div class="col-sm-6 col-md-6 text-right hidden-xs">
             <a id="threadtop"></a>
             <a class="btn btn-info" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewtopic.php?order=<{$order_current}>&amp;topic_id=<{$topic_id}>&amp;forum=<{$forum_id}>&amp;move=prev" title="<{$smarty.const._MD_PREVTOPIC}>">
                 <span class="glyphicon glyphicon-circle-arrow-left"></span>
@@ -191,7 +191,7 @@
 
     <div class="newbb-viewtopic-footer">
     <div class="row mb10">
-        <div class="col-sm-5 col-md-5">
+        <div class="col-sm-5 col-md-5 hidden-xs">
             <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/reply.php?topic_id=<{$topic_id}>" title="<{$smarty.const.THEME_FORUM_REPLY}>" class="btn btn-primary"><{$smarty.const.THEME_FORUM_REPLY}></a>
 
             <{if $viewer_level gt 1}>
@@ -207,11 +207,11 @@
             <{$forum_addpoll}>
         </div>
 
-        <div class="xoopsform col-sm-4 col-md-4">
+        <div class="xoopsform col-sm-5 col-md-5">
             <{$forum_jumpbox}>
         </div>
 
-        <div class="col-sm-3 col-md-3 text-right">
+        <div class="col-sm-2 col-md-2 text-right nompl hidden-xs">
             <a id="threadbottom"></a>
             <a class="btn btn-info" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewtopic.php?order=<{$order_current}>&amp;topic_id=<{$topic_id}>&amp;forum=<{$forum_id}>&amp;move=prev" title="<{$smarty.const._MD_PREVTOPIC}>">
                 <span class="glyphicon glyphicon-circle-arrow-left"></span>

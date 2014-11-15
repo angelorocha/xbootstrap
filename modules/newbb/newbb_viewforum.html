@@ -119,16 +119,16 @@
     <div class="newbb-topiclist-loop">
         <div class="newbb-topiclist-header clearfix">
         <div class="col-xs-6 col-sm-6 col-md-3"><a href="<{$h_topic_link}>" title="<{$smarty.const._MD_TOPICS}>"><{$smarty.const._MD_TOPICS}></a></div>
-        <div class="col-md-2 visible-lg"><a href="<{$h_poster_link}>" title="<{$smarty.const._MD_TOPICPOSTER}>"><{$smarty.const._MD_TOPICPOSTER}></a></div>
-        <div class="col-md-2 visible-lg"><a href="<{$h_publish_link}>" title="<{$smarty.const._MD_TOPICTIME}>"><{$smarty.const._MD_TOPICTIME}></a></div>
-        <div class="col-md-1 visible-lg"><a href="<{$h_reply_link}>" title="<{$smarty.const._MD_REPLIES}>"><{$smarty.const._MD_REPLIES}></a></div>
-        <div class="col-md-1 visible-lg"><a href="<{$h_views_link}>" title="<{$smarty.const._MD_VIEWS}>"><{$smarty.const._MD_VIEWS}></a></div>
+        <div class="col-md-2 visible-lg visible-md"><a href="<{$h_poster_link}>" title="<{$smarty.const._MD_TOPICPOSTER}>"><{$smarty.const._MD_TOPICPOSTER}></a></div>
+        <div class="col-md-2 visible-lg visible-md"><a href="<{$h_publish_link}>" title="<{$smarty.const._MD_TOPICTIME}>"><{$smarty.const._MD_TOPICTIME}></a></div>
+        <div class="col-md-1 visible-lg visible-md"><a href="<{$h_reply_link}>" title="<{$smarty.const._MD_REPLIES}>"><{$smarty.const._MD_REPLIES}></a></div>
+        <div class="col-md-1 visible-lg visible-md"><a href="<{$h_views_link}>" title="<{$smarty.const._MD_VIEWS}>"><{$smarty.const._MD_VIEWS}></a></div>
 
         <{if $rating_enable}>
             <div class="col-md-1 visible-lg"><a href="<{$h_rating_link}>" title="<{$smarty.const._MD_RATINGS}>"><{$smarty.const._MD_RATINGS}></a></div>
         <{/if}>
 
-        <div class="col-xs-6 col-sm-6 col-md-2"><a href="<{$h_date_link}>" title="<{$smarty.const._MD_LASTPOSTTIME}>"><{$smarty.const._MD_LASTPOSTTIME}></a></div>
+        <div class="<{if $rating_enable}>col-xs-6 col-sm-6 col-md-2<{else}>col-xs-6 col-sm-6 col-md-3<{/if}>"><a href="<{$h_date_link}>" title="<{$smarty.const._MD_LASTPOSTTIME}>"><{$smarty.const._MD_LASTPOSTTIME}></a></div>
         </div><!-- .newbb-topiclist-header -->
 
         <{if $sticky > 0}>
@@ -150,7 +150,7 @@
             <{/if}>
         <{/if}>
 -->
-        <div class="<{if $rating_enable}>col-xs-6 col-sm-6 col-md-3<{else}>col-xs-6 col-sm-6 col-md-4<{/if}>">
+        <div class="col-xs-6 col-sm-6 col-md-3">
         <span>
             <{if $mode gt 1}>
                 <input type="checkbox" name="topic_id[]" id="topic_id[<{$topic.topic_id}>]" value="<{$topic.topic_id}>">
@@ -166,12 +166,12 @@
 
         <!-- <{$topic.attachment}> <{$topic.topic_page_jump}> -->
 
-        <div class="col-md-2 visible-lg"><label class="label label-info"><span class="glyphicon glyphicon-user"></span> <{$topic.topic_poster}></label></div>
-        <div class="col-md-2 visible-lg"><{$topic.topic_time}></div>
-        <div class="col-md-1 visible-lg text-center"><{$topic.topic_replies}></div>
-        <div class="col-md-1 visible-lg text-center"><{$topic.topic_views}></div>
+        <div class="col-md-2 visible-lg visible-md"><label class="label label-info"><span class="glyphicon glyphicon-user"></span> <{$topic.topic_poster}></label></div>
+        <div class="col-md-2 visible-lg visible-md"><{$topic.topic_time}></div>
+        <div class="col-md-1 visible-lg visible-md text-center"><{$topic.topic_replies}></div>
+        <div class="col-md-1 visible-lg visible-md text-center"><{$topic.topic_views}></div>
         <{if $rating_enable}><div class="col-md-1 visible-lg"><{$topic.rating_img}></div><{/if}>
-        <div class="col-xs-6 col-sm-6 col-md-2"><{$topic.topic_last_posttime}> <{$smarty.const._MD_BY}> <{$topic.topic_last_poster}> <{$topic.topic_page_jump_icon}></div>
+        <div class="<{if $rating_enable}>col-xs-6 col-sm-6 col-md-2<{else}>col-xs-6 col-sm-6 col-md-3<{/if}>"><{$topic.topic_last_posttime}> <{$smarty.const._MD_BY}> <{$topic.topic_last_poster}> <{$topic.topic_page_jump_icon}></div>
 
     </div><!-- .newbb-topiclist-itens -->
     <{/foreach}>
