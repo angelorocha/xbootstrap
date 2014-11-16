@@ -1,3 +1,9 @@
+1.04 Alpha 1 NOT RELEASED
+-------------------
+- Added Sticky Bar and Scroll-Up (mamba)
+- adjusted NewBB for Sticky Bar (mamba)
+- added Footer Blocks (mamba)
+
 1.03 2014-11-15 Final
 -------------------
 - Support to newbb module (Angelo Rocha)

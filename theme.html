@@ -21,9 +21,14 @@
 <link rel="stylesheet" type="text/css" href="<{xoImgUrl}>css/xoops.css">
 <link rel="stylesheet" type="text/css" href="<{xoImgUrl}>css/reset.css">
 <link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>">
+<link rel="stylesheet" type="text/css" media="screen" href="<{xoImgUrl}>css/labs.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{xoImgUrl}>css/headhesive.css" />
+
 <script src="<{xoImgUrl}>js/jquery-1.10.2.js"></script>
 <script src="<{xoImgUrl}>js/bootstrap.min.js"></script>
 <script src="<{xoImgUrl}>js/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="<{xoImgUrl}>js/headhesive.min.js"></script>
+<script type="text/javascript" src="<{xoImgUrl}>js/jquery.scrollUp.min.js"></script>
 <script src="<{xoImgUrl}>js/imagesloaded.pkgd.min.js"></script>
 <!--[if lt IE 9]>
     <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -37,6 +42,15 @@
 
 <{includeq file="$theme_name/tpl/shareaholic-script.html"}>
     
+    <script>
+        $(function () {
+            $.scrollUp({
+                scrollImg     : true,            // Set true to use image
+                animation    : 'fade'
+            });
+        });
+    </script>
+
 <{$xoops_module_header}>
     
 </head>
@@ -74,6 +88,24 @@
 
 </div><!-- .maincontainer -->
 
+<script>
+    // Set options
+    var options = {
+        offset: '#showHere',
+        classes: {
+            clone:   'banner--clone',
+            stick:   'banner--stick',
+            unstick: 'banner--unstick'
+        }
+    };
+
+    // Initialise with options
+    var banner = new Headhesive('.banner', options);
+
+    // Headhesive destroy
+    // banner.destroy();
+</script>
+
 <{if $xoBlocks.page_bottomcenter || $xoBlocks.page_bottomright || $xoBlocks.page_bottomleft}>
     <div class="bottom-blocks">
         <div class="container">
@@ -87,6 +119,22 @@
         </div>
     </div><!-- .bottom-blocks -->
 <{/if}>
+
+<!-- for new footer blocks  -->
+<{if $xoBlocks.footer_left || $xoBlocks.footer_right || $xoBlocks.footer_center}>
+    <div class="bottom-blocks">
+        <div class="container">
+            <div class="row">
+                <{includeq file="$theme_name/tpl/leftFooter.html"}>
+
+                <{includeq file="$theme_name/tpl/centerFooter.html"}>
+
+                <{includeq file="$theme_name/tpl/rightFooter.html"}>
+            </div>
+        </div>
+    </div>
+<{/if}>
+<!-- end of new footer blocks  -->
 
 <footer class="footer">
     <h3>
