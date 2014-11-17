@@ -354,7 +354,7 @@ ul.tdm-new-download-block li:last-child{border-bottom: none;}
 .read-topic{color: #999;}
 .read-topic:hover{color: #333;}
 .new-topic{font-weight: bold;}
-.forum-search{margin-top: 5px;}
+.forum-search{margin-top: 10px;}
 
 /* 5. Useful Classes */
 .big-info-icon-link{color:#333; font-size:1.8em; margin:10px 0 10px 0; display:inline-table; cursor:pointer;}
@@ -369,6 +369,7 @@ div.order-by{font-size:1.2em;}
 div.order-by a{color:#999; font-size:1.2em;}
 
 .mb10{margin-bottom: 10px;} /* Only Add Margin Bottom of 10px */
+.mt10{margin-top: 10px;} /* Only add Margin Top of 10px */
 .lw30{line-height: 30px;} /* Only Add Line Height 30px */
 .nompl{margin: 0; padding: 0; line-height: inherit;}/* No margin, paddind and lineweight -> use in title tags if necessary... */
 
