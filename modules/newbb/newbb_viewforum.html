@@ -17,9 +17,9 @@
     </ol>
 
     <{if $viewer_level gt 1}>
-        <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/newtopic.php?forum=<{$forum_id}>" title="" class="btn btn-success"><{$smarty.const.THEME_FORUM_NEWTOPIC}></a>
+        <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/newtopic.php?forum=<{$forum_id}>" title="<{$smarty.const.THEME_FORUM_NEWTOPIC}>" class="btn btn-success"><{$smarty.const.THEME_FORUM_NEWTOPIC}></a>
     <{else}>
-        <a href="<{$xoops_url}>/user.php" title="" class="btn btn-success"><{$smarty.const.THEME_FORUM_REGISTER}></a>
+        <a href="<{$xoops_url}>/user.php" title="<{$smarty.const.THEME_FORUM_REGISTER}>" class="btn btn-success"><{$smarty.const.THEME_FORUM_REGISTER}></a>
     <{/if}>
 
     <{if $forum_topictype}><{$forum_topictype}><{/if}>
@@ -41,7 +41,7 @@
     <{/if}>
 
     <!-- Forum Search -->
-    <div class="row collapse" id="forum-search">
+    <div class="row collapse forum-search" id="forum-search">
         <div class="col-sm-9 col-md-9 mb10">
             <form class="input-group" action="<{$xoops_url}>/modules/<{$xoops_dirname}>/search.php" method="get" role="search">
                 <input name="term" id="term" type="text" class="form-control" placeholder="<{$smarty.const.THEME_NEWBB_SEARCH_FORUM}>">
@@ -69,7 +69,7 @@
     <{/if}>
 
     <{if $viewer_level gt 1}>
-        <{$forum_addpoll}>
+        <a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/newtopic.php?op=add&forum=<{$forum_id}>" title="<{$smarty.const.THEME_ADD_POLL}>"><{$smarty.const.THEME_ADD_POLL}></a> |
 
     <{if $mode gt 1}>
         <{$smarty.const._ALL}>: <input type="checkbox" name="topic_check1" id="topic_check1" value="1" onclick="xoopsCheckAll('form_topics_admin', 'topic_check1');" />
