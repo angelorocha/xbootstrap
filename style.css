@@ -354,6 +354,7 @@ ul.tdm-new-download-block li:last-child{border-bottom: none;}
 .read-topic{color: #999;}
 .read-topic:hover{color: #333;}
 .new-topic{font-weight: bold;}
+.forum-search{margin-top: 5px;}
 
 /* 5. Useful Classes */
 .big-info-icon-link{color:#333; font-size:1.8em; margin:10px 0 10px 0; display:inline-table; cursor:pointer;}
