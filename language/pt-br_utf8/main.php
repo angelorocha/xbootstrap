@@ -32,6 +32,7 @@ define("THEME_FORUM_REGISTER", "Registre-se para postar");
 define("THEME_FORUM_SEARCH", "Buscar");
 define("THEME_FORUM_ADVSEARCH", "Busca Avançada");
 define("THEME_FORUM_REPLY", "Responder");
+define("THEME_ADD_POLL", "Enquete");
 
 //Block login
 define("THEME_LOGIN", "Nome de Usuário");

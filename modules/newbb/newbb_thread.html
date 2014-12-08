@@ -89,7 +89,7 @@
         <strong><{$topic_post.post_title}></strong>
 
         <{if $topic_post.post_id > 0}>
-            <a id="<{$forum_post_prefix}><{$topic_post.post_id}>" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewtopic.php?post_id=<{$topic_post.post_id}>" title="<{$topic_post.post_no}>" class="newbb-post-anchor">
+            <a id="<{$forum_post_prefix}><{$topic_post.post_id}>" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/viewtopic.php?post_id=<{$topic_post.post_id}>#<{$topic_post.post_no}>" title="<{$topic_post.post_no}>" class="newbb-post-anchor">
                 #<{$topic_post.post_no}>
             </a>
         <{/if}>
