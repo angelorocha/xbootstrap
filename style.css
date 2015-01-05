@@ -387,7 +387,7 @@ div.order-by a{color:#999; font-size:1.2em;}
 /* Oswaldo */
 /* add hover dropdown*/
 @media (min-width:769px) {
-.dropdown:hover .dropdown-menu {
+.dropdown:hover> .dropdown-menu {
 display: block;
 }
 }
