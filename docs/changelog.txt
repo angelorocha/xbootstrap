@@ -1,6 +1,7 @@
 1.04 2015-01-13 Beta 1
 -------------------
 - Add extgallery bootstrap slide in blocks: extgallery_block.html and extgallery_block_ajax.html (Angelo Rocha, (thanks Andrax));
+- Add extCal support;
 
 1.03 2014-11-15 Final
 -------------------

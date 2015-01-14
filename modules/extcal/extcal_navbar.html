@@ -1,0 +1,26 @@
+<script>
+    jQuery(document).ready(function($){
+        $('a#current').parent().addClass('active');
+    });
+</script>
+
+<ul class="nav nav-tabs">
+    <li><a href="calendar-month.php" <{if $view ==
+        "calmonth"}>id="current"<{else}>class="head"<{/if}>><{$lang.calmonth}></a>
+    </li>
+    <li><a href="calendar-week.php" <{if $view ==
+        "calweek"}>id="current"<{else}>class="head"<{/if}>><{$lang.calweek}></a>
+    </li>
+    <li><a href="year.php" <{if $view ==
+        "year"}>id="current"<{else}>class="head"<{/if}>><{$lang.year}></a>
+    </li>
+    <li><a href="month.php" <{if $view ==
+        "month"}>id="current"<{else}>class="head"<{/if}>><{$lang.month}></a>
+    </li>
+    <li><a href="week.php" <{if $view ==
+        "week"}>id="current"<{else}>class="head"<{/if}>><{$lang.week}></a>
+    </li>
+    <li><a href="day.php" <{if $view ==
+        "day"}>id="current"<{else}>class="head"<{/if}>><{$lang.day}></a>
+    </li>
+</ul>
