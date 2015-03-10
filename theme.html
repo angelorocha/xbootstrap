@@ -16,19 +16,26 @@
 <link href="<{xoImgUrl}>js/owl/owl.carousel.css" rel="stylesheet">
 <link href="<{xoImgUrl}>js/owl/owl.theme.css" rel="stylesheet">
 
-<link href="<{$xoops_url}>/favicon.ico" rel="shortcut icon">
-<link rel="stylesheet" type="text/css" href="<{xoImgUrl}>css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="<{xoImgUrl}>css/xoops.css">
-<link rel="stylesheet" type="text/css" href="<{xoImgUrl}>css/reset.css">
-<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>">
-<link rel="stylesheet" type="text/css" media="screen" href="<{xoImgUrl}>css/labs.css" />
-<link rel="stylesheet" type="text/css" media="screen" href="<{xoImgUrl}>css/headhesive.css" />
+    <link href="<{$xoops_url}>/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="<{xoImgUrl}>css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<{xoImgUrl}>css/xoops.css">
+    <link rel="stylesheet" type="text/css" href="<{xoImgUrl}>css/reset.css">
+    <link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>">
+    <link rel="stylesheet" type="text/css" media="screen" href="<{xoImgUrl}>css/labs.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="<{xoImgUrl}>css/headhesive.css"/>
+    <{if $xoops_dirname=='newbb'}>
+    <link rel="stylesheet" type="text/css" media="screen" href="<{xoImgUrl}>css/forums.css"/>
+    <{/if}>
 
-<script src="<{xoImgUrl}>js/jquery-1.10.2.js"></script>
+<!--<script src="<{xoImgUrl}>js/jquery-1.10.2.js"></script>-->
+
+<script src="<{$xoops_url}>/browse.php?Frameworks/jquery/jquery.js" type="text/javascript"></script>
+
+
 <script src="<{xoImgUrl}>js/bootstrap.min.js"></script>
 <script src="<{xoImgUrl}>js/masonry.pkgd.min.js"></script>
-<script type="text/javascript" src="<{xoImgUrl}>js/headhesive.min.js"></script>
-<script type="text/javascript" src="<{xoImgUrl}>js/jquery.scrollUp.min.js"></script>
+<script src="<{xoImgUrl}>js/headhesive.min.js"></script>
+<script src="<{xoImgUrl}>js/jquery.scrollUp.min.js"></script>
 <script src="<{xoImgUrl}>js/imagesloaded.pkgd.min.js"></script>
 <!--[if lt IE 9]>
     <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -40,26 +47,34 @@
 
 <title><{if $xoops_dirname == "system"}><{$xoops_sitename}><{if $xoops_pagetitle !=''}> - <{$xoops_pagetitle}><{/if}><{else}><{if $xoops_pagetitle !=''}><{$xoops_pagetitle}> - <{$xoops_sitename}><{/if}><{/if}></title>
 
-<{includeq file="$theme_name/tpl/shareaholic-script.html"}>
-    
-    <script>
-        $(function () {
-            $.scrollUp({
-                scrollImg     : true,            // Set true to use image
-                animation    : 'fade'
-            });
-        });
-    </script>
+<{includeq file="$theme_name/tpl/shareaholic-script.tpl"}>
 
-<{$xoops_module_header}>
-    
+    <{$xoops_module_header}>
+
+
 </head>
+<script>
+    $(function () {
+        $.scrollUp({
+            scrollName: 'scrollUp', // Element ID
+            topDistance: '300', // Distance from top before showing element (px)
+            topSpeed: 300, // Speed back to top (ms)
+            animation: 'fade', // Fade, slide, none
+            animationInSpeed: 200, // Animation in speed (ms)
+            animationOutSpeed: 200, // Animation out speed (ms)
+            scrollText: 'Scroll to top', // Text for element
+            activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+//            activeOverlay:'#00FFFF', // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+            scrollImg     : true            // Set true to use image
+        });
+    });
+</script>
     
 <body id="<{$xoops_dirname}>">
 
-<{includeq file="$theme_name/tpl/nav-menu.html"}>
+<{includeq file="$theme_name/tpl/nav-menu.tpl"}>
 
-<{includeq file="$theme_name/tpl/slider.html"}>
+<{includeq file="$theme_name/tpl/slider.tpl"}>
 
 <div class="container maincontainer">
 
@@ -79,42 +94,26 @@
 <{/if}>
 
 <div class="row">
-    <{includeq file="$theme_name/tpl/leftBlock.html"}>
+    <{includeq file="$theme_name/tpl/leftBlock.tpl"}>
     
-    <{includeq file="$theme_name/tpl/content-zone.html"}>
+    <{includeq file="$theme_name/tpl/content-zone.tpl"}>
     
-    <{includeq file="$theme_name/tpl/rightBlock.html"}>
+    <{includeq file="$theme_name/tpl/rightBlock.tpl"}>
 </div>
 
 </div><!-- .maincontainer -->
 
-<script>
-    // Set options
-    var options = {
-        offset: '#showHere',
-        classes: {
-            clone:   'banner--clone',
-            stick:   'banner--stick',
-            unstick: 'banner--unstick'
-        }
-    };
 
-    // Initialise with options
-    var banner = new Headhesive('.banner', options);
-
-    // Headhesive destroy
-    // banner.destroy();
-</script>
 
 <{if $xoBlocks.page_bottomcenter || $xoBlocks.page_bottomright || $xoBlocks.page_bottomleft}>
     <div class="bottom-blocks">
         <div class="container">
             <div class="row">
-                <{includeq file="$theme_name/tpl/leftBottom.html"}>
+                <{includeq file="$theme_name/tpl/leftBottom.tpl"}>
                 
-                <{includeq file="$theme_name/tpl/centerBottom.html"}>
+                <{includeq file="$theme_name/tpl/centerBottom.tpl"}>
                 
-                <{includeq file="$theme_name/tpl/rightBottom.html"}>
+                <{includeq file="$theme_name/tpl/rightBottom.tpl"}>
             </div>
         </div>
     </div><!-- .bottom-blocks -->
@@ -125,16 +124,36 @@
     <div class="bottom-blocks">
         <div class="container">
             <div class="row">
-                <{includeq file="$theme_name/tpl/leftFooter.html"}>
+                <{includeq file="$theme_name/tpl/leftFooter.tpl"}>
 
-                <{includeq file="$theme_name/tpl/centerFooter.html"}>
+                <{includeq file="$theme_name/tpl/centerFooter.tpl"}>
 
-                <{includeq file="$theme_name/tpl/rightFooter.html"}>
+                <{includeq file="$theme_name/tpl/rightFooter.tpl"}>
             </div>
         </div>
     </div>
 <{/if}>
 <!-- end of new footer blocks  -->
+
+<script>
+
+    // Set options
+    var options = {
+        offset: '#showHere',
+        classes: {
+            clone:   'adhesiveHeader--clone',
+            stick:   'adhesiveHeader--stick',
+            unstick: 'adhesiveHeader--unstick'
+        }
+    };
+
+    // Initialise with options
+    var adhesiveHeader = new Headhesive('.adhesiveHeader', options);
+
+    // Headhesive destroy
+    // adhesiveHeader.destroy();
+</script>
+
 
 <footer class="footer">
     <h3>

@@ -8,12 +8,12 @@
  *
  |  var options = {
  |      classes {
- |          clone: 'banner--clone';
+ |          clone: 'adhesiveHeader--clone';
  |      }
  |  }
  *
  */
-.banner--clone {
+.adhesiveHeader--clone {
 
     /* Required styles */
     position: fixed;
@@ -44,12 +44,12 @@
  *
  |  var options = {
  |      classes {
- |          stick: 'banner--stick';
+ |          stick: 'adhesiveHeader--stick';
  |      }
  |  }
  *
  */
-.banner--stick {
+.adhesiveHeader--stick {
     /* Translate back to 0%; */
     -webkit-transform: translateY(0%);
         -ms-transform: translateY(0%);
@@ -63,11 +63,11 @@
  *
  |  var options = {
  |      classes {
- |          unstick: 'banner--unstick';
+ |          unstick: 'adhesiveHeader--unstick';
  |      }
  |  }
  *
  */
-.banner--unstick {
+.adhesiveHeader--unstick {
     /* Not required to use, but could be useful to have */
 }

@@ -1,6 +1,8 @@
-1.04 Alpha 1 NOT RELEASED
+1.04 Beta 2      NOT RELEASED
 -------------------
-- Added Sticky Bar and Scroll-Up (mamba)
+- Add extgallery bootstrap slide in blocks: extgallery_block.html and extgallery_block_ajax.html (Angelo Rocha, (thanks Andrax)); 
+- Add extCal support (angelo)
+- Added adhesiveHeader (sticky Bar) and Scroll-Up (mamba)
 - adjusted NewBB for Sticky Bar (mamba)
 - added Footer Blocks (mamba)
 

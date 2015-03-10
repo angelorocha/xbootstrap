@@ -11,16 +11,17 @@
 
 /**
  * @copyright       The XUUPS Project http://sourceforge.net/projects/xuups/
+ * @copyright       (c) 2000-2015 XOOPS Project (www.xoops.org)
  * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
  * @package         Publisher
  * @subpackage      Action
  * @since           1.0
  * @author          trabis <lusopoemas@gmail.com>
  * @author          The SmartFactory <www.smartfactory.ca>
- * @version         $Id: item.php 10374 2012-12-12 23:39:48Z trabis $
+ * @version         $Id: item.php 
  */
 
-include_once dirname(__FILE__) . '/header.php';
+include_once __DIR__ . '/header.php';
 
 $itemid = PublisherRequest::getInt('itemid');
 $item_page_id = PublisherRequest::getInt('page', -1);
@@ -39,9 +40,9 @@ if (!$itemObj) {
     exit();
 }
 
-$xoopsOption['template_main'] = 'publisher_item.html';
+$xoopsOption['template_main'] = 'publisher_item.tpl';
 include_once XOOPS_ROOT_PATH . '/header.php';
-$xoTheme->addStylesheet(PUBLISHER_URL . '/css/jquery.popeye.style.css');
+$xoTheme->addStylesheet(PUBLISHER_URL . '/assets/css/jquery.popeye.style.css');
 $xoTheme->addScript(XOOPS_URL . '/browse.php?Frameworks/jquery/jquery.js');
 $xoTheme->addScript(PUBLISHER_URL . '/js/jquery.popeye-2.0.4.js');
 //$xoTheme->addScript(PUBLISHER_URL . '/js/publisher.js');
@@ -217,8 +218,8 @@ if ((($itemObj->cancomment() == 1) || !$publisher->getConfig('perm_com_art_level
 if ($publisher->getConfig('perm_rating')) {
     $xoopsTpl->assign('rating_enabled', true);
     $item['ratingbar'] = publisher_ratingBar($itemid);
-    $xoTheme->addScript(PUBLISHER_URL . '/js/behavior.js');
-    $xoTheme->addScript(PUBLISHER_URL . '/js/rating.js');
+    $xoTheme->addScript(PUBLISHER_URL . '/assets/js/behavior.js');
+    $xoTheme->addScript(PUBLISHER_URL . '/assets/js/rating.js');
 }
 
 $xoopsTpl->assign('item', $item);
