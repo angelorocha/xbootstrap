@@ -2,9 +2,12 @@
 -------------------
 - Add extgallery bootstrap slide in blocks: extgallery_block.html and extgallery_block_ajax.html (Angelo Rocha, (thanks Andrax)); 
 - Add extCal support (angelo)
-- Added adhesiveHeader (sticky Bar) and Scroll-Up (mamba)
+- Added Sticky Bar and Scroll-Up (mamba)
 - adjusted NewBB for Sticky Bar (mamba)
 - added Footer Blocks (mamba)
+- Update Bootstrap to 3.3.5 (mamba)
+- Update Owl Carousel to 1.3.3 (mamba)
+- Update Masonry to 3.3.0 (mamba)
 
 1.03 2014-11-15 Final
 -------------------
