@@ -22,7 +22,14 @@
               <li><a href="javascript:;">Topic 2</a></li>
               <li><a href="javascript:;">Topic 3</a></li>
               <li><a href="javascript:;">Topic 4</a></li>
-              <li><a href="javascript:;">Topic 5</a></li>
+                <li class="dropdown-submenu">
+                    <a href="<{$xoops_url}>/modules/publisher/item.php?itemid=9" class="dropdown-toggle" data-toggle="dropdown">Sub-Topic A</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="<{$xoops_url}>/modules/publisher/item.php?itemid=10">Sub-Topic B</a></li>
+                        <li><a href="<{$xoops_url}>/modules/publisher/item.php?itemid=11">Sub-Topic C</a></li>
+                        <li><a href="<{$xoops_url}>/modules/publisher/item.php?itemid=12">Sub-Topic D</a></li>
+                    </ul>
+                </li>
             </ul>
           </li>
           <li><a href="<{$xoops_url}>/modules/newbb"><{$smarty.const.THEME_MODULE3}></a></li>
