@@ -31,7 +31,7 @@
 	<div class="pub_article_t_top clearfix">
 		<header>
 			<h2>
-				<{$item.titlelink}>
+				<{$item.titlelink}><br/>
 				<font style="font-size: 11px; padding: 0; margin: 0; line-height: 12px; opacity:0.8;-moz-opacity:0.8">
 					<span class="glyphicon glyphicon-tag"></span>&nbsp;<{$item.category}>
 				</font>
