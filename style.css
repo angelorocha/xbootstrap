@@ -133,6 +133,9 @@ ul.userblock > li.join-date{padding: 0 5px 0 0; width: 9%;}
 
 ul.userblock > li span.badge{background: #47A447; position: absolute; bottom: 0; right: 0;}
 
+.userinfo{border: 1px solid #DDD; border-radius: 5px;}
+.userinfo .welcome{padding: 6px; font-weight: bold; margin-bottom: 5px;}
+
 /* 4.4. System Comments */
 .xoops-comment-body{margin-top:20px;}
 .xoops-comment-template{margin-bottom:20px;}
