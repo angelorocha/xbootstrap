@@ -1,3 +1,10 @@
+1.04 2015-09-8 Beta 2
+-------------------
+- Update Bootstrap (3.3.5)
+- ADD new system_block_user.html (thanks slider84 - http://www.frxoops.org/userinfo.php?uid=14931)
+- Fix extgallery background arrows
+- Other minors adjusts
+
 1.04 2015-01-13 Beta 1
 -------------------
 - Add extgallery bootstrap slide in blocks: extgallery_block.html and extgallery_block_ajax.html (Angelo Rocha, (thanks Andrax));
