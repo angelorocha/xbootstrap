@@ -69,11 +69,11 @@ a.navbar-brand.xlogo{padding: 5px 20px 0 5px;}
 .xoopsCode code > span{position: relative; z-index: 5;}
 
 /* 3. XOOPS Blocks*/
-.xoops-side-blocks > aside{margin-bottom:20px;}
+.xoops-side-blocks > aside{margin-bottom:20px;text-align:justify;}
 .xoops-side-blocks > aside h1, div.xoops-side-blocks > aside h2, div.xoops-side-blocks > aside h3, div.xoops-side-blocks > aside h4, div.xoops-side-blocks > aside h5, div.xoops-side-blocks > aside h6{font-size:0.9em;}
 .xoops-side-blocks > aside > h4.block-title{line-height:inherit; margin:0; font-size:1.3em;}
 
-.xoops-blocks{margin-bottom:20px;}
+.xoops-blocks{margin-bottom:20px;text-align:justify;}
 .xoops-blocks > h4{line-height:inherit; margin:0;}
 
 .xoops-bottom-blocks{background:#FFF; padding:10px; text-align:justify; margin-bottom:20px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; position:relative; transition:all linear 300ms; -moz-transition:all linear 300ms; -webkit-transition:all linear 300ms; top:0;}
