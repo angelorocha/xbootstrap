@@ -4,11 +4,11 @@
 <div class="tdm-category row">
     <{foreach item=category from=$categories}>
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 tdm-category-list">
-            <a class="btn btn-primary btn-md btn-block" title="<{$category.title}>" href="<{$xoops_url}>/modules/TDMDownloads/viewcat.php?cid=<{$category.id}>">
+            <a class="btn btn-primary btn-md btn-block" title="<{$category.title}>" href="<{$xoops_url}>/modules/tdmdownloads/viewcat.php?cid=<{$category.id}>">
                 <{$category.title}>
             </a>
 
-            <a title="<{$category.title}>" href="<{$xoops_url}>/modules/TDMDownloads/viewcat.php?cid=<{$category.id}>" class="tdm-category-image">
+            <a title="<{$category.title}>" href="<{$xoops_url}>/modules/tdmdownloads/viewcat.php?cid=<{$category.id}>" class="tdm-category-image">
                 <img class="<{$img_float}>" src="<{$category.image}>" alt="<{$category.title}>">
             </a>
 
@@ -29,7 +29,7 @@
                             <{$category.description_main}>
                         </div>
                         <div class="modal-footer">
-                            <a title="<{$category.title}>" href="<{$xoops_url}>/modules/TDMDownloads/viewcat.php?cid=<{$category.id}>" class="pull-left btn btn-success">
+                            <a title="<{$category.title}>" href="<{$xoops_url}>/modules/tdmdownloads/viewcat.php?cid=<{$category.id}>" class="pull-left btn btn-success">
                                 There are <strong><{$category.totaldownloads}></strong> files in this category!
                             </a>
                             <button type="button" class="btn btn-default" data-dismiss="modal">&times;</button>
@@ -49,7 +49,7 @@
 </div><!-- .tdm-category -->
 
 <div class="aligncenter">
-    <a title="<{$smarty.const._MD_TDMDOWNLOADS_RSS}>" href="<{$xoops_url}>/modules/TDMDownloads/rss.php?cid=0">
+    <a title="<{$smarty.const._MD_TDMDOWNLOADS_RSS}>" href="<{$xoops_url}>/modules/tdmdownloads/rss.php?cid=0">
         <img src="images/rss.gif" alt="<{$smarty.const._MD_TDMDOWNLOADS_RSS}>">
     </a>
 </div>
@@ -63,7 +63,7 @@
         <ul class="list-unstyled">
         <{foreach item=bl_date from=$bl_date}>
             <li>
-                <a title="<{$bl_date.title}>" href="<{$xoops_url}>/modules/TDMDownloads/singlefile.php?cid=<{$bl_date.cid}>&amp;lid=<{$bl_date.id}>"><{$bl_date.title}></a> (<{$bl_date.date}>)
+                <a title="<{$bl_date.title}>" href="<{$xoops_url}>/modules/tdmdownloads/singlefile.php?cid=<{$bl_date.cid}>&amp;lid=<{$bl_date.id}>"><{$bl_date.title}></a> (<{$bl_date.date}>)
             </li>
         <{/foreach}>
         </ul>
@@ -76,7 +76,7 @@
         <ul class="list-unstyled">
         <{foreach item=bl_pop from=$bl_pop}>
             <li>
-                <a title="<{$bl_pop.title}>" href="<{$xoops_url}>/modules/TDMDownloads/singlefile.php?cid=<{$bl_pop.cid}>&amp;lid=<{$bl_pop.id}>"><{$bl_pop.title}></a> (<{$bl_pop.hits}>)
+                <a title="<{$bl_pop.title}>" href="<{$xoops_url}>/modules/tdmdownloads/singlefile.php?cid=<{$bl_pop.cid}>&amp;lid=<{$bl_pop.id}>"><{$bl_pop.title}></a> (<{$bl_pop.hits}>)
             </li>
         <{/foreach}>
         </ul>
@@ -89,7 +89,7 @@
         <ul class="list-unstyled">
         <{foreach item=bl_rating from=$bl_rating}>
             <li>
-            <a title="<{$bl_rating.title}>" href="<{$xoops_url}>/modules/TDMDownloads/singlefile.php?cid=<{$bl_rating.cid}>&amp;lid=<{$bl_rating.id}>"><{$bl_rating.title}></a> (<{$bl_rating.rating}>)
+            <a title="<{$bl_rating.title}>" href="<{$xoops_url}>/modules/tdmdownloads/singlefile.php?cid=<{$bl_rating.cid}>&amp;lid=<{$bl_rating.id}>"><{$bl_rating.title}></a> (<{$bl_rating.rating}>)
             </li>
         <{/foreach}>
         </ul>
