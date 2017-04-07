@@ -69,7 +69,7 @@
 <{/if}>
 
 <{if $share == true}>
-	<div class='shareaholic-canvas' data-app='share_buttons' data-app-id='482507'></div>
+    <!-- Define share plugin -->
 <{/if}>
 
 <div class="comments-nav">

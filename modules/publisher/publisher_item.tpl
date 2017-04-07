@@ -73,8 +73,6 @@
 		<{/if}>
 		<div>
 			<{$item.maintext}>
-                
-        <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='482507'></div>
 		</div>
         
 	</div>

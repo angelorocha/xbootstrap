@@ -85,7 +85,7 @@
 <{/if}>
 
 <{if $show_social}>
-    <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='482507'></div>
+    <!-- Define share plugin -->
 <{/if}>
 </div><!-- .tdmdownloads -->
 
