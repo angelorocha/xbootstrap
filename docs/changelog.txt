@@ -1,3 +1,11 @@
+1.04 Final 2017-04-07
+-------------------
+- Add tpl module templates (mamba)
+- Add Animated Header (mamba)
+- Update bootstrap to 3.3.7 (mamba)
+- Shareaholic removed (angelo)
+- Add profile template dropdown (oswaldo)
+
 1.04 Beta 2      NOT RELEASED
 -------------------
 - Add extgallery bootstrap slide in blocks: extgallery_block.html and extgallery_block_ajax.html (Angelo Rocha, (thanks Andrax)); 
@@ -10,7 +18,7 @@
 - Update Masonry to 3.3.0 (mamba)
 - Added Multi-level Menu option (mamba)
 - Added "responsive image" to wf-section in Publisher
-=======
+
 1.04 2015-09-8 Beta 2
 -------------------
 - Update Bootstrap (3.3.5)
