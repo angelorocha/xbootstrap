@@ -1,18 +1,54 @@
+<!-- By slider84 02-08-2015 www.frxoops.org-->
+<{assign var='no_avatar' value=$xoops_upload_url|cat:'/blank.gif'}>
 <div class="usermenu">
-    <ul class="nav nav-pills nav-stacked">
-    <{if $xoops_isadmin}>
-        <li><a href="<{xoAppUrl admin.php}>" title="<{$block.lang_adminmenu}>"><span class="glyphicon glyphicon-wrench"></span><{$block.lang_adminmenu}></a></li>
-        <li><a href="<{xoAppUrl user.php}>" title="<{$block.lang_youraccount}>"><span class="glyphicon glyphicon-user"></span><{$block.lang_youraccount}></a></li>
-    <{else}>
-        <li><a class="menuTop" href="<{xoAppUrl user.php}>" title="<{$block.lang_youraccount}>"><span class="glyphicon glyphicon-user"></span><{$block.lang_youraccount}></a></li>
-    <{/if}>
-        <li><a href="<{xoAppUrl edituser.php}>" title="<{$block.lang_editaccount}>"><span class="glyphicon glyphicon-pencil"></span><{$block.lang_editaccount}></a></li>
-        <li><a href="<{xoAppUrl notifications.php}>" title="<{$block.lang_notifications}>"><span class="glyphicon glyphicon-info-sign"></span><{$block.lang_notifications}></a></li>
-    <{if $block.new_messages > 0}>
-        <li><a class="info" href="<{xoAppUrl viewpmsg.php}>" title="<{$block.lang_inbox}>"><span class="glyphicon glyphicon-envelope"></span><{$block.lang_inbox}> <span class="badge pull-right"><strong><{$block.new_messages}></strong></span></a></li>
-    <{else}>
-        <li><a href="<{xoAppUrl viewpmsg.php}>" title="<{$block.lang_inbox}>"><span class="glyphicon glyphicon-envelope"></span><{$block.lang_inbox}></a></li>
-    <{/if}>
-        <li><a href="<{xoAppUrl user.php?op=logout}>" title="<{$block.lang_logout}>"><span class="glyphicon glyphicon-off"></span><{$block.lang_logout}></a></li>
-    </ul>
+    <div class="userinfo clearfix">
+        <div class="btn-info welcome"><{$smarty.const.THEME_USER_WELCOME}> <{$xoops_uname}></div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <{if $xoops_avatar != $no_avatar}>
+            <div class="thumbnail col-xs-6 col-sm-6 col-md-6"><img src="<{$xoops_avatar}>"></div>
+            <div class="col-xs-6 col-sm-6 col-md-6">
+                <a class="info" href="<{xoAppUrl viewpmsg.php}>" title="<{$block.lang_inbox}>">
+                    <{if $block.new_messages > 0}>
+                        <span class="boxshadow bradius3 floatleft center btn-warning pad5"><{$block.lang_inbox}><br><p
+                                class="bold maxi"><{$block.new_messages}></p></span>
+                    <{else}>
+                        <span class="boxshadow bradius3 floatleft center btn-default pad5"><{$block.lang_inbox}><br><p
+                                class="bold maxi">0</p></span>
+                    <{/if}>
+                </a>
+            </div>
+        </div>
+        <{else}>
+        <div class="width100 floatleft">
+            <a class="info" href="<{xoAppUrl viewpmsg.php}>" title="<{$block.lang_inbox}>">
+                <{if $block.new_messages > 0}>
+                <span class="width100 bradius3 floatleft center btn-warning pad5"><{$block.lang_inbox}>:&nbsp;<{$block.new_messages}></span>
+                <{else}>
+                <span class="width100 bradius3 floatleft center btn-default pad5"><{$block.lang_inbox}>:&nbsp;0</span>
+                <{/if}>
+            </a>
+        </div>
+        <{/if}>
+        <div class="dropdown width100 floatleft pad5">
+            <button class="btn btn-default btn-block dropdown-toggle" type="button" id="dropdownMenu1"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <{$smarty.const._MB_SYSTEM_VACNT}>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+                <{if $xoops_isadmin}>
+                <li><a href="<{xoAppUrl admin.php}>" title="<{$block.lang_adminmenu}>"><span
+                        class="glyphicon glyphicon-wrench"></span><{$block.lang_adminmenu}></a></li>
+                <{/if}>
+                <li><a class="menuTop" href="<{xoAppUrl user.php}>" title="<{$block.lang_youraccount}>"><span
+                        class="glyphicon glyphicon-user"></span>&nbsp;<{$block.lang_youraccount}></a></li>
+                <li><a href="<{xoAppUrl edituser.php}>" title="<{$block.lang_editaccount}>"><span
+                        class="glyphicon glyphicon-pencil"></span>&nbsp;<{$block.lang_editaccount}></a></li>
+                <li><a href="<{xoAppUrl notifications.php}>" title="<{$block.lang_notifications}>"><span
+                        class="glyphicon glyphicon-info-sign"></span>&nbsp;<{$block.lang_notifications}></a></li>
+                <li><a href="<{xoAppUrl user.php?op=logout}>" title="<{$block.lang_logout}>"><span
+                        class="glyphicon glyphicon-off"></span>&nbsp;<{$block.lang_logout}></a></li>
+            </ul>
+        </div>
+    </div>
 </div>

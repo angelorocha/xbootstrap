@@ -1,0 +1,107 @@
+<div class="extcal">
+<h3><{$event.event_title}></h3>
+
+<blockquote>
+    <span class="text-muted"><{$event.cat.cat_name}></span>
+    <footer><{$event.cat.cat_desc}></footer>
+</blockquote>
+
+<{if $event.event_isrecur}>
+    <p class="small"><strong><{$lang.reccur_rule}>:</strong> <{$event.formated_reccur_rule}></p>
+<{else}>
+    <p><strong><{$lang.start}>:</strong> <{$event.formated_event_start}></p>
+    <p><strong><{$lang.end}>:</strong> <{$event.formated_event_end}></p>
+<{/if}>
+
+<address><{$event.event_address}></address>
+
+<iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=<{$event.event_address}>&key=AIzaSyAtGyDPfv204eGctFLOewOcLlrL7TJ4FpU"></iframe>
+
+<p><strong><{$lang.contact_info}>:</strong> <{$event.event_contact}></p>
+
+<p><strong><{$lang.email}>:</strong> <a href="mailto:<{$event.event_email}>" title="<{$lang.email}>"><{$event.event_email}></a></p>
+
+<p><strong><{$lang.url}>:</strong> <a href="<{$event.event_url}>" title="<{$lang.url}>"><{$event.event_url}></a></p>
+
+<p><strong><{$lang.posted_by}>:</strong> <a href="<{$xoops_url}>/userinfo.php?uid=<{$event.user.uid}>" title="<{$event.user.uname}>"><{$event.user.uname}></a></p>
+
+<p><strong><{$lang.on}>:</strong> <{$event.formated_event_submitdate}></p>
+
+<{$event.event_desc}>
+
+<{foreach item=eventFile from=$event_attachement}>
+    <a href="download_attachement.php?file=<{$eventFile.file_id}>" title="<{$eventFile.file_nicename}>">
+        <{$eventFile.file_nicename}>
+        (<{$eventFile.file_mimetype}>)
+        <{$eventFile.formated_file_size}>
+    </a>
+<{/foreach}>
+
+<{if $whosGoing}>
+
+<{$lang.whos_going}> (<{$eventmember.member.nbUser}>):
+
+<{foreach name=eventMemberList from=$eventmember.member.userList item=member}>
+    <{if $smarty.foreach.eventMemberList.first != 1}>,<{/if}>
+        <a href="<{$xoops_url}>/userinfo.php?uid=<{$member.uid}>" title="<{$member.uname}>">
+            <{$member.uname}>
+        </a>
+<{/foreach}>
+
+<{if $eventmember.member.show_button}>
+    <form method="post" action="event_member.php">
+        <input type="hidden" name="mode" value="<{$eventmember.member.joinevent_mode}>">
+        <input type="hidden" name="event" value="<{$event.event_id}>">
+        <{$token}>
+        <input type="submit" value="<{$eventmember.member.button_text}>" <{$eventmember.member.button_disabled}>>
+    </form>
+<{/if}>
+
+<{/if}>
+
+<{if $whosNotGoing}>
+    <{$lang.whosnot_going}> (<{$eventmember.notmember.nbUser}>):
+        <{foreach name=eventMemberList from=$eventmember.notmember.userList item=member}>
+        <{if $smarty.foreach.eventMemberList.first != 1}>,<{/if}>
+        <a href="<{$xoops_url}>/userinfo.php?uid=<{$member.uid}>">
+            <{$member.uname}>
+        </a>
+    <{/foreach}>
+
+    <{if $eventmember.notmember.show_button}>
+        <form method="post" action="event_notmember.php">
+            <input type="hidden" name="mode" value="<{$eventmember.notmember.joinevent_mode}>">
+            <input type="hidden" name="event" value="<{$event.event_id}>">
+            <{$token}>
+            <input type="submit" value="<{$eventmember.notmember.button_text}>"<{$eventmember.notmember.button_disabled}>>
+        </form>
+    <{/if}>
+<{/if}>
+
+
+<a href="<{$xoops_url}>/modules/extcal/print.php?event=<{$event.event_id}>"><img src="<{$pathImageIcon}>/printer.png" alt=""></a>
+
+<{if $isAdmin || $canEdit}>
+    <a href="edit_event.php?event=<{$event.event_id}>" title="">
+        <img src="<{$pathImageIcon}>/edit.png" alt="">
+    </a>
+<{/if}>
+<{if $isAdmin}> <a href="admin/event.php?op=delete&event_id=<{$event.event_id}>"><img src="<{$pathImageIcon}>/delete.png"/></a><{/if}>
+
+<{$commentsnav}>
+
+<{$lang_notice}>
+
+</div>
+
+<!-- start comments loop -->
+<{if $comment_mode == "flat"}>
+    <{include file="db:system_comments_flat.html"}>
+    <{elseif $comment_mode == "thread"}>
+    <{include file="db:system_comments_thread.html"}>
+    <{elseif $comment_mode == "nest"}>
+    <{include file="db:system_comments_nest.html"}>
+<{/if}>
+<!-- end comments loop -->
+
+<{include file='db:system_notification_select.html'}>
