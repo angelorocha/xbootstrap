@@ -133,6 +133,9 @@ ul.userblock > li.join-date{padding: 0 5px 0 0; width: 9%;}
 
 ul.userblock > li span.badge{background: #47A447; position: absolute; bottom: 0; right: 0;}
 
+.userinfo{border: 1px solid #DDD; border-radius: 5px;}
+.userinfo .welcome{padding: 6px; font-weight: bold; margin-bottom: 5px;}
+
 /* 4.4. System Comments */
 .xoops-comment-body{margin-top:20px;}
 .xoops-comment-template{margin-bottom:20px;}
@@ -215,10 +218,10 @@ ul.adminlinks > li > a{color: #FFF;}
 
 .photo-nav-controls{}
 .photo-nav-controls ul{background:url(images/alpha.png); position:relative; right:5px; color:#FFF; font-weight:bold; border-radius:5px 5px 0 0; -moz-border-radius:5px 5px 0 0; -webkit-border-radius:5px 5px 0 0; margin:0; overflow:hidden;}
-.photo-nav-controls ul li{display:inline-table;}
+.photo-nav-controls ul li{display:inline-table; padding: 5px 0 0 0}
 .photo-nav-controls ul li.nav-btn{background:url(images/alpha.png); width:30px; font-size:1.5em;}
-.photo-nav-controls ul li a{color:#000; text-shadow:1px 1px 0 #333;}
-.photo-nav-controls ul li.small{font-size:0.9em; margin:0 5px 0 5px;}
+.photo-nav-controls ul li a{color:#555; text-shadow:1px 1px 0 #111;}
+.photo-nav-controls ul li.small{font-size:0.9em; margin:0 5px 0 5px; position: relative; bottom: 5px;}
 .gallery-single-photo{}
 .gallery-single-photo img.img-thumbnail{position: relative; width:100%;}
 
