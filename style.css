@@ -316,6 +316,14 @@ ul.tdm-new-download-block li:last-child{border-bottom: none;}
 /* 4.12. NewBB Module */
 .newbb{}
 .newbb-header{}
+
+.anchor:before {
+    content: ' ';
+    height: 60px;
+    margin-top: -60px;
+    display: block;
+}
+
 .newbb-menu{}
 .newbb-header-icons{}
 .newbb-header-icons div{margin-bottom: 10px;}
@@ -386,3 +394,12 @@ div.order-by a{color:#999; font-size:1.2em;}
 .aligncenter{text-align:center; margin-left:auto; margin-right:auto;}
 .alignleft{text-align:left; float:left;}
 .alignright{text-align:right; float:right;}
+
+/* Oswaldo */
+/* add hover dropdown*/
+@media (min-width:769px) {
+.dropdown:hover> .dropdown-menu {
+display: block;
+}
+}
+/* dropdown hover */
