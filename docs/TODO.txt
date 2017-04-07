@@ -15,9 +15,16 @@ To have paginations like on demo page and screenshots:
 Finally go publisher >> Preferences
 Change "Articles display type" to: -WF Section Style-
    
+Finally go publisher >> Preferences
+Change "Articles display type" to: -WF Section Style-
+   
 ----- Avatars Dimensions --
 Recomended avatars dimensions:
 350x350
+----- eXtgallery Thumbs Dimensions --
+Recomended:
+350x240
+And regenerate all albuns thumbs.
 
 ----- eXtgallery Thumbs Dimensions --
 Recomended:

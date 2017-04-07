@@ -1,3 +1,16 @@
+1.04 Beta 2      NOT RELEASED
+-------------------
+- Add extgallery bootstrap slide in blocks: extgallery_block.html and extgallery_block_ajax.html (Angelo Rocha, (thanks Andrax)); 
+- Add extCal support (angelo)
+- Added Sticky Bar and Scroll-Up (mamba)
+- Adjusted NewBB for Sticky Bar (mamba)
+- Added Footer Blocks (mamba)
+- Update Bootstrap to 3.3.5 (mamba)
+- Update Owl Carousel to 1.3.3 (mamba)
+- Update Masonry to 3.3.0 (mamba)
+- Added Multi-level Menu option (mamba)
+- Added "responsive image" to wf-section in Publisher
+=======
 1.04 2015-09-8 Beta 2
 -------------------
 - Update Bootstrap (3.3.5)

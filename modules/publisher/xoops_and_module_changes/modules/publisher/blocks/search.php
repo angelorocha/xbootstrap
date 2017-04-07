@@ -11,18 +11,19 @@
 
 /**
  * @copyright       The XUUPS Project http://sourceforge.net/projects/xuups/
+ * @copyright       (c) 2000-2015 XOOPS Project (www.xoops.org)
  * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
  * @package         Publisher
  * @subpackage      Blocks
  * @since           1.0
  * @author          trabis <lusopoemas@gmail.com>
  * @author          phppp
- * @version         $Id: search.php 10374 2012-12-12 23:39:48Z trabis $
+ * @version         $Id: search.php 
  */
 
-defined("XOOPS_ROOT_PATH") or die("XOOPS root path not defined");
+defined("XOOPS_ROOT_PATH") || exit("XOOPS root path not defined");
 
-include_once dirname(dirname(__FILE__)) . '/include/common.php';
+include_once dirname(__DIR__) . '/include/common.php';
 
 function publisher_search_show($options)
 {

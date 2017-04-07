@@ -11,16 +11,17 @@
 
 /**
  * @copyright       The XUUPS Project http://sourceforge.net/projects/xuups/
+ * @copyright       (c) 2000-2015 XOOPS Project (www.xoops.org)
  * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
  * @package         Publisher
  * @subpackage      Action
  * @since           1.0
  * @author          trabis <lusopoemas@gmail.com>
  * @author          Taiwen Jiang <phppp@users.sourceforge.net>
- * @version         $Id: search.php 10374 2012-12-12 23:39:48Z trabis $
+ * @version         $Id: search.php
  */
 
-include_once dirname(__FILE__) . '/header.php';
+include_once __DIR__ . '/header.php';
 xoops_loadLanguage('search');
 
 //Checking general permissions
@@ -42,7 +43,7 @@ if (!$publisher->getConfig('perm_search') || !$gperm_handler->checkRight('global
 }
 
 $xoopsConfig["module_cache"][$module_id] = 0;
-$xoopsOption["template_main"] = 'publisher_search.html';
+$xoopsOption["template_main"] = 'publisher_search.tpl';
 include XOOPS_ROOT_PATH . '/header.php';
 
 $module_info_search = $publisher->getModule()->getInfo("search");
@@ -256,4 +257,3 @@ if ($xoopsConfigSearch["keyword_min"] > 0) {
 }
 
 include XOOPS_ROOT_PATH . "/footer.php";
-?>
