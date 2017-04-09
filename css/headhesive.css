@@ -27,16 +27,15 @@
 
     /* Translate -100% to move off screen */
     -webkit-transform: translateY(-100%);
-        -ms-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
 
     /* Animations */
     -webkit-transition: all 300ms ease-in-out;
-       -moz-transition: all 300ms ease-in-out;
-            transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
 
 }
-
 
 /**
  * Headhesive stick
@@ -52,10 +51,9 @@
 .adhesiveHeader--stick {
     /* Translate back to 0%; */
     -webkit-transform: translateY(0%);
-        -ms-transform: translateY(0%);
-            transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
 }
-
 
 /**
  * Headhesive unstick

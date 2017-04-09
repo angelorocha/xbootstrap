@@ -1,39 +1,39 @@
 /**** Isotope Filtering ****/
 
 .isotope-item {
-  z-index: 2;
+    z-index: 2;
 }
 
 .isotope-hidden.isotope-item {
-  pointer-events: none;
-  z-index: 1;
+    pointer-events: none;
+    z-index: 1;
 }
 
 /**** Isotope CSS3 transitions ****/
 
 .isotope,
 .isotope .isotope-item {
-  -webkit-transition-duration: 0.8s;
-     -moz-transition-duration: 0.8s;
-      -ms-transition-duration: 0.8s;
-       -o-transition-duration: 0.8s;
-          transition-duration: 0.8s;
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -ms-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
 }
 
 .isotope {
-  -webkit-transition-property: height, width;
-     -moz-transition-property: height, width;
-      -ms-transition-property: height, width;
-       -o-transition-property: height, width;
-          transition-property: height, width;
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    -ms-transition-property: height, width;
+    -o-transition-property: height, width;
+    transition-property: height, width;
 }
 
 .isotope .isotope-item {
-  -webkit-transition-property: -webkit-transform, opacity;
-     -moz-transition-property:    -moz-transform, opacity;
-      -ms-transition-property:     -ms-transform, opacity;
-       -o-transition-property:      -o-transform, opacity;
-          transition-property:         transform, opacity;
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    -ms-transition-property: -ms-transform, opacity;
+    -o-transition-property: -o-transform, opacity;
+    transition-property: transform, opacity;
 }
 
 /**** disabling Isotope CSS3 transitions ****/
@@ -41,13 +41,12 @@
 .isotope.no-transition,
 .isotope.no-transition .isotope-item,
 .isotope .isotope-item.no-transition {
-  -webkit-transition-duration: 0s;
-     -moz-transition-duration: 0s;
-      -ms-transition-duration: 0s;
-       -o-transition-duration: 0s;
-          transition-duration: 0s;
+    -webkit-transition-duration: 0s;
+    -moz-transition-duration: 0s;
+    -ms-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    transition-duration: 0s;
 }
-
 
 /**** "Multi level Navbar Menu" ****/
 
@@ -55,7 +54,7 @@
     position: relative;
 }
 
-.dropdown-submenu>.dropdown-menu {
+.dropdown-submenu > .dropdown-menu {
     top: 0;
     left: 100%;
     margin-top: -6px;
@@ -65,11 +64,11 @@
     border-radius: 0 6px 6px 6px;
 }
 
-.dropdown-submenu:hover>.dropdown-menu {
+.dropdown-submenu:hover > .dropdown-menu {
     display: block;
 }
 
-.dropdown-submenu>a:after {
+.dropdown-submenu > a:after {
     display: block;
     content: " ";
     float: right;
@@ -83,7 +82,7 @@
     margin-right: -10px;
 }
 
-.dropdown-submenu:hover>a:after {
+.dropdown-submenu:hover > a:after {
     border-left-color: #fff;
 }
 
@@ -91,7 +90,7 @@
     float: none;
 }
 
-.dropdown-submenu.pull-left>.dropdown-menu {
+.dropdown-submenu.pull-left > .dropdown-menu {
     left: -100%;
     margin-left: 10px;
     -webkit-border-radius: 6px 0 6px 6px;
