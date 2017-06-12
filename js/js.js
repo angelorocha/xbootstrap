@@ -1,6 +1,7 @@
 // JavaScript Document
 
 /* Scroll Top */
+
 jQuery(function ($) {
     $.scrollUp({
         scrollName: 'scrollUp', // Element ID

@@ -23,14 +23,14 @@
 article,
 input[type="text"],
 input[type="password"],
-textarea
-{
+textarea {
     text-align: right;
 }
 
-.global-nav ul.nav{
+.global-nav ul.nav {
     float: right;
 }
-.global-nav form.navbar-form{
+
+.global-nav form.navbar-form {
     display: none;
 }
