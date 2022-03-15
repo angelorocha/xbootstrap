@@ -10,52 +10,19 @@
     <meta name="author" content="<{$xoops_meta_author}>">
     <meta name="generator" content="XOOPS">
     <!--[if IE]>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Owl Carousel Assets -->
-    <link href="<{xoImgUrl}>js/owl/assets/owl.carousel.css" rel="stylesheet">
-    <link href="<{xoImgUrl}>js/owl/assets/owl.theme.default.css" rel="stylesheet">
-
-    <link href="<{$xoops_url}>/favicon.ico" rel="shortcut icon">
-    <link rel="stylesheet" type="text/css" href="<{xoImgUrl}>css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="<{xoImgUrl}>css/xoops.css">
-    <link rel="stylesheet" type="text/css" href="<{xoImgUrl}>css/reset.css">
-    <link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="<{xoImgUrl}>css/scrollup.css"/>
-    <link rel="stylesheet" type="text/css" media="screen" href="<{xoImgUrl}>css/headhesive.css"/>
-    <!-- Multi-level Menu -->
-    <link rel="stylesheet" type="text/css" href="<{xoImgUrl}>css/multilevelmenu.css">
-
-    <{if $xoops_dirname=='newbb'}>
-        <link rel="stylesheet" type="text/css" media="screen" href="<{xoImgUrl}>css/forums.css"/>
-    <{/if}>
-
-    <script src="<{$xoops_url}>/browse.php?Frameworks/jquery/jquery.js"></script>
-
-    <script src="<{xoImgUrl}>js/bootstrap.min.js"></script>
-    <script src="<{xoImgUrl}>js/masonry.pkgd.min.js"></script>
-
-    <script src="<{xoImgUrl}>js/headhesive.min.js"></script>
-    <{*<script src="<{xoImgUrl}>js/headhesive.js"></script>*}>
-    <script src="<{xoImgUrl}>js/jquery.scrollUp.min.js"></script>
-    <script src="<{xoImgUrl}>js/imagesloaded.pkgd.min.js"></script>
-
-    <!--[if lt IE 9]>
-    <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="http://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <script src="<{xoImgUrl}>js/selectivizr-min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <![endif]-->
-    <script src="<{xoImgUrl}>js/js.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="<{$xoops_url}>/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="<{xoImgUrl}>assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<{xoImgUrl}>assets/css/main.min.css">
+    <script src="<{$xoops_url}>/browse.php?Frameworks/jquery/jquery.js"></script>
+    <script src="<{xoImgUrl}>assets/js/bootstrap.min.js"></script>
+    <script src="<{xoImgUrl}>assets/js/js.min.js"></script>
     <link rel="alternate" type="application/rss+xml" title="" href="<{xoAppUrl backend.php}>">
-
-    <title><{if $xoops_dirname == "system"}><{$xoops_sitename}><{if $xoops_pagetitle !=''}> - <{$xoops_pagetitle}><{/if}><{else}><{if $xoops_pagetitle !=''}><{$xoops_pagetitle}> - <{$xoops_sitename}><{/if}><{/if}></title>
-
-    <{includeq file="$theme_name/tpl/shareaholic-script.tpl"}>
-
     <{$xoops_module_header}>
-
+    <link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>">
+    <title><{if $xoops_dirname == "system"}><{$xoops_sitename}><{if $xoops_pagetitle !=''}> - <{$xoops_pagetitle}><{/if}><{else}><{if $xoops_pagetitle !=''}><{$xoops_pagetitle}> - <{$xoops_sitename}><{/if}><{/if}></title>
 </head>
 
 
