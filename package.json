@@ -1,0 +1,34 @@
+{
+  "name": "xbootstrap",
+  "version": "2.0.0",
+  "description": "A simple XOOPS theme made with Boostrap",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Angelo Rocha",
+  "Repository": "https://github.com/angelorocha/xbootstrap",
+  "keywords": [
+    "xoops"
+  ],
+  "license": "GPL-2.0-or-later",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-load-plugins": "^2.0.7",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglifycss": "^1.1.0",
+    "gulp-watch": "^5.0.1",
+    "gulp-webp": "^4.0.1",
+    "node-sass": "^6.0.1"
+  }
+}

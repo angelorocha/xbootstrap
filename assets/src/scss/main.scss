@@ -1,0 +1,260 @@
+/* SCSS Document */
+/*
+    xBootstrap Template
+    Author:            Angelo Rocha
+    Author URL:        www.angelorocha.com.br
+    Licence:           GPL v3
+    Contacts
+    Linkedin:           http://br.linkedin.com/in/angelorocha
+    Github:             https://github.com/angelorocha
+*/
+
+.global-nav {
+    margin-bottom: 0;
+}
+
+a.navbar-brand.xlogo {
+    padding: 5px 20px 0 5px;
+}
+
+.slideshow {
+}
+
+.slideshow .carousel-caption {
+    bottom: 10%;
+}
+
+.slideshow .carousel-indicators {
+    bottom: 40px;
+}
+
+.slideshow .item {
+    text-align: center;
+}
+
+.slideshow .item img {
+    display: inline-block;
+}
+
+.maincontainer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.home-message {
+    background: #FAFAFA;
+    padding-top: 5px;
+    border-left: 3px solid #9C6;
+    margin-top: -60px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 5;
+}
+
+.bottom-blocks {
+    background: url(images/cover.jpg) 50% 50% no-repeat fixed;
+    background-size: cover;
+    margin-top: 20px;
+    padding: 20px 0 20px 0;
+}
+
+.footer-blocks {
+    background: #111;
+    color: #EAEAEA;
+}
+
+.footer {
+    background: #111;
+    color: #EAEAEA;
+}
+
+.footer > h3 {
+    font-size: 0.9em;
+    line-height: inherit;
+    max-width: 960px;
+    margin: 0 auto 0 auto;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+.footer > h3 > a.credits {
+    position: absolute;
+    top: 3px;
+    right: 10px;
+}
+
+.xoops-banner {
+    position: relative;
+    top: 40px;
+}
+
+.xoops-banner * {
+    max-width: 100%;
+}
+
+/* 2. XOOPS Codes */
+.xoopsQuote blockquote {
+    font-size: 0.9em;
+    border-left: 2px solid #EEE;
+    padding-left: 10px;
+    font-style: italic;
+    color: #969696;
+}
+
+.xoopsCode {
+    background: url(images/code.png);
+    overflow-x: auto;
+    border: 1px solid #EEE;
+    padding-left: 10px;
+}
+
+.xoopsCode code {
+    background-color: transparent;
+    line-height: 25px;
+    position: relative;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.xoopsCode code > span {
+    position: relative;
+    z-index: 5;
+}
+
+/* 3. XOOPS Blocks*/
+.xoops-side-blocks > aside {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.xoops-side-blocks > aside h1, div.xoops-side-blocks > aside h2, div.xoops-side-blocks > aside h3, div.xoops-side-blocks > aside h4, div.xoops-side-blocks > aside h5, div.xoops-side-blocks > aside h6 {
+    font-size: 0.9em;
+}
+
+.xoops-side-blocks > aside > h4.block-title {
+    line-height: inherit;
+    margin: 0;
+    font-size: 1.3em;
+}
+
+.xoops-blocks {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.xoops-blocks > h4 {
+    line-height: inherit;
+    margin: 0;
+}
+
+.xoops-bottom-blocks {
+    background: #FFF;
+    padding: 10px;
+    text-align: justify;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    position: relative;
+    transition: all linear 300ms;
+    -moz-transition: all linear 300ms;
+    -webkit-transition: all linear 300ms;
+    top: 0;
+}
+
+.xoops-bottom-blocks:hover {
+    top: -10px;
+    box-shadow: 0 10px 10px #222;
+}
+
+/* 5. Useful Classes */
+.big-info-icon-link {
+    color: #333;
+    font-size: 1.8em;
+    margin: 10px 0 10px 0;
+    display: inline-table;
+    cursor: pointer;
+}
+
+.xoops-default-title {
+    font-size: 1.3em;
+    margin: 0;
+    line-height: inherit;
+}
+
+.generic-pagination {
+}
+
+.generic-pagination a {
+    background: #FAFAFA;
+    border: 1px solid #EEE;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.generic-pagination a:hover {
+    background: #EBEBEB;
+}
+
+.generic-pagination .xo-pagact {
+    background: #09C;
+    color: #FFF;
+    border: 1px solid #EEE;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+div.order-by {
+    font-size: 1.2em;
+}
+
+div.order-by a {
+    color: #999;
+    font-size: 1.2em;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+/* Only Add Margin Bottom of 10px */
+.mt10 {
+    margin-top: 10px;
+}
+
+/* Only add Margin Top of 10px */
+.lw30 {
+    line-height: 30px;
+}
+
+/* Only Add Line Height 30px */
+.nompl {
+    margin: 0;
+    padding: 0;
+    line-height: inherit;
+}
+
+/* No margin, paddind and lineweight -> use in title tags if necessary... */
+
+/* Media Queries */
+@media (min-width: 320px) and (max-width: 768px) {
+    .xoops-banner {
+        top: 0;
+    }
+
+    .xoops-banner.pull-right {
+        float: none !important;
+    }
+}
+
+
+/* Oswaldo */
+/* add hover dropdown*/
+@media (min-width: 769px) {
+    .dropdown:hover > .dropdown-menu {
+        display: block;
+    }
+}
+
+/* dropdown hover */
